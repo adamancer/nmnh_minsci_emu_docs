@@ -1,0 +1,48 @@
+module,tab,description,divisions
+ecatalogue,Catalog,"This tab summarizes basic information about specimen custody, counts, and identifiers, including the catalog number that serves as the primary identifier for a specimen that has been accessioned into the collection. Most fields on this tab should be populated in every record.
+",ALL
+ecatalogue,Status,"Documents inventory status and record quality
+
+**Known issues:**
+
+- The inventory grid is a mess.
+",ALL
+ecatalogue,Identification,This tab consist of a grid identifying the types of rock or mineral found in a specimen.,PET | MIN
+ecatalogue,Gems/Minerals,This tab captures data specific to gems and minerals.,MIN
+ecatalogue,Meteorites,"This tab captures data specific to meteorites. Basic meteorite metadata, including name, type, and find/fall, is aligned annually with the Meteorite Bulletin Database (MBDB).",MET
+ecatalogue,Petrology (1),This tab captures data specific to rocks and ores.,PET
+ecatalogue,Petrology (2),This tab captures additional data specific to rocks and ores.,PET
+ecatalogue,Relationship,"This tab documents relationships between objects, including objects held by other organizations.",ALL
+ecollectionevents,Locality (1),"This tab includes the political and marine geography of a collection locality, along with fields for classifying the collection event. Definitions below are adapted from the GeoNames Feature Codes list.
+
+**Known issues:**
+
+- Usage of Site Details is inconsistent. It has been used variously to try to distinguish generic localities from localities with detailed collection info; to try to mark records as canonical for a given locality (for example, by referencing the corresponding GeoNames record); and to idenitfy stations/dredges associatd with a specific expedition.
+- It's difficult to reliably distinguish marine and terrestrial localities.
+- Administrative divisions that do not map neatly to country/state/county scheme have been entered inconsistently. Many countries use deeper schemes, so it's not always clear how to fit all the information in.
+",ALL
+ecollectionevents,Locality (2),"This tab contains named locality features additional to what appears in table 1.
+",ALL
+ecollectionevents,Volcano (1),"This tab contains information about the volcano that produced a given igneous rock, including eruption dates. Information recorded on this tab should use the identifiers, names, and events defined by the `Global Volcanism Program (GVP) <https://volcano.si.edu>`_ .",ALL
+ecollectionevents,Exp/Method,"This tab includes information about expeditions that produced samples in the collection. Expeditions include both terrestrial and marine programs. For the latter, this tab also includes fields for identifying vessels and cruises.",ALL
+ecollectionevents,Depth/Elev,"This tab is used to summarize depth and elevation information. Only populate this tab if the collector provides this information--do not extrapolate depths or elevations from coordinates.
+
+This tab includes two sets of fields for depth. The **depth fields** describe the depth in the water column at which a specimen was collected. The **bottom depth fields** fields describe to the depth of the sea floor. Geological specimens in the Mineral Sciences collections always come from the sea floor. To avoid redundancy, only the Bottom Depth columns are populated.
+",ALL
+elocations,Location,"This tab includes information about a storage location, allowing users to locate specimens in the collection or on exhibit. Most collections locations use the first three or four levels of the hierarchy, that is, building, room, cabinet/case, and drawer/shelf (Mineralogy typically omits the last level). Exhibit locations use a more flexible hierarchy, with the first two locations identifying the building and exhibit, the third through fifth levels describing more precise locations within the exhibit (for example, a topic area, a group of cases, and a specific case), and the sixth level the identifier assigned by Exhibits. The exhibit hierarchy was derived from the exhibit script and those locations vary widely in their specificity.",ALL
+enmnhtransactions,Transactors,"To show the Transactors tab, click the Multiple Transactors checkbox on the primary tab for the current transaction type (either Loan, Acquisition, or Disposal).
+
+This tab depicts contact information for all transactors associated with a transaction. It is sometimes used if there are multiple current contacts for a transaction but is most commonly used for outgoing loans where the contact at the receiving organization has changed.
+
+When the transactor changes, do the following:
+
+- Add a note explaining the contact change
+- Create a party record for the new contact if one does not already exist
+- Contact the data manager to update the primary contact for the loan",ALL
+enmnhtransactions,Tasks,"This tab is used to note tasks that need to be performed at a later date to complete a transaction or improve the transaction record. Tasks may include:
+
+- Adding or modifying data to ensure that the transaction record is accurate and complete
+- Cataloging an acquisition
+- Closing a loan after a condition has been met (for example, after one year if specimens are reported lost)
+
+Because tasks may not be completed for years and contacts for individual collections may change over time, the best practice is to assign all tasks to Position records created for this purpose. The position records can be found by searching the Parties module using Party Type = ""Position"". Records have been created for each of the four collection managers (which will direct the task to the current collection manager) and the registrar (which will direct the request to the NMNH-MinSciRegistrar resource account).",

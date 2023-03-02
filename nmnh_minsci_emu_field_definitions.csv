@@ -1,0 +1,518 @@
+module,tab,group,field,fields,description,usage,format,allowed values,examples
+ecatalogue,Catalog,Collection Custody,Museum,- CatMuseum,The name of the museum that has custody of the specimen,Required for all records,,- NMNH,
+ecatalogue,Catalog,Collection Custody,Museum Acronym,- CatMuseumAcronym,"The acronym used when displaying the catalog number. Most specimens at NMNH use the acronym ""USNM"" (short for United States National Museum), but both **Mineralogy** and **Petrology & Volcanology** switched to ""NMNH"" decades ago, much to the consternation of various parties.
+",Required for all records,,"- NMNH *(Mineralogy and Petrology & Volcanology)*
+- USNM *(Meteorites)*",
+ecatalogue,Catalog,Collection Custody,Department,- CatDepartment,The name of the department that has custody of the specimen,Required for all records,,- Mineral Sciences,
+ecatalogue,Catalog,Collection Custody,Division,- CatDivision,The name of the division within a department that has custody of the specimen,Required for all records,,"- Meteorites
+- Mineralogy
+- Petrology & Volcanology",
+ecatalogue,Catalog,Collection Custody,Catalog,- CatCatalog,The name of the catalog within the division. Only **Mineralogy** has multiple catalogs (Gems and Minerals).,Required for all records,,"- Gems
+- Meteorites
+- Minerals
+- Rock & Ore Collection",
+ecatalogue,Catalog,Collection Custody,Collection Name,- CatCollectionName_tab,"The name of the collection or collections the specimen has been assigned to. Each division divides its holdings into collections, that is, subsets with some common feature. Collections may be named after collectors, donors, or an aspect of the collection itself (like a specific place, project, or specimen type).
+",Recommended for all records,"Include the word ""Collection"" in each collection name. For collections named after a person, use their full name if possible. A single specimen may be assigned to multiple collections. For example, a type mineral might include both the Type Minerals Collection and a collection named after the collector.
+",,"- Inventory Collection
+- Sea Floor Rock Collection
+- Washington A. Roebling Collection"
+ecatalogue,Catalog,Cataloging Details,Prefix,- CatPrefix,"An alphabetic prefix added to the beginning of the catalog number to specify a catalog number series. A series is similar to a collection. **Mineralogy** uses prefixes to distinguish series.
+",Omit if record is not part of a prefixed series,A single capital letter,"- B *(Bosch)*
+- C *(Canfield)*
+- G *(Gems)*
+- M *(Micromount)*
+- R *(Roebling)*
+- S *(Synthetic)*",
+ecatalogue,Catalog,Cataloging Details,Number,- CatNumber,"The numeric part of a catalog number. A catalog number may represent a single specimen or a group of related specimens.
+",Required for all records,"The Antarctic meteorites collection in **Meteorites** uses the same catalog number to represent all the specimens from a single field collected during a single year. It does not assign suffixes to individual records. Catalog numbers are essentially worthless for this collection, and it is best to refer to individual Antarctic meteorites by the NASA-style meteorite number.
+
+**Petrology & Volcanology** often uses a single catalog number to represent a group of related specimens, for example, specimens collected at a single locality by the same collector. Individual specimens may be distinguished by suffixes.",,
+ecatalogue,Catalog,Cataloging Details,Suffix,- CatSuffix,An alphanumeric suffix used to distinguish specimens with the same catalog number.,Omit if no appropriate data is available,"Suffix format and meaning vary by division. When publishing the catalog number, suffixes should be delimited with a hyphen.
+
+**Mineralogy** typically uses a two-character alphanumeric suffix. Numeric suffixes are zero-padded to two-characers if needed (for example, ""1"" becomes ""01""). The first specimen for a given catalog number is assigned the suffix ""00"" (but note that this suffix is often omitted when catalog numbers are published.)
+
+**Petrology & Volcanology** typically uses a numeric suffix. Suffixes are *not* zero-padded. In labels for GGM, suffixes were zero-padded to four characters, but this is not typical.",,
+ecatalogue,Catalog,Cataloging Details,Barcode,- CatBarcode,,Not used,,,
+ecatalogue,Catalog,Cataloging Details,Part Number,- CatPartNumber,,Not used,,,
+ecatalogue,Catalog,Cataloging Details,Whole/Part,- CatWholePart,"Whether a record represents a specimen in its entirety or a part of a complex specimen. For example, consider a specimen from the mineral collection containing multiple species. In some cases, each species has been cataloged separately, in which case using ""Part"" in this field would be appropriate.
+",Required for all specimens,,"- Part
+- Whole",
+ecatalogue,Catalog,Cataloging Details,Cataloged By,- CatCatalogedByRef,"A reference to the party record for the cataloger. For new records, the cataloger is the person who creates the digital record, either by creating a record in the client or submitting a record in another format to be imported.
+",Omit if no appropriate data is available,,,
+ecatalogue,Catalog,Cataloging Details,Date Cataloged,- CatDateCataloged,"The date the specimen was cataloged. For records entered directly into the client, the cataloged date is the date the record is created. For imported records, the cataloged date is the date the import spreadsheet was submitted to the data manager. For records first entered into an earlier database, the cataloged date is the entry date in the ledger.
+",Omit if no appropriate data is available,,,
+ecatalogue,Catalog,Cataloging Details,Kind Of Object,- CatObjectType,The type of object represented by the record,Required for all records,,- Specimen/Object,
+ecatalogue,Catalog,Counts,Specimen Count,"- CatSpecimenCount
+- CatSpecimenCountModifier","The number of objects represented by this record. 
+",Required for all records,"Counting objects can be tricky, so here are some general guidelines:
+
+The count is based on the primary object represented by a record. For most records, this will be a rock or mineral, in which case the count will be the number of rock/mineral fragments. Preparations, like thin sections or powders, are counted separately using the preparation grid.
+
+For some records, the primary object is itself a prepation, like vial of powder or box of thin sections. In this case, the specimen count is the number of preparations.
+
+**Mineralogy** sometimes uses ""10"" or ""100"" with a modifier of ""plus"" to signify that there are a large number of objects that have not been counted exactly.",,"- Box containing three large rock fragments: 3
+- Box containing a hand sample and vial of power: 1
+- Box of 200 thin sections: 200"
+ecatalogue,Catalog,Counts,Original Count,"- CatOriginalCount
+- CatOriginalCountModifier",,Not used,,,
+ecatalogue,Catalog,Counts,Other Counts,"- CatOtherCountsType_tab
+- CatOtherCountsValue_tab",,Not used,,,
+ecatalogue,Catalog,Counts,Other Numbers,"- CatOtherNumbersType_tab
+- CatOtherNumbersSource_tab
+- CatOtherNumbersValue_tab","Additional identifiers used to refer to the specimen, like the field number assigned by the collector.",Omit if no appropriate data is available,"Each row must include both Kind and Value. Source is rarely populated and can be omitted. Examples of typical kinds are provided below.
+
+Identifiers should be populated verbatim. Previous collections staff sometimes zero-padded identifiers to a common length so that they would sort properly in a spreadsheet. Do not do this! It makes it difficult to find occurrences of those specimens in the literature.
+
+Each identifier should be given its own row in the grid. Do not combine multiple identifiers into a single row, even if they are the same kind.
+
+The first row with the Kind ""Collector's field number"" will appear in the summary line at the top of the record.
+
+The other numbers grid has been used to store information about recataloged specimens. This information is often ambiguous. For example, some specimens were recataloged only in part, which is not always clear from entries in the other number grid. This information should be added to the Relationships tab instead.
+",,"- Collector's field number
+- IGSN
+- Lab number
+- Parent IGSN
+- VG number"
+ecatalogue,Status,Object/Remains Status,Accession Status,- StaAccessionStatus,The current accession status,Populated automatially?,,,
+ecatalogue,Status,Object/Remains Status,TM Status,- StaTMStatus,"The current transaction status. Note that incorrect transaction records (especially partial disposals that are not entered properly) can prevent a given record from being attached to a new transaction.
+","Populated automatically when this record is linked to a loan or disposal in the Transactions module if the whole specimen is part of the transaction
+",,"- Deaccessioned
+- Disposed
+- On Loan
+- Pending Deaccession
+- Pending Disposal
+- Pending Loan",
+ecatalogue,Status,Object/Remains Status,Record Quality,- StaRecordQuality,"The quality of the record as an integer between 2 and 4, where increasing numbers represent increasing completeness of the record. Used primarily to generate statistics for museum- or institution-wide collections reports.
+","Populated automatically based on a department-specific rubric integrated into the EMu backend. The rubric can only be modified by contacting Informatics.
+",,,
+ecatalogue,Status,Object/Remains Status,Primary Collection,- StaPrimaryCollection,"The name of the collection used for reporting by the museum or institution. Each division defined its own collections, which are based on the collection name, storage location, or collection locality.
+
+Primary collections are used to track the health of the collection over time, so it's generally best to use the same ones each year. If a new primary collection is needed, contact the Registrar and Informatics.
+","Required for all records, but not the responsibility of the cataloger. This field is populated annually by the data manger.
+",,,
+ecatalogue,Status,Inventory Status,Inventory Status,"- StaInventoryStatus_tab
+- StaInventoryRecordedByRef_tab
+- StaInventoryDate0
+- StaInventoryRemarks_tab",Records an inventory event,Required for documenting inventories,"Inventory status, recorded by, and data recorded must be populated in each row. Status will ultimately be standardized to a small number of options (""Found"" and ""Not found"" are the only ones that spring to mind right now). Remarks are optional and can be used to provide more detail about the inventory.
+
+Inventories are the only actions that should be documented in this grid. Fields in this grid have been used to document actions like disposals, exchanges, and transfers between divisions (i.e., recataloging). These actions should be documented elsewhere. Actions related to transactions, including loans, dispoals, and exchanges should be documented in the Transactions module. Recataloged specimens should be documented using the Relationships tab.
+
+The grid has not been cleaned, and the lookup still contains the non-preferred values.
+","- Found?
+- Not Found?",
+ecatalogue,Status,Record Status,Record Status,"- StaRecordStatus_tab
+- StaRecordRecordedByRef_tab
+- StaRecordDate0
+- StaRecordRemarks_tab","Records the source of the EMu record if it was loaded from a previous database, like Paradox or SELGEM.
+","Not used, except to document records imported from previous databases. In the future, this field may be used to mark records that have been validated, but the specifics for doing so have not been worked out.
+",,,
+ecatalogue,Identification,Identification Details,Taxon,- IdeTaxonRef_tab,The name of the rock or mineral,Required,Reference to Taxonomy,,
+ecatalogue,Identification,Identification Details,Qualifier,- IdeQualifier_tab,Used to express uncertainty in the identification,Omit if high confidence in the identification,"Must be ""uncertain"" if populated",,
+ecatalogue,Identification,Identification Details,Qualified Name,- IdeQualifiedName_tab,The qualified name of the rock or mineral,Populated automatically by EMu,"Usually the display name of from Taxon. If Qualifier is ""uncertain"", a question mark will be appended to the value in this field to denote that uncertainty.",,
+ecatalogue,Identification,Identification Details,Comments,- IdeComments_tab,Comments about the identification,Omit if no appropriate data is available,"Used primarily to note verbatim names when the selected Taxon does not exactly match the name in the source material.
+
+**Deprecated uses**
+
+This field was previously used to store long-form descriptions of specimens. Use Lot Description on the division-specific tabs instead.",,
+ecatalogue,Identification,Identification Details,Identified By,- IdeIdentifiedByRef_tab,The person who identified the specimen,Omit if no appropriate data is available,Reference to Parties,,
+ecatalogue,Identification,Identification Details,Date Identified,- IdeDateIdentified0,The date the identification was made,Omit if no appropriate data is available,,,
+ecatalogue,Identification,Identification Details,Named Part,- IdeNamedPart_tab,The part of the specimen being identified,Required for each populated row,"Assign ""Primary"" to the primary classification (i.e., the rock name for Petrology & Volcanology and the most important mineral phase for Mineralogy). Assign ""Associated"" to additional classifications.
+
+**Deprecated uses**
+
+Older records use more specific terms (""Primary Rock"", ""Primary Mineral"", etc.) Most Taxonomy records now note whether a given species is a rock or mineral, so this level of specificity is no longer necessary. 
+
+Older records used ""Primary Synonym"" to note variety or synonym names to a record. This term is still in use but should not be added to new records. Most varieties and synonyms have their own records in Taxonomy.",,
+ecatalogue,Identification,Identification Details,Texture/Structure,- IdeTextureStructure_tab,An alphabetized list of textural terms that apply to the rock/mineral,Omit if no appropriate data is available,Terms should be listed in alphabetical order in lower case. Use semicolons to separate terms.,,
+ecatalogue,Identification,Identification Details,Color,- MinColor_tab,The color of the rock/mineral,Omit if no appropriate data is available,,,
+ecatalogue,Meteorites,Meteorite Details,Meteorite Name,- MetMeteoriteName,The official name of the meteorite,Required,"For **non-Antarctic meteorites**, the name should exactly match the Name field for the corresponding MBDB record. Most meteorites are named after the nearest named place to where they fell, so these names are usually simple strings.
+
+For **Antarctic meteorites**, the name must be the meteorite number as currently asssigned by NASA. The NASA meteorite number consists of two components: a generic identifier identifying a mass and an optional specific identifier (often referred to as a comma number) identifying a subsample. The generic identifier includes:
+
+- A three-character alphabetic prefix identifying the general area where the meteorite was collected
+- A space
+- A five- to six-digit number (YYDDD or YYDDDD, where YY is the last two digits of the collection year and DDD/DDDD is the number identifying a mass)
+
+If a specific identfier has been assigned, append a comma followed by that identifier to the generic identifier. A representative example is ""ALH 83101,15"", where ""ALH 83101"" is the generic identifier and ""15"" is the specific identifier.
+
+Some notes on meteorite numbers:
+
+- Meteorites collected early on in ANSMET used a letter to separate the locality prefix from the specimen number. The letter was intended to signify different field seasons within a year. Those additional field seasons never materialized, but some meteorites from the early years of the program were originally numbered named using an ""A"" instead of a space. MBDB retains the original identifiers, but NASA's public documentation has standardized all meteorites numbers to use a space. In other words, ""ALHA76001"" in MBDB is the same as ""ALH 76001"" in NASA's documentation. We use the NASA identifiers but retain the original numbers in the Other Numbers grid.
+- MBDB includes the NASA meteorite number in the Abbrev. field. MBDB uses the Name field to provide the full name of the collection area. For example, for ALH 83101, MBDB uses ""Allan Hills 83101"" for the name ""ALH 83101"" for the abbreviation.
+
+Names are aligned with MBDB annually. Roughly 100 meteorites in the collection could not be matched to an entry in MBDB.
+",,
+ecatalogue,Meteorites,Meteorite Details,Synonym,- MetSynonym,The verbatim name of the meteorite if originally cataloged under a synonym,Required if meteorite was originally cataloged under a synonym,"For meteorites originally cataloged under a synonym, use this field to record the verbatim name. This field should not be used to record every synonym for a meteorite.",,
+ecatalogue,Meteorites,Meteorite Details,Meteorite Type,- MetMeteoriteType,The type of meteorite,Required,"The type should exactly match the Type field for the corresponding MBDB record. MBDB uses a different format format for meteorite type than NASA.
+
+A handful of specimens collected during ANSMET were determined to be terrestrial in origin. These specimens are assigned the type ""Terrestrial rock"".
+
+Meteorite types  are aligned with MBDB annually.",,
+ecatalogue,Meteorites,Meteorite Details,Record Number,- MetRecordNumber,No idea,Legacy,,,
+ecatalogue,Meteorites,Meteorite Details,Find/Fall,- MetFindFall,Whether the meteorite fall was observed,Required,"Usually ""Find"" or ""Fall"", but more recent meteorites sometimes included more specific information.
+
+Historically, meteorites are categorized as ""falls"" if they are witnessed falling and ""finds"" otherwise. These categories elide much of the uncertainy in assigning fall status. In Agee et al. (2015), the Meteorite Nomenclature Committee revised fall categorization for recent meteorite discoveries to better capture that uncertainty. The terms they settled on are included in the Allowed Values list. We plan implement that vocabulary but, as of 2022, none of the meteorites in the collection has been assigned to one of the new categories.
+
+Fall status is aligned with MBDB annually.","- Fall
+- Fall, confirmed
+- Fall, probable
+- Find
+- Find, possible fall
+- Find, doubtful fall
+",
+ecatalogue,Meteorites,Collection Details,Locality,- BioEventSiteRef,The collection locality and event,Required,Reference to Collection Events,,
+ecatalogue,Meteorites,Lot Description,Lot Description,- BioLiveSpecimen,A long-form description of the specimen ,Omit if no appropriate data is available,,,
+ecatalogue,Meteorites,Condition Determination,Condition Determination,- MetConditionDetermination,A description of the condition of the specimen,Omit if no appropriate data is available,,,
+ecollectionevents,Locality (1),Site Details,Record Classification,- LocRecordClassification,,Under evaluation,,,
+ecollectionevents,Locality (1),Site Details,Field/Sample Numbers,- ColSiteVisitNumbers_tab,,Under evaluation,,,
+ecollectionevents,Locality (1),Site Details,Site/Station Number,- LocSiteStationNumber,,Under evaluation,"Marine collection events, like dredges or dives, are usually assigned an identifier. Historically we've captured this information very generally (for example, ""Dredge 1"" or ""Station 1""). This is not very useful for discriminating between records. Instead, the recommended practice is to use the exact identifier assigned during the cruise. This is often the cruise number followed by the dredge or station number, and samples collected during an event often include the site/station number at the beginning of their field number.
+",,
+ecollectionevents,Locality (1),Site Details,Site Number Source,- LocSiteNumberSource,,Under evaluation,"The name of the authority that provided the station number. For cruises, this may be an oceanographic institute, like WHOI or Scripps.
+",,
+ecollectionevents,Locality (1),Site Details,Site Name,- LocSiteName_tab,,Under evaluation,,,
+ecollectionevents,Locality (1),Ocean,Ocean,- LocOcean,The name of an ocean,"Required for marine localities and ocean islands. Omit for large islands.
+","Ocean and sea boundaries are determined by the International Hydrographic Organization (IHO). Names can be resolved using coordinates, for example, using the `GeoNames ocean webservice <https://www.geonames.org/export/web-services.html#ocean>`_ or shapefiles provided by the `Marine Regions <https://www.marineregions.org/>`_ website run by the Flanders Marine Institute.
+
+The boundaries of the Arctic and Southern Oceans seem to vary seasonally. The Southern Ocean is not part of the official IHO ocean list but has been added to the IHO shapefile on the Marine Regions website.
+
+The generic Atlantic and Pacific Ocean names should be avoided when possible. Map them to either North or South if coordinates or other locality info allows. The north/south divisions generally follow the equator, with the exception of the Galapagos and Gilbert Islands, which cross the equator but are assigned to the South Pacific Ocean. Other features that cross the equator but are not addressed by IHO include:
+
+- **Halmahera** is assigned to the North Pacific Ocean because it is mostly north of the equator.
+- **Sulawesi** is assigned to the South Pacific Ocean because it is mostly south of the equator.
+- **Galapagos Rise** and **Galapagos Spreading Center** are assigned to the South Pacific Ocean by analogy to the Galapagos Islands.
+Large islands at the border between oceans cannot always be assigned to a specific ocean. For example, Sumatra sits at the border of the Indian and Pacific Oceans *and* straddles the equator.
+","- Arctic Ocean
+- Indian Ocean
+- North Atlantic Ocean
+- North Pacific Ocean
+- South Atlantic Ocean
+- South Pacific Ocean
+- Southern Ocean",
+ecollectionevents,Locality (1),Ocean,Sea/Gulf,- LocSeaGulf,"The name of one of the primary divisions of the oceans, like a sea, marginal sea, or gulf","Recommended for marine localities and ocean islands. Omit if locality does not appear in a named sea or if the sea name cannot be determined.
+","As with :ref:`Ocean` above, sea and gulf boundaries are determined by the IHO. Names in this field should exactly match an IHO name. See that entry for sources for more information about assigning ocean and sea names.
+",,"- Carribean Sea
+- Gulf of Mexico"
+ecollectionevents,Locality (1),Ocean,Bay/Sound,- LocBaySound,The name of any coastal body of water smaller than a sea or gulf,Omit if no appropriate data is available,,,
+ecollectionevents,Locality (1),Continent (Political),Continent,- LocContinent,The name of a continent,"Required for records representing terrestrial specimens. Recommended for marine localities on the continental shelf.
+","Use the `GeoNames country code list <https://www.geonames.org/countries/>`_ to map countries to continents. Mapping this way introduces some incongruities (for example, Hawaii maps to North America) but it beats making a series of individual decisions.
+","- Africa
+- Antarctica
+- Asia
+- Europe
+- North America
+- Oceania
+- South America",
+ecollectionevents,Locality (1),Continent (Political),Country,- LocCountry,"The name of a country. Includes both independent entities and dependent but self-governed entities.
+",Required for all terrestrial records,"Country names should use the English short name from the `ISO 3166 list of country codes <https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes>`_. The ISO list includes both sovereign states and entities, like Greenland, that are affiliated with another country but are largely self-governed. Puerto Rico falls into the latter category and should be given as a country (not a territory of the United States) in EMu.
+
+For a discussion of updating names as administrative boundaries change over time, see TKTK.
+
+**Known issues**
+
+The formal ISO names have not been fully adopted in EMu. For example, North Korea and South Korea are still in use despite not being the preferred form in the ISO list.",,
+ecollectionevents,Locality (1),Continent (Political),Province/State/Terrirtory,- LocProvinceStateTerritory,"The primary administrative division in a country, like a state in the United States or a province in Canada
+",Omit if no appropriate data is available,"Entities in this field must be first-order administrative divisions. The names of administrative divisions vary from country to country, sometimes in ways that may confuse data entry. For example, the state-level entities in the Bahamas are called districts and the county-level entities in the Phillipines are called provinces. GeoNames is a useful resource for figuring out what consistutes a first-order admin division.
+See :ref:`filling-in-gaps-in-the-administrative-hierarchy` for guidance on backfilling administrative divisions from more specific locality information.
+",,
+ecollectionevents,Locality (1),Continent (Political),District/County/Shire,- LocDistrictCountyShire,"The secondary administrative division in a country, like a county in the United States
+",Omit if no appropriate data is available,"Additional administrative divisions can be included in :ref:`Precise Locality`.
+See :ref:`filling-in-gaps-in-the-administrative-hierarchy` for guidance on backfilling administrative divisions from more specific locality information.
+",,
+ecollectionevents,Locality (1),Continent (Political),City/Town,- LocTownship,"The name of a populated place, like a city, town, or township",Omit if no appropriate data is available,"The name should be given in full, without abbreviations, unless the original documenation includes abbreviations of uncertain meaning.
+
+If both town and township are known, include the town, then a semicolon, then the township.
+
+Modifiers (in parentheses) may follow the city/town/township designation.
+",,
+ecollectionevents,Locality (1),Continent (Political),No Further Locality Data,- LocNoFurtherLocalityData,"Identifies simple locality records that do not include information on any tab except Locality (1) *except* georeferenced coordinates. This is to allow simple localities to be georeferenced while still making use of this field.
+",Leave unchecked if locality info appears on any other tab,,,
+ecollectionevents,Locality (1),Continent (Political),Precise Locality,- LocPreciseLocation,A brief description of the exact sampling location,Omit if no appropriate data is available,"The precise locality is usually entered as one or more sentence fragments. Full sentences are acceptable here, especially if quoting from original documentation, but try to be brief. When using fragments, separate each fragment with a semicolon, not a period, so the different parts can be parsed if needed.
+",,
+ecollectionevents,Locality (2),Island Details,Archipelago,- LocArchipelago,,Not used. See Island Grouping instead.,,,
+ecollectionevents,Locality (2),Island Details,Island Grouping,- LocIslandGrouping,A group of islands,Omit if no appropriate data is available,"Entries must be written out in full.
+A single island may belong to more than one island group. For example, Dominica is part of the Windward Islands, the Lesser Antilles, and the West Indies. You may include up to two groups using the following format: ""Smaller Group (Larger Group).""
+
+There are two island groups commonly referred to as the Windward Islands and the Leeward Islands. One is in the Caribbean and is part of the Lesser Antilles. The other is in the Pacific and is part of the Society Islands. Always specify the larger group when referring to either of these groups.
+
+Admin divisions may correspond to island groupings (for example, Hawaii). Include the island grouping even if it is its own admin division.
+",,"- Galapagos Islands
+- Windward Islands (Lesser Antilles)
+- Windward Islands (Society Islands)"
+ecollectionevents,Locality (2),Island Details,Island Name,- LocIslandName,The name of an island,Omit if locality is not on an island,"Entries must be written out in full.
+Include the word ""island"" only if it is typically used when referring to a given island. For example, enter ""Fernandina,"" not ""Fernandina Island.""
+
+Admin divisions may correspond to a single island (for example, Puerto Rico). Include the island name even if it is its own admin division.
+",,"- Fernandina
+- Tahiti"
+ecollectionevents,Locality (2),Mine Details,Mining District,- LocMiningDistrict,"The name of an area containing a group of mines. The mines in a single district are usually tapping the same geologic feature and extracting related ores.
+",Omit if no appropriate data is available,,,
+ecollectionevents,Locality (2),Mine Details,Mine Name,- LocMineName,The name of a mine or quarry,Omit if no appropriate data is available,,,
+ecollectionevents,Locality (2),Geomorphological Location,Geomorphological Location,- LocGeomorphologicalLocation,"The name of one or more geomorphological features
+",Omit if no appropriate data is available,A semicolon-delimited list of feature names,,"- Rocky Mountains
+- Lake Huron
+- Half-Mile Beach"
+ecollectionevents,Locality (2),Geologic Setting,Geologic Setting,- LocGeologicSetting,"The name of a geologic feature, including petrologic province, complex, zone within a complex, or genetic association from which a specimen was collected. ",Omit if no appropriate data is available,"Names of geologic settings must be writtern out in full.
+
+- **Geologic features**, like kimberlite pipes and plutons, should be recorded in Geologic Setting
+- **Stratigraphic units**, like groups, formations, and members, should be recorded in Catalog > Stratigraphy
+- **Topographic features**, like ridges and cordilleras, should be recorded in Geomorphological Location
+- **Volcanic features**, like volcanoes, volcanic fields, and calderas, should be recorded in the Volcano (1) > Volcano Details fields",,
+ecollectionevents,Locality (2),Collection Event Details,Collection Event Parent,- LocSiteParentRef,,Not used,,,
+ecollectionevents,Locality (2),Collection Event Details,Collection Event Owner,- LocSiteOwnerRef_tab,,Not used,,,
+ecollectionevents,Locality (2),Collection Event Details,Land Owner/Jurisdiction,- LocJurisdiction,,Not used,,,
+ecollectionevents,Volcano (1),Volcano Details,Volcano Number,- VolVolcanoNumber,A numeric identifier assigned to volcanoes active in the Holocene or Pleistocene in the GVP database,"Required if volcano name is populated. For volcanoes older than the Pleistocene, use ""--"".",A six-digit number corresponding to a volcano in the GVP database. Names and numbers are checked for consistency annually by the data manager.,,
+ecollectionevents,Volcano (1),Volcano Details,Volcano Name,- VolVolcanoName,The name of a volcano from the GVP database that produced the sampled material ,Required if volcano number is populated.,"Name should exactly match the format used on the GVP website. If the collection materials use a synonym, record the preferred name instead.
+
+The Holocene and Pleistocene volcano lists provded by GVP use an inverted format that omits diacritics that appear on the website. For example, ""Île de la Possession"" is rendered as ""Possession, Ile de la"". Use ""Île de la Possession"". Refer to the GVP website to verify diacritics.
+
+GVP omits ""Mount""/""Mt"" from volcano names, so use ""Rainier"" (not ""Mt. Rainier"") and ""St. Helens"" (not ""Mt. St. Helens""). This practice is not consistent across languages, however. For example, Japanese volcano names in GVP include *-san* and *-yama* suffixes that serve a similar purpose.
+
+GVP includes large features, like volcanic fields and calderas, that may include named vents that are themselves referred to as volcanoes in collection materials. Parícutin, for example, is classified by GVP as a subfeature of Michoacán-Guanajuato. Subfeatures should be recorded in the Subfeature field.",,"- Arenal
+- Michoacán-Guanajuato
+- St. Helens"
+ecollectionevents,Volcano (1),Volcano Details,Subfeature,- VolSubfeature,"The name of a cone, vent, or other volcanic feature from the GVP database that produced the sampled material",Omit if no appropriate data is available,"Name should exactly match a volcanic feature from the GVP database. Note that some subfeatures defined by GVP are well-known stratovolcanoes in their own right. For example, Sakurajima is classified as a feature of the Aira caldera.",,"- Parícutin
+- Sakurajima"
+ecollectionevents,Volcano (1),Volcano Details,Holocene,- VolHolocene,Whether a volcano has erupted in the Holocene,Populated from GVP at least annually by data manager for records with volcano numbers,,"- Yes
+- No
+- Unknown",
+ecollectionevents,Volcano (1),Volcano Details,Tectonic Setting,- VolTectonicSetting_tab,"The tectonic environment in which a volcano formed, including crustal thickness, according to GVP",Populated from GVP at least annually by data manager for records with volcano numbers,"Usually includes two values, one for the setting and one for the crustal thickness.","- Oceanic crust (<15 km)
+- Intermedidate crust (15-25 km)
+- Continental crust (>25 km)
+- Crustal thickness unknown
+- Intraplate
+- Rift zone
+- Subduction zone
+- Unknown",
+ecollectionevents,Volcano (1),Eruption Details,Eruption ID,- VolEruptionID,A numeric identifier assigned to an eruption in the GVP database,Omit if no appropriate data is available,A five-digit number corresponding to an eruption in the GVP database,,
+ecollectionevents,Volcano (1),Eruption Details,Eruption Date From,"- VolEruptionDateFrom
+- VolEruptionDateTo",The start and end dates of the volcanic eruption as recorded by GVP,Populated from GVP at least annually by data manager for records with eruption IDs,,,
+ecollectionevents,Volcano (1),Eruption Details,Eruption Notes,- VolEruptionNotes,The verbatim eruption date or date range provided by the collector,Required if the eruption ID or date fields are populated,"Use a structured note format for this field. Allowed keys include ""Verbatim Eruption Date"", ""Eruption Kind"", and ""Eruption Details"".",,
+ecollectionevents,Exp/Method,Expedition Details,Expedition Name,- ExpExpeditionName,"The name of the expedition or field program during which a collecting event took place. Names are typically assigned by the sponsor of an expedition and should use their exact format when possible.
+
+For cruises that are not part of a larger expedition, it can be useful to provide a long-form cruise identifier in this field. For example, leg 2 of cruise ABCD of the Enterprise can be entered as ""Enterprise Cruise ABCD (Leg 2)"". This allows the cataloger to include a more readable version of the cruise identifier.
+",Omit if no appropriate data is available,,,"- 40th Parallel Expedition
+- CERES Expedition (CERE)"
+ecollectionevents,Exp/Method,Expedition Details,Vessel Name,- AquVesselName,The name of the ship from which a sample was collected.,Omit if no appropriate data is available,"If a ship-supported submersible (like Alvin) was used, include both the ship and submersible, separated by a semicolon (""Atlantis II; Alvin""). Omit the prefix ""R/V"" when entering a ship name in EMu.
+",,"- Atlantis II
+- James B. Gilliss
+- Thomas Washington"
+ecollectionevents,Exp/Method,Expedition Details,Cruise Number,- AquCruiseNumber,"The identifier assigned by the organization that operates a vessel to a research cruise, that is, a continuous, port-to-port voyage conducted to make observations or collect specimens. The terms ""cruise"" and ""leg"" are interchangeable for the purposes of this field.
+",Omit if no appropriate data is available,"Typically, the identifier is either a number or an alphanumeric code. Cruise number formats vary widely between or even within organizations, with different abbreviations, delimiters, or zero-padding conventions being used in different documents. There are no hard rules for formatting a cruise number, but a good practice is to search for a vessel name to see how cruise numbers for that vessel have been recorded previously.
+
+Cruise numbers should include the leg if known, and legs should not be recorded elsewhere (for example, in notes). Many organizations already incorporate the leg into their cruise identifiers, but if not, it is acceptable to append the leg to the cruise number. For example, leg 2 of cruise ABCD can be entered as ""ABCD-2"".
+",,
+ecollectionevents,Exp/Method,Expedition Details,Start/Completion Date,"- ExpStartDate
+- ExpCompletionDate",The start and end dates for an expedition or cruise,Omit if no appropriate data is available,"EMu depicts dates using the following formats:
+
+- Year, month, and day: 1 Jan 1970
+- Year and month: Jan 1970
+- Year: 1970
+
+It accepts a variety of formats in addition to the display formats above, including but not limited to:
+- January 1, 1970
+- Jan 1, 1970
+- 1970-01-01
+- 1970-01
+- 0101970
+
+Use the most specific date format possible.
+
+If only a single date is available, include that date in both the start and completion date fields. For example, if a cruise took place in Jan 1970 but the exact start and end dates are not known, enter ""Jan 1970"" in both fields. If a cruise took place in 1970 and the exact dates are not known, enter ""1970"" in both fields.
+",,
+ecollectionevents,Exp/Method,Expedition Details,Project Number,- ExpProjectNumber,,Not used,,,
+ecollectionevents,Exp/Method,Collection Method,Collection Method,- ColCollectionMethod,The device used to collect a specimen,"Required for marine specimens and terrestrial drill cores. Omit otherwise. Specimens collected during routine field work do not need to indicate a collection method.
+","The format of this field is under review. Historically, we have only captured three collection methods: core (sometimes given as drill core), dredge, and submersible. NOAA's IMLGS includes a more detailed vocabulary that may be worth a look.
+",,"- Core
+- Dredge
+- Submersible (HOV)
+- Submersible (ROV)"
+ecollectionevents,Exp/Method,Total Surface Area,Area,- MetTotalSurfaceAreaValue,,Not used,,,
+ecollectionevents,Exp/Method,Total Surface Area,Unit,- MetTotalSurfaceAreaUnit,,Not used,,,
+ecollectionevents,Depth/Elev,Depth Details,Depth From,"- AquDepthFromMet
+- AquDepthFromFt
+- AquDepthFromFath
+- AquDepthFromModifier",,Not used,,,
+ecollectionevents,Depth/Elev,Depth Details,Depth To,"- AquDepthToMet
+- AquDepthToFt
+- AquDepthToFath
+- AquDepthToModifier",,Not used,,,
+ecollectionevents,Depth/Elev,Depth Details,Depth Determination,- AquDepthDetermination,,Not used,,,
+ecollectionevents,Depth/Elev,Depth Details,Text Depth,- AquVerbatimDepth,,Not used,,,
+ecollectionevents,Depth/Elev,Depth Details,Bottom Depth From,"- AquBottomDepthFromMet
+- AquBottomDepthFromFt
+- AquBottomDepthFromFath
+- AquBottomDepthFromModifier","The depth of the seafloor at which a collection event began
+",Omit for terrestrial samples and aquatic samples where the collection depth is not known.,"For dredges and trawls, Depth From is the depth at the point where the collecting event started. In earlier databases, this was referred to as ""on bottom"".
+
+Each of the columns in this group represents a specific unit: meters, feet, and fathoms. When adding bottom depth, you only need to fill out one of the three columns. The other two will be calculated automatically by EMu. Original values display as black and calculated values as red in the client.
+
+If only one depth is provided, use that depth in both Depth From and Depth To. Always provide the verbatim depth, including units, in Text Bottom Depth.
+
+The modifier field is used to indicate uncertainty in depth measurements. Use ""approx."" to indicate uncertainty. The exact uncertainty can be expressed in Text Bottom Depth.",,
+ecollectionevents,Depth/Elev,Depth Details,Bottom Depth To,"- AquBottomDepthToMet
+- AquBottomDepthToFt
+- AquBottomDepthToFath
+- AquBottomDepthToModifier","The depth of the seafloor at which a collection event ended 
+",Omit for terrestrial samples and aquatic samples where the collection depth is not known.," For dredges and trawls, Depth To is the depth at the point where the collecting event ends. In earlier databases, this was referred to as ""off bottom"".
+
+Each of the columns in this group represents a specific unit: meters, feet, and fathoms. When adding bottom depth, you only need to fill out one of the three columns. The other two will be calculated automatically by EMu. Original values display as black and calculated values as red in the client.
+
+If only one depth is provided, use that depth in both Depth From and Depth To. Always provide the verbatim depth, including units, in Text Bottom Depth.
+
+The modifier field is used to indicate uncertainty in depth measurements. Use ""approx."" to indicate uncertainty. The exact uncertainty can be expressed in Text Bottom Depth.",,
+ecollectionevents,Depth/Elev,Depth Details,Bottom Depth Determination,- AquBottomDepthDetermination,The method by which the bottom depth was measured,Omit if no appropriate data is available,,,
+ecollectionevents,Depth/Elev,Depth Details,Text Bottom Depth,- AquVerbatimBottomDepth,"A text string with the verbatim depth information, including units and uncertainy, if any.",Required if depth info is populated,,,"- 1000-1200 m
+- 72 fathoms
+- 125.5 Â± 0.5 ft"
+ecollectionevents,Depth/Elev,Depth Details,Source Of Sample,- DepSourceOfSample,"The part of the water column from which the specimen was collected. For geological specimens, this should always be Bottom.",Required when depth info is populated,,- Bottom,
+ecollectionevents,Depth/Elev,Elevation (Relative),Elevation From,"- TerElevationFromMet
+- TerElevationFromFt
+- TerElevationFromModifier",The elevation at which a collection event began,Omit if no appropriate data is available,"Each of the columns in this group represents a specific unit: meters and feet. When adding an elevation, you only need to fill out one of column. The other unit will be calculated automatically by EMu. Original values display as black and calculated values as red in the client.
+
+If only one elevation is provided, use that depth in both From and To. Always provide the verbatim elevation, including units, in Text.
+
+The modifier field is used to indicate uncertainty in elevation measurements. Use ""approx."" to indicate uncertainty. The exact uncertainty can be expressed in Text.",,
+ecollectionevents,Depth/Elev,Elevation (Relative),Elevation To,"- TerElevationToMet
+- TerElevationToFt
+- TerElevationToModifier","The elevation at which a collection event ended
+",Omit if no appropriate data is available,"Each of the columns in this group represents a specific unit: meters and feet. When adding an elevation, you only need to fill out one of column. The other unit will be calculated automatically by EMu. Original values display as black and calculated values as red in the client.
+
+If only one elevation is provided, use that depth in both From and To. Always provide the verbatim elevation, including units, in Text.
+
+The modifier field is used to indicate uncertainty in elevation measurements. Use ""approx."" to indicate uncertainty. The exact uncertainty can be expressed in Text.",,
+ecollectionevents,Depth/Elev,Elevation (Relative),Elevation Determination,- TerElevationDetermination,The method by which the elevation was measured,Omit if no appropriate data is available,,,
+ecollectionevents,Depth/Elev,Elevation (Relative),Elevation Text,- TerVerbatimElevation,"A text string with the verbatim elevation information, including units and uncertainy, if any.",Required if elevation info is populated,,,
+elocations,Location,Identifiers,Location Code,- LocLocationCode,"A code used to identify a location, usually an exhibit case",Omit if no appropriate data is available,,"- NHB
+- MSC
+- Udvar Hazy",
+elocations,Location,Identifiers,Barcode,- LocBarcode,,Not used,,,
+elocations,Location,Location Type,Location/Holder,- LocLocationType,Type of storage location,Required,,,
+elocations,Location,Storage,Unit Type,- LocStorageType,Type of storage unit,Required,,,"- Desiccant cabinet
+- Exhibit
+- Quarter unit
+- Shelf"
+elocations,Location,Location Hierarchy,Level 1,- LocLevel1,The name or abbreviation for a building,Required,,,"- MSC
+- NHB
+- Udvar Hazy"
+elocations,Location,Location Hierarchy,Level 2,- LocLevel2,The room number or exhibit name,Required,"Usually the room number. Mineralogy includes a parenthetical with a short text description that identifies the location (like ""Blue Room"" or ""Reference Collection"").",,"- E431C (Blue Room)
+- E432A
+- E433
+- GGM"
+elocations,Location,Location Hierarchy,Level 3,- LocLevel3,"For collections, the identifier of a cabinet, case, or other storage unit. For exhibits, a description of where in the exhibit the case is found.",Required,"For collections locations, zero-pad the cabinet/case number to three characters.",,"- 001
+- 010
+- 100"
+elocations,Location,Location Hierarchy,Level 4,- LocLevel4,"For collections, the identifier of a drawer, shelf, or other storage sub-unit.  For exhibits, a description of where in the exhibit the case is found.",Omit if no appropriate data is available,"For collections locations, zero-pad the drawer/shelf identifier to two characters.",,"- 01
+- 10"
+elocations,Location,Location Hierarchy,Level 5,- LocLevel5,"For exhibits, a description of where in the exhibit the case is found.",Omit if no appropriate data is available,,,
+elocations,Location,Location Hierarchy,Level 6,- LocLevel6,"For exhibits, the case identifier",Omit if no appropriate data is available,,,"- MC-009
+- MC-010"
+elocations,Location,Location Hierarchy,Level 7,- LocLevel7,,Not used,,,
+elocations,Location,Location Hierarchy,Level 8,- LocLevel8,,Not used,,,
+enmnhtransactions,Tasks,Task Information,Description,- TasDescription_tab,A description of the task to be performed,Required when task is created,"**Provisional guidance**
+
+Description should start with an upper-case key phrase in square brackets that describes the type of task. Additional information can follow if needed.
+
+Bracketed key phrases under consideration include:
+
+- [CATALOGING PENDING] describes an acquisition that needs to be catalogued and reconciled. This is used to identify records representing the backlog.
+- [DATA PENDING] describes an outgoing loan for which no data has been returned
+- [ACTION PENDING] describes any other action that must be completed at a later date
+
+Key phrases would be used for searching/reporting and must be entered exactly.",,"- [CATALOGING PENDING] Collection of roughly 400 object stored in the NW corner of E433
+- [DATA PENDING]
+- [ACTION PENDING] Close if recipient can not locate samples within one year"
+enmnhtransactions,Tasks,Task Information,Assigned To,- TasPersonAssignedToRef_nesttab,The position of the person responsible for completing the task,Required when task is created,Reference to Parties. Best practice is to link to the position record in Parties for the appropriate collection manager,,
+enmnhtransactions,Tasks,Task Information,Assigned By,- TasTaskAssignerRef_tab,The person who assigned the task,Required when task is created,Reference to Parties,,
+enmnhtransactions,Tasks,Task Information,Result,- TasResults_tab,The result of the task once completed,Required when task is completed,"Provide a brief description of the result of the task, including metrics if applicable (for example, the number of catalog records created). If the task will not be completed (for example, if a loan recipient locates missing specimens before a transaction is scheduled to be closed unbalanced), note why the task was not performed.",,
+enmnhtransactions,Tasks,Commencement,Start Date,- TasCommencementDate0,The date on which to start the task,Required for time-dependent tasks (like closing a loan after a certain amount of time),,,
+enmnhtransactions,Tasks,Commencement,Notify On,- TasStartNotifyDate0,The date on which to notify the contacts in the associated Notify grid,Required for time-dependent tasks (like closing a loan after a certain amount of time),,,
+enmnhtransactions,Tasks,Commencement,Notify,- TasCommenceNotifyRef_nesttab,List of positions to notify when the task is due to start,Required for time-dependent tasks (like closing a loan after a certain amount of time),Reference to Parties. Include the Mineral Sciences registrar at a minimum. Consider also including the appropriate collection manager.,,
+enmnhtransactions,Tasks,Completion,Completed,- TasCompleted_tab,Whether the task has been completed,Required when task is created,"Yes if the task has been completed, No otherwise.
+
+Note that you should use Yes even if the assigned action did not need to be completed after all (for example, if a loan recipient locates missing specimens before a transaction is scheduled to be closed unbalanced).",,
+enmnhtransactions,Tasks,Completion,Hours Taken,- TasTimeTakenOnTask_tab,The time taken to completed the task,Not used,,,
+enmnhtransactions,Tasks,Completion,End Date,- TasCompletionDate0,The date on which the task was completed,Required when the task is completed,,,
+enmnhtransactions,Tasks,Completion,Notify On,- TasEndNotifyDate0,The date on which to notify the contacts in the associated Notify grid that the task was completed,Not used,,,
+enmnhtransactions,Tasks,Completion,Notify,- TasCompletionNotifyRef_nesttab,List of positions to notify when the task is complete,Not used,,,
+ecatalogue,Petrology (1),Object Data from time of Collecting Event,Event/Site,- BioEventSiteRef,The collection locality and event,Required,Reference to Collection Events,,
+ecatalogue,Petrology (1),Object Data from time of Collecting Event,Collectors,- BioParticipantRef_tab,List of collector names,Populated automatically from the associated Collections Event record,,,
+ecatalogue,Petrology (1),Volcano Attributes,Lava Source,- PetLavaSource,The name of the volcanic feature,Deprecated. Use the Subfeature field instead.,,,
+ecatalogue,Petrology (1),Volcano Attributes,Flow/Tephra,- PetFlowTephra,The name of the flow or tephra unit,Deprecate? Conceptual overlap with stratigraphy table.,,,
+ecatalogue,Petrology (1),Preparation Details,Preparation,"- ZooPreparation_tab
+",The type of the preparation,Omit if no appropriate data is available,"The preparation grid is used to store information about preparations dervied from and stored in the same location as the primary specimen. Preparations stored in a different location should have their own EMu record that links back to the primary specimen using the Relationships tab.
+
+Preparation type should be selected from the list of allowed values provided here. Please contact the data manager if additional values are required.
+
+Historically, some collection methods (usually dredge or core) were included in this field. This data should go in *Collection Events > Exp/Method > Collection method* instead.","- Grain mount
+- Powder
+- Thick section
+- Thin section",
+ecatalogue,Petrology (1),Preparation Details,Prepared By,- ZooPreparedByRef_tab,The person who created the preparation,Omit if no appropriate data is available,Reference to Parties,,
+ecatalogue,Petrology (1),Preparation Details,Preparation Count,- ZooPreparationCount_tab,The number of preparations of this type,Required for each row where Preparation is populated,,,
+ecatalogue,Petrology (1),Preparation Details,Preparation Remarks,- ZooPreparationRemarks_tab,Comments about the preparation,Omit if no appropriate data is available,,,
+ecatalogue,Petrology (1),Lot Description,Lot Description,- BioLiveSpecimen,A long-form description of the specimen ,Omit if no appropriate data is available,,,
+ecatalogue,Gems/Minerals,Object Data from time of Collecting Event,Event/Site,- BioEventSiteRef,The collection locality and event,Required,Reference to Collection Events,,
+ecatalogue,Gems/Minerals,Object Data from time of Collecting Event,Collectors,- BioParticipantRef_tab,List of collector names,Populated automatically from the associated Collections Event record,,,
+ecatalogue,Gems/Minerals,Object Data from time of Collecting Event,Primary coll number,- BioPrimaryCollNumber,,Not used,,,
+ecatalogue,Gems/Minerals,Physical Details,Jewelry Type,- MinJeweleryType,The type of jewelry,Omit if no appropriate data is available,,,"- Bracelet
+- Brooch
+- Necklace
+- Ring"
+ecatalogue,Gems/Minerals,Physical Details,Fashion/Cut,- MinCut,The cut of the primary gem,Omit if no appropriate data is available,,,"- Cushion
+- Fancy
+- Step"
+ecatalogue,Gems/Minerals,Physical Details,Color,- MinColor_tab,The color of the primary gem,Omit if no appropriate data is available,,,"- Blue
+- Green
+- Red
+- Yellow"
+ecatalogue,Gems/Minerals,Physical Details,Cut By,- MinCutByRef,The person who cut a gem,Omit if no appropriate data is available,Reference to Parties,,
+ecatalogue,Gems/Minerals,Physical Details,Maker,- MinMakerRef,The person or organization that fabricated a piece of jewelry or synthetic specimen,Omit if no appropriate data is available,Reference to Parties,,
+ecatalogue,Gems/Minerals,Physical Details,Microprobed,- MinMicroprobed,,Not used,,,
+ecatalogue,Gems/Minerals,Physical Details,X-Rayed,- MinXRayed,Whether or not a specimen has been X-rayed,Omit if no appropriate data is available,,,
+ecatalogue,Gems/Minerals,Physical Details,Synthetic,- MinSynthetic,Whether or not a specimen is synthetic,Omit if no appropriate data is available,"Synthetic specimens often include information about where and how the specimen was fabricated. This information is beyond the scope of this field and should be recorded as follows:
+
+- If the maker is known, record that information in Maker
+- If additional details about the fabrication process are known, include them in the lot description",- Synthetic,
+ecatalogue,Gems/Minerals,Physical Details,Chemical Modifier,- MinChemicalModifier,"A modifier applied to the primary mineral type. In practice, modifiers are often included in Taxon instead.",Omit if no appropriate data is available,,,"- Ferroan
+- Manganoan
+- Palladian"
+ecatalogue,Gems/Minerals,Gem/Jewelry Name,Gem/Jewelry Name,- MinName,"The name of a gem, piece of jewelry, or mineral specimen",Omit if no appropriate data is available,,,"- Hope Diamond
+- Jolly Green Giant"
+ecatalogue,Gems/Minerals,Lot Description,Lot Description,- BioLiveSpecimen,A long-form description of the specimen ,Omit if no appropriate data is available,,,
+ecatalogue,Gems/Minerals,Publication Details,Described/Figured,- MinDescribedFigured_tab,Whether a specimen has been described or figured,Omit if no appropriate data is available,"If a specimen has been described in a publication or manuscript, include the full reference to that document in the Bibliography tab. Use publication type ""Citation"" to record specific information about the description, including page or figure numbers.","- Described
+- Figured",
+ecatalogue,Gems/Minerals,Composition,Chemical Analysis,- PetChemicalAnalysisRef_tab,,Not used,,,
+ecatalogue,Relationship,Object Details,Object ID,- RelNhURI_tab,The identifier of the related object,Required for each populated row,"This is the only identifier that appears in the summary grid and must be populated manually for each row.
+
+The museum recommends using a persistent URI to represent the related object. We adopt that standard for objects not held by the department but for Mineral Sciences specimens use the catalog number to make the grid more usable.",,
+ecatalogue,Relationship,Object Details,ID Type,- RelNhIDType_tab,The type of identifier used to represent the related object,Required for each populated row,,,"- Catalog Number
+- EZID
+- IGSN"
+ecatalogue,Relationship,Object Details,Object,- RelObjectsRef_tab,The catalog record of the related object if held in the same department,Required for each populated row when the related object is held by the department,Reference to Catalog. The linked record will automatically be updated to include the relationship.,,
+ecatalogue,Relationship,Object Details,Counts,- RelNhCount_tab,,Not used,,,
+ecatalogue,Relationship,Object Details,Relationship,- RelRelationship_tab,The type of relationship,Required for each populated row,"Relationships currently in use include:
+
+- **Parent/child** designates subsampling relationships
+- **Same as/Same as** designates specimens with different catalog records that are fragments of the same object
+- **Whole/Part**: Deprecated. Use parent/child instead.
+
+When the related object has a linked record in EMu, the value for Relationship will be set to the unused value in the pair. ","- Child
+- Parent
+- Same as",
+ecatalogue,Relationship,Object Details,Date,- RelNhDate0,,Not used,,,
+ecatalogue,Relationship,Object Details,Source,- RelNhAccordingToRef_tab,The source documenting the relationship,Omit if no appropriate data is available,Reference to Parties,,
+ecatalogue,Relationship,Object Details,Held By,- RelNhRepositoryRef_tab,The repository that holds the related object,Required for each populated row,Reference to Parties,,
+ecatalogue,Relationship,Object Details,Inter.,- RelNhInteraction_tab,,Not used,,,
+ecatalogue,Relationship,Object Details,Site,- RelNhSiteInHost_tab,,Not used,,,
+ecatalogue,Relationship,Object Details,Event Type,- RelNhEventType_tab,,Not used,,,
+ecatalogue,Relationship,Object Details,Identified By,- RelNhIdentifyByRef_tab,,Not used,,,
+ecatalogue,Relationship,Object Details,Notes,- RelRemarks_tab,,Omit if no appropriate data is available,Free text,,
+ecatalogue,Relationship,Taxon Identification,Taxon Identification,"- RelNhKingdom_tab
+- RelNhPhylum_tab
+- RelNhClass_tab
+- RelNhOrder_tab
+- RelNhFamily_tab
+- RelNhGenus_tab
+- RelNhSpecies_tab
+- RelNhSubspecies_tab
+- RelNhVariety_tab",Taxonomy of the related object,Not used,,,
