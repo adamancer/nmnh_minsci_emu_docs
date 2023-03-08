@@ -7,4 +7,5 @@ Mineral Sciences Data Guidelines
 
     Guidelines for using EMu <guidelines.rst>
     Guidelines for georeferencing <georeferencing.rst>
+    Guidelines for stratigraphy <stratigraphy.rst>
     Field usage <modules.rst>

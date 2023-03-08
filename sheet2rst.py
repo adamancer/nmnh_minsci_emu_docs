@@ -27,12 +27,17 @@ def rewrap_rst(path):
                 units[-1].append(line)
         for unit in units:
             if unit:
+                # Tables
+                if re.match(r"[+|].*?[+|]$", unit[0]):
+                    unit = wrap_table("\n".join(unit)) + "\n"
+                    unit = unit.replace(" ", "<NBSP>")
                 # Headers
-                if not unit[-1].strip("#*-"):
+                elif not unit[-1].strip("#*-="):
                     unit = "\n".join(unit) + "\n"
                 # Labels
                 elif unit[0].startswith(".. _"):
                     unit = "\n".join(unit) + "\n"
+                    is_block = False
                 # Code blocks
                 elif unit[0].startswith(".. "):
                     unit = "\n".join(unit) + "\n"
@@ -79,7 +84,6 @@ def write_metadata(metadata, module):
 
     cols = []
     for field in metadata["fields"]:
-
         field_info = SCHEMA.get_field_info(module, field)
 
         col = {}
@@ -223,13 +227,82 @@ def wrap_list_item(val, width=72, marker=None):
         marker = get_marker(val)
     marker = marker.rstrip() + " "
     indent = re.match(r" *", val).group()
-    val = re.sub(f" *{re.escape(marker)} *", "", val)
+    # Normalize spaces
+    val = re.sub(f"^ *{re.escape(marker)} *", "", val)
     return textwrap.fill(
         val,
         width,
         initial_indent=indent + marker,
         subsequent_indent=indent + " " * len(marker),
     )
+
+
+def wrap_table(table, one_line_per_row=False, max_table_width=72, max_width="min"):
+    """Wraps a table"""
+    rows = []
+    row = []
+    for i, line in enumerate(table.splitlines()):
+        if line.strip("|+-= "):
+            delim = line[0]
+            line = line[1:-1].strip()
+            for i, cell in enumerate([s.strip() for s in line.split(delim)]):
+                try:
+                    row[i] += " " + cell
+                except IndexError:
+                    row.append(cell)
+            if one_line_per_row:
+                rows.append(row)
+                row = []
+        elif row and not one_line_per_row:
+            rows.append(row)
+            row = []
+    if row:
+        rows.append(row)
+
+    cols = {}
+    for i, row in enumerate(rows):
+        for j, cell in enumerate(row):
+            if max_width == "min":
+                lines = textwrap.wrap(cell, 1, break_long_words=False)
+                if lines:
+                    width = max((len(s) for s in lines))
+                    cols.setdefault(j, []).append(width)
+            else:
+                cols.setdefault(j, []).append(len(cell))
+
+    widths = {k: max(v) + 2 for k, v in cols.items()}
+
+    keys = list(widths)
+    while sum(widths.values()) + 2 < max_table_width:
+        widths[keys.pop()] += 1
+        if not keys:
+            keys = list(widths)
+
+    sep = "+" + "+".join(["-" * w for w in widths.values()]) + "+"
+    tab = [sep]
+    for i, row in enumerate(rows):
+        formatted = []
+        for j, cell in enumerate(row):
+            wrapped = textwrap.wrap(
+                cell,
+                widths[j] - 1,
+                initial_indent=" ",
+                subsequent_indent=" ",
+                break_long_words=False,
+            )
+            formatted.append([f"{s.ljust(widths[j])}" for s in wrapped])
+        lines = []
+        while any(formatted):
+            cells = [
+                r.pop(0) if r else " " * widths[j] for j, r in enumerate(formatted)
+            ]
+            tab.append("|" + "|".join(cells) + "|")
+        if i:
+            tab.append(sep)
+        else:
+            tab.append(sep.replace("-", "="))
+
+    return "\n".join(tab)
 
 
 def is_list_item(val):
@@ -261,7 +334,8 @@ def clean_text(val):
             + marker
             + re.sub(" +", " ", line[len(whitespace) + len(marker) :])
         )
-    return "\n".join(clean) + re.search("\s*$", val).group()
+    text = "\n".join(clean) + re.search("\s*$", val).group()
+    return text.replace("<NBSP>", " ")
 
 
 SCHEMA = EMuSchema()
@@ -271,7 +345,6 @@ FIELD_PATH = "nmnh_minsci_emu_field_definitions.csv"
 TAB_PATH = "nmnh_minsci_emu_tab_definitions.csv"
 
 if __name__ == "__main__":
-
     # Read definitions
     try:
         fields = pd.read_excel(EXCEL_PATH, "fields").fillna("")
@@ -293,7 +366,6 @@ if __name__ == "__main__":
 
     toc = {}
     for (module, tab_name), tab in fields.groupby(["module", "tab"], sort=False):
-
         output = []
 
         # Add page header
@@ -307,9 +379,7 @@ if __name__ == "__main__":
         output.append(wrap_text(tabs[(module, tab_name)]))
 
         for group, fields in tab.groupby("group", sort=False):
-
             for _, row in fields.iterrows():
-
                 # Convert row to dict
                 row = row.to_dict()
 
@@ -402,10 +472,15 @@ content = h1("Mineral Sciences Data Guidelines")
 content.extend([".. toctree::", "   :maxdepth: 2", ""])
 content.append(f"    Guidelines for using EMu <guidelines.rst>")
 content.append(f"    Guidelines for georeferencing <georeferencing.rst>")
+content.append(f"    Guidelines for stratigraphy <stratigraphy.rst>")
 content.append(f"    Field usage <modules.rst>")
 with open("docs/index.rst", "w") as f:
     f.write("\n".join(content))
 
 # Clean up manual reST files
-rewrap_rst("docs/guidelines.rst")
-rewrap_rst("docs/georeferencing.rst")
+for path in (
+    "docs/guidelines.rst",
+    "docs/georeferencing.rst",
+    "docs/stratigraphy.rst",
+):
+    rewrap_rst(path)
