@@ -206,3 +206,75 @@ individual requests. Mineral Sciences uses a ticketing system to track
 requests. When a request is received, the data manager creates a ticket,
 which automatically generates a list of tasks that must be completed as
 the request is processed and filled.
+
+**********************
+Archiving scanned PDFs
+**********************
+
+This section provides instructions for setting up and using the PDF
+archiving workflow for scanned documents. A properly archived document
+should:
+
+* Include a descriptive title
+* Include searchable text
+* Be saved as PDF/A-1b
+
+Setup
+-----
+
+These steps import a Foxit action that OCRs each PDF and saves it as
+PDF/A-1b. They only need to be performed once per computer/login.
+
+#. Open Foxit PDF Editor
+#. Click File in the upper left corner
+#. Click Action Wizard in the left sidebar
+#. Click Manage Actions under the Action Wizard header
+#. Click the Manage Icon under the Manage Actions header
+#. Click the Import button on the right side of the Manage Actions
+   window
+#. Navigate to the script directory
+#. Click “OR PDF Finalizer.sequ”
+#. Click Open
+
+Preparing documents
+-------------------
+
+Each document requires a title. To assign a title:
+
+#. Open Foxit PDF Editor
+#. Click File in the upper left corner
+#. Click Properties at the top of the left sidebar
+#. Click the Title field under the Description header
+#. Add a descriptive title
+
+Run the OR PDF Finalizer action:
+
+#. Open Foxit PDF Editor
+#. Click File in the upper left corner
+#. Click Action Wizard in the left sidebar
+#. Click Run Action under the Action Wizard header
+#. Click the OR PDF Finalizer action under the Run Action header
+#. Click the Import button on the right side of the Manage Actions
+   window
+#. You should now be able to see a Run Action sidebar in the document
+   view
+#. In the Run Action sidebar, click Add Folder
+#. Select the folder containing the PDFs
+#. Click the blue start button
+
+**Tip:** The action runs on all files in the selected directory,
+including files nested in subdirectories. For best results, organize all
+PDFs in a single directory that does not include any other files. This
+will prevent Foxit from converting any images it encounter to PDF.
+
+Accessibility considerations
+----------------------------
+
+PDFs should be made accessible to allow them to reach the broadest
+possible audience and to comply with federal law. However, accessibility
+remediation is labor-intensive and we are currently unable to remediate
+all documents. Currently:
+
+* Scanned documents are not remediated
+* Born-digital documents must be submitted to the departmental data
+  manager for review
