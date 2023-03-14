@@ -187,7 +187,7 @@ Guidelines for specific types of data
 IGSN
 ====
 
-The `IGSN < http://www.geosamples.org/useigsn>`_ is a unique, persistent
+The `IGSN <http://www.geosamples.org/useigsn>`_ is a unique, persistent
 identifier used to unambiguously identify a sample. **It is very
 important to include the IGSN for all samples that have one.** Learn
 more about IGSNs at the [System for Earth Sample Registration].
@@ -232,9 +232,8 @@ Classification
     * Rock names and definitions: `BGS Rock Classification
       <http://www.bgs.ac.uk/bgsrcs/>`_
 
-* + Pyroclastic classifications: `IUGS Pyroclastic Classification
-  <http://www.geol.lsu.edu/henry/Geology3041/lectures/02I
-  gneousClassify/IUGS-IgneousClassFlowChart.htm>`_
+* Pyroclastic classifications: `IUGS Pyroclastic Classification
+  <http://www.geol.lsu.edu/henry/Geology3041/lectures/02IgneousClassify/IUGS-IgneousClassFlowChart.htm>`_
 * Petrology specimens should almost always have a rock name as the first
   term. Major minerals are sometimes included in the rock name (e.g.,
   Olivine-basalt). List minor minerals after the primary name using a

@@ -197,12 +197,24 @@ def label(*args):
     return [f".. _{'-'.join([slug(a).replace('_', '-') for a in args if a])}:", ""]
 
 
-def wrap_text(text, width=72):
+def fix_links(val, width):
+    repl = {}
+    for i, link in enumerate(re.findall("<http.*?>", val, flags=re.DOTALL)):
+        clean = link.replace("   ", "")
+        if len(clean) > width:
+            placeholder = f"<{str(i).zfill(len(clean) - 2)}>"
+            repl[placeholder] = clean
+            val = val.replace(link, placeholder)
+    return val, repl
+
+
+def wrap_text(val, width=72):
     """Wraps text to keep text documents readable"""
     is_list = False
     lines = []
-    indent = re.match(r" *", text).group()
-    for line in text.splitlines():
+    indent = re.match(r" *", val).group()
+    val, repl = fix_links(val, width)
+    for line in val.splitlines():
         if is_list_item(line):
             lines.append(wrap_list_item(line, width))
             is_list = True
@@ -211,9 +223,18 @@ def wrap_text(text, width=72):
                 lines.append("")
                 is_list = False
             lines.append(
-                textwrap.fill(line, width, initial_indent="", subsequent_indent=indent)
+                textwrap.fill(
+                    line,
+                    width,
+                    initial_indent="",
+                    subsequent_indent=indent,
+                    break_long_words=False,
+                )
             )
-    return "\n".join(lines) + "\n"
+    val = "\n".join(lines)
+    for placeholder, link in repl.items():
+        val = val.replace(placeholder, link)
+    return val + "\n"
 
 
 def get_marker(val, default=None):
@@ -230,17 +251,23 @@ def wrap_list_item(val, width=72, marker=None):
         marker = get_marker(val)
     marker = marker.rstrip() + " "
     indent = re.match(r" *", val).group()
+    # Fix links
+    val, repl = fix_links(val, width)
     # Normalize spaces
     val = re.sub(f"^ *{re.escape(marker)} *", "", val)
     # Enforce consistent marker on unordered lists
     if len(marker) == 2:
         marker = "* "
-    return textwrap.fill(
+    val = textwrap.fill(
         val,
         width,
         initial_indent=indent + marker,
         subsequent_indent=indent + " " * len(marker),
+        break_long_words=False,
     )
+    for placeholder, link in repl.items():
+        val = val.replace(placeholder, link)
+    return val
 
 
 def wrap_table(table, one_line_per_row=False, max_table_width=72, max_width="min"):
