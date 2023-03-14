@@ -1,11 +1,9 @@
-################################
-Mineral Sciences Data Guidelines
-################################
+###########################
+Mineral Sciences Data Guide
+###########################
 
 .. toctree::
    :maxdepth: 2
 
-    Guidelines for using EMu <guidelines.rst>
-    Guidelines for georeferencing <georeferencing.rst>
-    Guidelines for stratigraphy <stratigraphy.rst>
-    Field usage <modules.rst>
+   Guidelines <guidelines.rst>
+   Modules <modules.rst>
