@@ -1,4 +1,5 @@
 """Converts EMu field and tab definitions from spreadsheet to reST for sphinx"""
+import glob
 import os
 import re
 import textwrap
@@ -367,10 +368,24 @@ if __name__ == "__main__":
         fields.to_csv(FIELD_PATH, index=False)
         tabs.to_csv(TAB_PATH, index=False)
 
-    # Create tab lookup
-    tabs = {(r["module"], r["tab"]): r["description"] for _, r in tabs.iterrows()}
+    # Map fields that do not specify a module
+    modules = sorted({m for m in fields["module"].unique() if m})
+    new_rows = []
+    for _, row in fields[fields["module"] == ""].iterrows():
+        for mod in modules:
+            new_rows.append(row.copy())
+            new_rows[-1]["module"] = mod
+    fields = pd.concat([fields, pd.DataFrame(new_rows)])
+    fields = fields[fields["module"] != ""]
 
-    toc = {}
+    # Create tab lookup and map tabs that do not specify a module
+    tabs = {(r["module"], r["tab"]): r["description"] for _, r in tabs.iterrows()}
+    for key in list(tabs):
+        if not key[0]:
+            for module in modules:
+                tabs[(module, key[1])] = tabs[key]
+            del tabs[key]
+
     for (module, tab_name), tab in fields.groupby(["module", "tab"], sort=False):
         output = []
 
@@ -454,39 +469,63 @@ if __name__ == "__main__":
         ) as f:
             f.write("\n".join(output))
 
-        toc.setdefault(module, []).append(tab_name)
+    # Write index file for each module folder
+    for root, dirs, files in os.walk("docs/modules"):
+        pages = []
+        for fn in files:
+            path = os.path.join(root, fn)
+            if fn == "about.rst":
+                with open(path, encoding="utf-8") as f:
+                    title = f.read().splitlines()[1]
+                    pages.insert(0, (title, fn))
+            elif fn != "index.rst" and fn.endswith(".rst"):
+                with open(path, encoding="utf-8") as f:
+                    title = f.read().splitlines()[1].split(">")[-1].strip()
+                    pages.append((title, fn))
 
-# Create the module pages
-for module, tabs in toc.items():
-    content = h1(module)
+        if pages:
+            rewrap_rst(path)
+            path = f"docs/modules/{os.path.basename(root)}/index.rst"
+            content = h1(os.path.basename(root))
+            content.extend([".. toctree::", "   :maxdepth: 2", ""])
+            content.extend([f"   {t} <{p}>" for t, p in pages])
+            with open(path, "w", encoding="utf-8") as f:
+                f.write("\n".join(content))
+
+    # Create guidelines landing page and clean up manually created reST files
+    content = h1("Guidelines")
     content.extend([".. toctree::", "   :maxdepth: 2", ""])
-    for tab_name in tabs:
-        content.append(f"   {tab_name.title()} <{slug(tab_name)}.rst>")
-    with open(f"docs/modules/{module}/index.rst", "w", encoding="utf-8") as f:
+    for root, dirs, files in os.walk("docs/guidelines"):
+        for fn in files:
+            path = os.path.join(root, fn)
+            if path.endswith(".rst"):
+                rewrap_rst(path)
+            if root == "docs/guidelines":
+                with open(path, encoding="utf-8") as f:
+                    title = f.read().splitlines()[1]
+                content.append(f"   {title} <guidelines/{fn}>")
+    with open("docs/guidelines.rst", "w") as f:
         f.write("\n".join(content))
 
-# Create the module landing page
-content = h1("Modules")
-content.extend([".. toctree::", "   :maxdepth: 2", ""])
-for module in toc:
-    content.append(f"   {module} <modules/{module}/index.rst>")
-with open("docs/modules.rst", "w") as f:
-    f.write("\n".join(content))
+    # Create module landing pages
+    content = h1("Modules")
+    content.extend([".. toctree::", "   :maxdepth: 2", ""])
+    for root, dirs, files in os.walk("docs/modules"):
+        for fn in files:
+            if fn == "index.rst":
+                rewrap_rst(os.path.join(root, fn))
+                module = os.path.basename(root)
+                content.append(f"   {module} <modules/{module}/index.rst>")
 
-# Create the index page
-content = h1("Mineral Sciences Data Guidelines")
-content.extend([".. toctree::", "   :maxdepth: 2", ""])
-content.append(f"    Guidelines for using EMu <guidelines.rst>")
-content.append(f"    Guidelines for georeferencing <georeferencing.rst>")
-content.append(f"    Guidelines for stratigraphy <stratigraphy.rst>")
-content.append(f"    Field usage <modules.rst>")
-with open("docs/index.rst", "w") as f:
-    f.write("\n".join(content))
+    with open("docs/modules.rst", "w") as f:
+        f.write("\n".join(content))
 
-# Clean up manual reST files
-for path in (
-    "docs/guidelines.rst",
-    "docs/georeferencing.rst",
-    "docs/stratigraphy.rst",
-):
-    rewrap_rst(path)
+    # Create the index page
+    content = h1("Mineral Sciences Data Guide")
+    content.extend([".. toctree::", "   :maxdepth: 2", ""])
+    for path in glob.iglob("docs/*.rst"):
+        fn = os.path.basename(path)
+        if fn != "index.rst":
+            content.append(f"   {os.path.splitext(fn)[0].title()} <{fn}>")
+    with open("docs/index.rst", "w") as f:
+        f.write("\n".join(content))
