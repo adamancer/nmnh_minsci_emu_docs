@@ -46,3 +46,5 @@ enmnhtransactions,Tasks,"This tab is used to note tasks that need to be performe
 - Closing a loan after a condition has been met (for example, after one year if specimens are reported lost)
 
 Because tasks may not be completed for years and contacts for individual collections may change over time, the best practice is to assign all tasks to Position records created for this purpose. The position records can be found by searching the Parties module using Party Type = ""Position"". Records have been created for each of the four collection managers (which will direct the task to the current collection manager) and the registrar (which will direct the request to the NMNH-MinSciRegistrar resource account).",
+,Security,This tab controls who can view and modify a given record. Most fields are grayed out and not accessible to normal users.,
+,Admin,"This tab includes includes a hodgepodge of administrative information, including legacy data, GUIDs, and record creation and modification times.",
