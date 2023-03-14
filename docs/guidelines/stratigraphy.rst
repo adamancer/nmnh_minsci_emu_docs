@@ -1,6 +1,6 @@
-###########################
-Guidelines for stratigraphy
-###########################
+############
+Stratigraphy
+############
 
 This document contains guidance for managing stratigraphy data in EMu.
 This workflow was originally developed for a data cleanup project in
@@ -61,8 +61,8 @@ EMu includes fields for Group, Formation, and Member. Unit names should
 always go in the field matching their rank and should include the
 abbreviated form of the rank:
 
-* Glen Canyon Group → Group = Glen Canyon Gp
-* Navajo Formation → Formation = Navajo Fm
+* Glen Canyon Group ⇒ Group = Glen Canyon Gp
+* Navajo Formation ⇒ Formation = Navajo Fm
 
 **Populating higher ranks:** Macrostrat and other sources may include
 higher stratigraphic ranks that are missing from EMu. If you are able to
@@ -119,11 +119,11 @@ it, so the best practice is to defer to the data in EMu or the original
 documentation. If those records includes the rock name, keep it when
 standardizing the name:
 
-* Navajo Sandstone → Navajo Sandstone Fm
+* Navajo Sandstone ⇒ Navajo Sandstone Fm
 
 Otherwise leave it out:
 
-* Navajo Formation → Navajo Fm
+* Navajo Formation ⇒ Navajo Fm
 
 You can include the rock name even if it isn’t officially listed by
 Macrostrat as an alternative name. Note also that rank (“Fm” in this
@@ -133,7 +133,7 @@ The diversity of rock names is large and the abbreviations are less than
 perfectly clear, so for clarity you should always use the full rock name
 if you do decide to include it:
 
-* Navajo Ss → Navajo Sandstone Fm
+* Navajo Ss ⇒ Navajo Sandstone Fm
 
 Modifiers
 =========
@@ -150,7 +150,7 @@ sample was collected. Common modifiers include:
 To maintain sorting in the lookup list, include modifiers as a trailing
 parenthetical:
 
-* Upper Navajo Formation → Navajo Fm (Upper)
+* Upper Navajo Formation ⇒ Navajo Fm (Upper)
 
 Ranges
 ======
