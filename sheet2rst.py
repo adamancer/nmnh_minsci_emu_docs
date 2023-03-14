@@ -32,7 +32,7 @@ def rewrap_rst(path):
                     unit = wrap_table("\n".join(unit)) + "\n"
                     unit = unit.replace(" ", "<NBSP>")
                 # Headers
-                elif not unit[-1].strip("#*-="):
+                elif not unit[-1].strip("#*=-^"):
                     unit = "\n".join(unit) + "\n"
                 # Labels
                 elif unit[0].startswith(".. _"):
@@ -122,21 +122,23 @@ def write_table(rows, header):
     """Writes rows as a table"""
 
     def format_row(row, widths):
-        return " ".join([c.ljust(w) for c, w in zip(row, widths)])
+        return "|" + "|".join([c.ljust(w) for c, w in zip(row, widths)]) + "|"
 
     widths = {}
     for row in [header] + rows:
         for i, val in enumerate(row):
             widths.setdefault(i, []).append(len(val))
-    widths = [max(w) for i, w in widths.items()]
+    widths = [max(w) for w in widths.values()]
 
-    border = " ".join(["=" * w for w in widths])
+    border = "+" + "+".join(["-" * w for w in widths]) + "+"
+    header_border = "+" + "+".join(["=" * w for w in widths]) + "+"
 
-    return (
-        [border, format_row(header, widths), border]
-        + [format_row(r, widths) for r in rows]
-        + [border, ""]
-    )
+    table = [border, format_row(header, widths), header_border]
+    for row in rows:
+        table.extend([format_row(row, widths), border])
+    table.append("")
+
+    return table
 
 
 def h1(val):
@@ -216,7 +218,7 @@ def wrap_text(text, width=72):
 def get_marker(val, default=None):
     """Gets the list marker from a value"""
     try:
-        return re.match(r"(\*|#\.|-) ", val.lstrip()).group()
+        return re.match(r"(\*|#\.|\-|\+) ", val.lstrip()).group()
     except AttributeError:
         return default
 
@@ -229,6 +231,9 @@ def wrap_list_item(val, width=72, marker=None):
     indent = re.match(r" *", val).group()
     # Normalize spaces
     val = re.sub(f"^ *{re.escape(marker)} *", "", val)
+    # Enforce consistent marker on unordered lists
+    if len(marker) == 2:
+        marker = "* "
     return textwrap.fill(
         val,
         width,
@@ -273,10 +278,11 @@ def wrap_table(table, one_line_per_row=False, max_table_width=72, max_width="min
     widths = {k: max(v) + 2 for k, v in cols.items()}
 
     keys = list(widths)
-    while sum(widths.values()) + 2 < max_table_width:
-        widths[keys.pop()] += 1
-        if not keys:
-            keys = list(widths)
+    if max_width != "min":
+        while sum(widths.values()) + 2 < max_table_width:
+            widths[keys.pop()] += 1
+            if not keys:
+                keys = list(widths)
 
     sep = "+" + "+".join(["-" * w for w in widths.values()]) + "+"
     tab = [sep]

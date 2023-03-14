@@ -13,14 +13,17 @@ by other organizations.
 Object ID
 *********
 
-========== ============
-Field      Value       
-========== ============
-ItemPrompt URI         
-ColumnName RelNhURI_tab
-DataKind   dkTable     
-DataType   Text        
-========== ============
++----------+------------+
+|Field     |Value       |
++==========+============+
+|ItemPrompt|URI         |
++----------+------------+
+|ColumnName|RelNhURI_tab|
++----------+------------+
+|DataKind  |dkTable     |
++----------+------------+
+|DataType  |Text        |
++----------+------------+
 
 The identifier of the related object
 
@@ -48,15 +51,19 @@ grid more usable.
 ID Type
 *******
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt ID Type             
-ColumnName RelNhIDType_tab     
-DataKind   dkTable             
-DataType   Text                
-LookupName Relationship ID Type
-========== ====================
++----------+--------------------+
+|Field     |Value               |
++==========+====================+
+|ItemPrompt|ID Type             |
++----------+--------------------+
+|ColumnName|RelNhIDType_tab     |
++----------+--------------------+
+|DataKind  |dkTable             |
++----------+--------------------+
+|DataType  |Text                |
++----------+--------------------+
+|LookupName|Relationship ID Type|
++----------+--------------------+
 
 The type of identifier used to represent the related object
 
@@ -80,15 +87,19 @@ Examples
 Object
 ******
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Object Ref       
-ColumnName RelObjectsRef_tab
-DataKind   dkTable          
-DataType   Reference        
-RefTable   ecatalogue       
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Object Ref       |
++----------+-----------------+
+|ColumnName|RelObjectsRef_tab|
++----------+-----------------+
+|DataKind  |dkTable          |
++----------+-----------------+
+|DataType  |Reference        |
++----------+-----------------+
+|RefTable  |ecatalogue       |
++----------+-----------------+
 
 The catalog record of the related object if held in the same department
 
@@ -112,14 +123,17 @@ include the relationship.
 Counts
 ******
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Count         
-ColumnName RelNhCount_tab
-DataKind   dkTable       
-DataType   Integer       
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Count         |
++----------+--------------+
+|ColumnName|RelNhCount_tab|
++----------+--------------+
+|DataKind  |dkTable       |
++----------+--------------+
+|DataType  |Integer       |
++----------+--------------+
 
 Not used
 
@@ -131,15 +145,19 @@ Not used
 Relationship
 ************
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Relationship       
-ColumnName RelRelationship_tab
-DataKind   dkTable            
-DataType   Text               
-LookupName Object Relationship
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Relationship       |
++----------+-------------------+
+|ColumnName|RelRelationship_tab|
++----------+-------------------+
+|DataKind  |dkTable            |
++----------+-------------------+
+|DataType  |Text               |
++----------+-------------------+
+|LookupName|Object Relationship|
++----------+-------------------+
 
 The type of relationship
 
@@ -153,10 +171,10 @@ Format
 
 Relationships currently in use include:
 
-- **Parent/child** designates subsampling relationships
-- **Same as/Same as** designates specimens with different catalog
+* **Parent/child** designates subsampling relationships
+* **Same as/Same as** designates specimens with different catalog
   records that are fragments of the same object
-- **Whole/Part**: Deprecated. Use parent/child instead.
+* **Whole/Part**: Deprecated. Use parent/child instead.
 
 
 When the related object has a linked record in EMu, the value for
@@ -177,14 +195,17 @@ Allowed Values
 Date
 ****
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Date      
-ColumnName RelNhDate0
-DataKind   dkTable   
-DataType   Date      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Date      |
++----------+----------+
+|ColumnName|RelNhDate0|
++----------+----------+
+|DataKind  |dkTable   |
++----------+----------+
+|DataType  |Date      |
++----------+----------+
 
 Not used
 
@@ -196,15 +217,19 @@ Not used
 Source
 ******
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt According To Ref       
-ColumnName RelNhAccordingToRef_tab
-DataKind   dkTable                
-DataType   Reference              
-RefTable   eparties               
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|According To Ref       |
++----------+-----------------------+
+|ColumnName|RelNhAccordingToRef_tab|
++----------+-----------------------+
+|DataKind  |dkTable                |
++----------+-----------------------+
+|DataType  |Reference              |
++----------+-----------------------+
+|RefTable  |eparties               |
++----------+-----------------------+
 
 The source documenting the relationship
 
@@ -226,15 +251,19 @@ Reference to Parties
 Held By
 *******
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt Repository Ref        
-ColumnName RelNhRepositoryRef_tab
-DataKind   dkTable               
-DataType   Reference             
-RefTable   eparties              
-========== ======================
++----------+----------------------+
+|Field     |Value                 |
++==========+======================+
+|ItemPrompt|Repository Ref        |
++----------+----------------------+
+|ColumnName|RelNhRepositoryRef_tab|
++----------+----------------------+
+|DataKind  |dkTable               |
++----------+----------------------+
+|DataType  |Reference             |
++----------+----------------------+
+|RefTable  |eparties              |
++----------+----------------------+
 
 The repository that holds the related object
 
@@ -256,15 +285,19 @@ Reference to Parties
 Inter.
 ******
 
-========== ========================
-Field      Value                   
-========== ========================
-ItemPrompt Interaction             
-ColumnName RelNhInteraction_tab    
-DataKind   dkTable                 
-DataType   Text                    
-LookupName Relationship Interaction
-========== ========================
++----------+------------------------+
+|Field     |Value                   |
++==========+========================+
+|ItemPrompt|Interaction             |
++----------+------------------------+
+|ColumnName|RelNhInteraction_tab    |
++----------+------------------------+
+|DataKind  |dkTable                 |
++----------+------------------------+
+|DataType  |Text                    |
++----------+------------------------+
+|LookupName|Relationship Interaction|
++----------+------------------------+
 
 Not used
 
@@ -276,15 +309,19 @@ Not used
 Site
 ****
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Site In Host       
-ColumnName RelNhSiteInHost_tab
-DataKind   dkTable            
-DataType   Text               
-LookupName Relationship Site  
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Site In Host       |
++----------+-------------------+
+|ColumnName|RelNhSiteInHost_tab|
++----------+-------------------+
+|DataKind  |dkTable            |
++----------+-------------------+
+|DataType  |Text               |
++----------+-------------------+
+|LookupName|Relationship Site  |
++----------+-------------------+
 
 Not used
 
@@ -296,15 +333,19 @@ Not used
 Event Type
 **********
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt Event Type             
-ColumnName RelNhEventType_tab     
-DataKind   dkTable                
-DataType   Text                   
-LookupName Relationship Event Type
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|Event Type             |
++----------+-----------------------+
+|ColumnName|RelNhEventType_tab     |
++----------+-----------------------+
+|DataKind  |dkTable                |
++----------+-----------------------+
+|DataType  |Text                   |
++----------+-----------------------+
+|LookupName|Relationship Event Type|
++----------+-----------------------+
 
 Not used
 
@@ -316,15 +357,19 @@ Not used
 Identified By
 *************
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt Identified By Ref     
-ColumnName RelNhIdentifyByRef_tab
-DataKind   dkTable               
-DataType   Reference             
-RefTable   eparties              
-========== ======================
++----------+----------------------+
+|Field     |Value                 |
++==========+======================+
+|ItemPrompt|Identified By Ref     |
++----------+----------------------+
+|ColumnName|RelNhIdentifyByRef_tab|
++----------+----------------------+
+|DataKind  |dkTable               |
++----------+----------------------+
+|DataType  |Reference             |
++----------+----------------------+
+|RefTable  |eparties              |
++----------+----------------------+
 
 Not used
 
@@ -336,14 +381,17 @@ Not used
 Notes
 *****
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Remarks       
-ColumnName RelRemarks_tab
-DataKind   dkTable       
-DataType   Text          
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Remarks       |
++----------+--------------+
+|ColumnName|RelRemarks_tab|
++----------+--------------+
+|DataKind  |dkTable       |
++----------+--------------+
+|DataType  |Text          |
++----------+--------------+
 
 
 
@@ -365,14 +413,18 @@ Free text
 Taxon Identification
 ********************
 
-========== ==================== =================== ================== ================== =================== ================== ==================== ======================== ====================
-Field      RelNhKingdom_tab     RelNhPhylum_tab     RelNhClass_tab     RelNhOrder_tab     RelNhFamily_tab     RelNhGenus_tab     RelNhSpecies_tab     RelNhSubspecies_tab      RelNhVariety_tab    
-========== ==================== =================== ================== ================== =================== ================== ==================== ======================== ====================
-ItemPrompt Kingdom              Phylum              Class              Order              Family              Genus              Species              Subsp.                   Variety             
-ColumnName RelNhKingdom_tab     RelNhPhylum_tab     RelNhClass_tab     RelNhOrder_tab     RelNhFamily_tab     RelNhGenus_tab     RelNhSpecies_tab     RelNhSubspecies_tab      RelNhVariety_tab    
-DataKind   dkTable              dkTable             dkTable            dkTable            dkTable             dkTable            dkTable              dkTable                  dkTable             
-DataType   Text                 Text                Text               Text               Text                Text               Text                 Text                     Text                
-LookupName Relationship Kingdom Relationship Phylum Relationship Class Relationship Order Relationship Family Relationship Genus Relationship Species Relationship Sub Species Relationship Variety
-========== ==================== =================== ================== ================== =================== ================== ==================== ======================== ====================
++----------+--------------------+-------------------+------------------+------------------+-------------------+------------------+--------------------+------------------------+--------------------+
+|Field     |RelNhKingdom_tab    |RelNhPhylum_tab    |RelNhClass_tab    |RelNhOrder_tab    |RelNhFamily_tab    |RelNhGenus_tab    |RelNhSpecies_tab    |RelNhSubspecies_tab     |RelNhVariety_tab    |
++==========+====================+===================+==================+==================+===================+==================+====================+========================+====================+
+|ItemPrompt|Kingdom             |Phylum             |Class             |Order             |Family             |Genus             |Species             |Subsp.                  |Variety             |
++----------+--------------------+-------------------+------------------+------------------+-------------------+------------------+--------------------+------------------------+--------------------+
+|ColumnName|RelNhKingdom_tab    |RelNhPhylum_tab    |RelNhClass_tab    |RelNhOrder_tab    |RelNhFamily_tab    |RelNhGenus_tab    |RelNhSpecies_tab    |RelNhSubspecies_tab     |RelNhVariety_tab    |
++----------+--------------------+-------------------+------------------+------------------+-------------------+------------------+--------------------+------------------------+--------------------+
+|DataKind  |dkTable             |dkTable            |dkTable           |dkTable           |dkTable            |dkTable           |dkTable             |dkTable                 |dkTable             |
++----------+--------------------+-------------------+------------------+------------------+-------------------+------------------+--------------------+------------------------+--------------------+
+|DataType  |Text                |Text               |Text              |Text              |Text               |Text              |Text                |Text                    |Text                |
++----------+--------------------+-------------------+------------------+------------------+-------------------+------------------+--------------------+------------------------+--------------------+
+|LookupName|Relationship Kingdom|Relationship Phylum|Relationship Class|Relationship Order|Relationship Family|Relationship Genus|Relationship Species|Relationship Sub Species|Relationship Variety|
++----------+--------------------+-------------------+------------------+------------------+-------------------+------------------+--------------------+------------------------+--------------------+
 
 Not used

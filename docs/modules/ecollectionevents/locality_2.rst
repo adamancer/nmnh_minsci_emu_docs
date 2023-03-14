@@ -13,15 +13,19 @@ table 1.
 Archipelago
 ***********
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Archipelago   
-ColumnName LocArchipelago
-DataKind   dkAtom        
-DataType   Text          
-LookupName Archipelago   
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Archipelago   |
++----------+--------------+
+|ColumnName|LocArchipelago|
++----------+--------------+
+|DataKind  |dkAtom        |
++----------+--------------+
+|DataType  |Text          |
++----------+--------------+
+|LookupName|Archipelago   |
++----------+--------------+
 
 
 
@@ -38,15 +42,19 @@ Not used. See Island Grouping instead.
 Island Grouping
 ***************
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Island Grouping  
-ColumnName LocIslandGrouping
-DataKind   dkAtom           
-DataType   Text             
-LookupName Island Grouping  
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Island Grouping  |
++----------+-----------------+
+|ColumnName|LocIslandGrouping|
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Text             |
++----------+-----------------+
+|LookupName|Island Grouping  |
++----------+-----------------+
 
 A group of islands
 
@@ -89,14 +97,17 @@ Examples
 Island Name
 ***********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Island Name  
-ColumnName LocIslandName
-DataKind   dkAtom       
-DataType   Text         
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Island Name  |
++----------+-------------+
+|ColumnName|LocIslandName|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Text         |
++----------+-------------+
 
 The name of an island
 
@@ -130,15 +141,19 @@ Examples
 Mining District
 ***************
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Mining District  
-ColumnName LocMiningDistrict
-DataKind   dkAtom           
-DataType   Text             
-LookupName Mining District  
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Mining District  |
++----------+-----------------+
+|ColumnName|LocMiningDistrict|
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Text             |
++----------+-----------------+
+|LookupName|Mining District  |
++----------+-----------------+
 
 The name of an area containing a group of mines. The mines in a single
 district are usually tapping the same geologic feature and extracting
@@ -157,15 +172,19 @@ Omit if no appropriate data is available
 Mine Name
 *********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Mine Name  
-ColumnName LocMineName
-DataKind   dkAtom     
-DataType   Text       
-LookupName Mine Name  
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Mine Name  |
++----------+-----------+
+|ColumnName|LocMineName|
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Text       |
++----------+-----------+
+|LookupName|Mine Name  |
++----------+-----------+
 
 The name of a mine or quarry
 
@@ -182,14 +201,17 @@ Omit if no appropriate data is available
 Geomorphological Location
 *************************
 
-========== ===========================
-Field      Value                      
-========== ===========================
-ItemPrompt Geomorphological Location  
-ColumnName LocGeomorphologicalLocation
-DataKind   dkAtom                     
-DataType   Text                       
-========== ===========================
++----------+---------------------------+
+|Field     |Value                      |
++==========+===========================+
+|ItemPrompt|Geomorphological Location  |
++----------+---------------------------+
+|ColumnName|LocGeomorphologicalLocation|
++----------+---------------------------+
+|DataKind  |dkAtom                     |
++----------+---------------------------+
+|DataType  |Text                       |
++----------+---------------------------+
 
 The name of one or more geomorphological features
 
@@ -218,15 +240,19 @@ Examples
 Geologic Setting
 ****************
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Geologic Setting  
-ColumnName LocGeologicSetting
-DataKind   dkAtom            
-DataType   Text              
-LookupName Geologic Setting  
-========== ==================
++----------+------------------+
+|Field     |Value             |
++==========+==================+
+|ItemPrompt|Geologic Setting  |
++----------+------------------+
+|ColumnName|LocGeologicSetting|
++----------+------------------+
+|DataKind  |dkAtom            |
++----------+------------------+
+|DataType  |Text              |
++----------+------------------+
+|LookupName|Geologic Setting  |
++----------+------------------+
 
 The name of a geologic feature, including petrologic province, complex,
 zone within a complex, or genetic association from which a specimen was
@@ -242,13 +268,13 @@ Format
 
 Names of geologic settings must be writtern out in full.
 
-- **Geologic features**, like kimberlite pipes and plutons, should be
+* **Geologic features**, like kimberlite pipes and plutons, should be
   recorded in Geologic Setting
-- **Stratigraphic units**, like groups, formations, and members, should
+* **Stratigraphic units**, like groups, formations, and members, should
   be recorded in Catalog > Stratigraphy
-- **Topographic features**, like ridges and cordilleras, should be
+* **Topographic features**, like ridges and cordilleras, should be
   recorded in Geomorphological Location
-- **Volcanic features**, like volcanoes, volcanic fields, and calderas,
+* **Volcanic features**, like volcanoes, volcanic fields, and calderas,
   should be recorded in the Volcano (1) > Volcano Details fields
 
 --------------------------------------------------------------------------------
@@ -259,15 +285,19 @@ Names of geologic settings must be writtern out in full.
 Collection Event Parent
 ***********************
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Site Parent Ref  
-ColumnName LocSiteParentRef 
-DataKind   dkAtom           
-DataType   Reference        
-RefTable   ecollectionevents
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Site Parent Ref  |
++----------+-----------------+
+|ColumnName|LocSiteParentRef |
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Reference        |
++----------+-----------------+
+|RefTable  |ecollectionevents|
++----------+-----------------+
 
 Not used
 
@@ -279,15 +309,19 @@ Not used
 Collection Event Owner
 **********************
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Site Owner Ref     
-ColumnName LocSiteOwnerRef_tab
-DataKind   dkTable            
-DataType   Reference          
-RefTable   eparties           
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Site Owner Ref     |
++----------+-------------------+
+|ColumnName|LocSiteOwnerRef_tab|
++----------+-------------------+
+|DataKind  |dkTable            |
++----------+-------------------+
+|DataType  |Reference          |
++----------+-------------------+
+|RefTable  |eparties           |
++----------+-------------------+
 
 Not used
 
@@ -299,14 +333,18 @@ Not used
 Land Owner/Jurisdiction
 ***********************
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt Jurisdiction           
-ColumnName LocJurisdiction        
-DataKind   dkAtom                 
-DataType   Text                   
-LookupName Land Owner/Jurisdiction
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|Jurisdiction           |
++----------+-----------------------+
+|ColumnName|LocJurisdiction        |
++----------+-----------------------+
+|DataKind  |dkAtom                 |
++----------+-----------------------+
+|DataType  |Text                   |
++----------+-----------------------+
+|LookupName|Land Owner/Jurisdiction|
++----------+-----------------------+
 
 Not used

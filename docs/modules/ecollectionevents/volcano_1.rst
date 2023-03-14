@@ -15,15 +15,19 @@ Volcanism Program (GVP) <https://volcano.si.edu>`_ .
 Volcano Number
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Volcano         
-ColumnName VolVolcanoNumber
-DataKind   dkAtom          
-DataType   Text            
-LookupName Volcano Number  
-========== ================
++------------+------------------+
+| Field      | Value            |
++============+==================+
+| ItemPrompt | Volcano          |
++------------+------------------+
+| ColumnName | VolVolcanoNumber |
++------------+------------------+
+| DataKind   | dkAtom           |
++------------+------------------+
+| DataType   | Text             |
++------------+------------------+
+| LookupName | Volcano Number   |
++------------+------------------+
 
 A numeric identifier assigned to volcanoes active in the Holocene or
 Pleistocene in the GVP database
@@ -48,13 +52,15 @@ and numbers are checked for consistency annually by the data manager.
 Volcano Name
 ************
 
-========== ==============
-Field      Value         
-========== ==============
-ColumnName VolVolcanoName
-DataKind   dkAtom        
-DataType   Text          
-========== ==============
++------------+----------------+
+| Field      | Value          |
++============+================+
+| ColumnName | VolVolcanoName |
++------------+----------------+
+| DataKind   | dkAtom         |
++------------+----------------+
+| DataType   | Text           |
++------------+----------------+
 
 The name of a volcano from the GVP database that produced the sampled
 material
@@ -103,14 +109,17 @@ Examples
 Subfeature
 **********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Subfeature:  
-ColumnName VolSubfeature
-DataKind   dkAtom       
-DataType   Text         
-========== =============
++------------+---------------+
+| Field      | Value         |
++============+===============+
+| ItemPrompt | Subfeature:   |
++------------+---------------+
+| ColumnName | VolSubfeature |
++------------+---------------+
+| DataKind   | dkAtom        |
++------------+---------------+
+| DataType   | Text          |
++------------+---------------+
 
 The name of a cone, vent, or other volcanic feature from the GVP
 database that produced the sampled material
@@ -142,14 +151,17 @@ Examples
 Holocene
 ********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Holocene   
-ColumnName VolHolocene
-DataKind   dkAtom     
-DataType   Text       
-========== ===========
++------------+-------------+
+| Field      | Value       |
++============+=============+
+| ItemPrompt | Holocene    |
++------------+-------------+
+| ColumnName | VolHolocene |
++------------+-------------+
+| DataKind   | dkAtom      |
++------------+-------------+
+| DataType   | Text        |
++------------+-------------+
 
 Whether a volcano has erupted in the Holocene
 
@@ -174,15 +186,20 @@ Allowed Values
 Tectonic Setting
 ****************
 
-========== ========================
-Field      Value                   
-========== ========================
-ItemPrompt Tectonic Setting:       
-ColumnName VolTectonicSetting_tab  
-DataKind   dkTable                 
-DataType   Text                    
-LookupName Volcano Tectonic Setting
-========== ========================
++------------+------------------------+
+| Field      | Value                  |
++============+========================+
+| ItemPrompt | Tectonic Setting:      |
++------------+------------------------+
+| ColumnName | VolTectonicSetting_tab |
++------------+------------------------+
+| DataKind   | dkTable                |
++------------+------------------------+
+| DataType   | Text                   |
++------------+------------------------+
+| LookupName | Volcano Tectonic       |
+|            | Setting                |
++------------+------------------------+
 
 The tectonic environment in which a volcano formed, including crustal
 thickness, according to GVP
@@ -219,14 +236,17 @@ Allowed Values
 Eruption ID
 ***********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Eruption ID: 
-ColumnName VolEruptionID
-DataKind   dkAtom       
-DataType   Text         
-========== =============
++------------+---------------+
+| Field      | Value         |
++============+===============+
+| ItemPrompt | Eruption ID:  |
++------------+---------------+
+| ColumnName | VolEruptionID |
++------------+---------------+
+| DataKind   | dkAtom        |
++------------+---------------+
+| DataType   | Text          |
++------------+---------------+
 
 A numeric identifier assigned to an eruption in the GVP database
 
@@ -248,14 +268,17 @@ A five-digit number corresponding to an eruption in the GVP database
 Eruption Date From
 ******************
 
-========== =================== =================
-Field      VolEruptionDateFrom VolEruptionDateTo
-========== =================== =================
-ItemPrompt Eruption Date From: Eruption Date To:
-ColumnName VolEruptionDateFrom VolEruptionDateTo
-DataKind   dkAtom              dkAtom           
-DataType   Date                Date             
-========== =================== =================
++------------+---------------------+-------------------+
+| Field      | VolEruptionDateFrom | VolEruptionDateTo |
++============+=====================+===================+
+| ItemPrompt | Eruption Date From: | Eruption Date To: |
++------------+---------------------+-------------------+
+| ColumnName | VolEruptionDateFrom | VolEruptionDateTo |
++------------+---------------------+-------------------+
+| DataKind   | dkAtom              | dkAtom            |
++------------+---------------------+-------------------+
+| DataType   | Date                | Date              |
++------------+---------------------+-------------------+
 
 The start and end dates of the volcanic eruption as recorded by GVP
 
@@ -268,8 +291,6 @@ eruption IDs
 Format
 ======
 
-
-
 --------------------------------------------------------------------------------
 
 .. _ecollectionevents-volcano-1-eruption-details-eruption-notes:
@@ -278,14 +299,17 @@ Format
 Eruption Notes
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Eruption Notes: 
-ColumnName VolEruptionNotes
-DataKind   dkAtom          
-DataType   Text            
-========== ================
++------------+------------------+
+| Field      | Value            |
++============+==================+
+| ItemPrompt | Eruption Notes:  |
++------------+------------------+
+| ColumnName | VolEruptionNotes |
++------------+------------------+
+| DataKind   | dkAtom           |
++------------+------------------+
+| DataType   | Text             |
++------------+------------------+
 
 The verbatim eruption date or date range provided by the collector
 

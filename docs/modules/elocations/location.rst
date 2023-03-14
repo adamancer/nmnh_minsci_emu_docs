@@ -22,14 +22,17 @@ locations vary widely in their specificity.
 Location Code
 *************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Location Code  
-ColumnName LocLocationCode
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Location Code  |
++----------+---------------+
+|ColumnName|LocLocationCode|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 A code used to identify a location, usually an exhibit case
 
@@ -53,14 +56,17 @@ Allowed Values
 Barcode
 *******
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Barcode   
-ColumnName LocBarcode
-DataKind   dkAtom    
-DataType   Text      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Barcode   |
++----------+----------+
+|ColumnName|LocBarcode|
++----------+----------+
+|DataKind  |dkAtom    |
++----------+----------+
+|DataType  |Text      |
++----------+----------+
 
 Not used
 
@@ -72,14 +78,17 @@ Not used
 Location/Holder
 ***************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Location Type  
-ColumnName LocLocationType
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Location Type  |
++----------+---------------+
+|ColumnName|LocLocationType|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 Type of storage location
 
@@ -96,15 +105,19 @@ Required
 Unit Type
 *********
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Storage Type  
-ColumnName LocStorageType
-DataKind   dkAtom        
-DataType   Text          
-LookupName Storage Type  
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Storage Type  |
++----------+--------------+
+|ColumnName|LocStorageType|
++----------+--------------+
+|DataKind  |dkAtom        |
++----------+--------------+
+|DataType  |Text          |
++----------+--------------+
+|LookupName|Storage Type  |
++----------+--------------+
 
 Type of storage unit
 
@@ -129,15 +142,19 @@ Examples
 Level 1
 *******
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Level 1           
-ColumnName LocLevel1         
-DataKind   dkAtom            
-DataType   Text              
-LookupName Location Hierarchy
-========== ==================
++----------+------------------+
+|Field     |Value             |
++==========+==================+
+|ItemPrompt|Level 1           |
++----------+------------------+
+|ColumnName|LocLevel1         |
++----------+------------------+
+|DataKind  |dkAtom            |
++----------+------------------+
+|DataType  |Text              |
++----------+------------------+
+|LookupName|Location Hierarchy|
++----------+------------------+
 
 The name or abbreviation for a building
 
@@ -161,14 +178,17 @@ Examples
 Level 2
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 2  
-ColumnName LocLevel2
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 2  |
++----------+---------+
+|ColumnName|LocLevel2|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 The room number or exhibit name
 
@@ -200,14 +220,17 @@ Examples
 Level 3
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 3  
-ColumnName LocLevel3
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 3  |
++----------+---------+
+|ColumnName|LocLevel3|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 For collections, the identifier of a cabinet, case, or other storage
 unit. For exhibits, a description of where in the exhibit the case is
@@ -239,14 +262,17 @@ Examples
 Level 4
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 4  
-ColumnName LocLevel4
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 4  |
++----------+---------+
+|ColumnName|LocLevel4|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 For collections, the identifier of a drawer, shelf, or other storage
 sub-unit.  For exhibits, a description of where in the exhibit the case
@@ -277,14 +303,17 @@ Examples
 Level 5
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 5  
-ColumnName LocLevel5
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 5  |
++----------+---------+
+|ColumnName|LocLevel5|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 For exhibits, a description of where in the exhibit the case is found.
 
@@ -301,14 +330,17 @@ Omit if no appropriate data is available
 Level 6
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 6  
-ColumnName LocLevel6
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 6  |
++----------+---------+
+|ColumnName|LocLevel6|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 For exhibits, the case identifier
 
@@ -331,14 +363,17 @@ Examples
 Level 7
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 7  
-ColumnName LocLevel7
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 7  |
++----------+---------+
+|ColumnName|LocLevel7|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 Not used
 
@@ -350,13 +385,16 @@ Not used
 Level 8
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Level 8  
-ColumnName LocLevel8
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Level 8  |
++----------+---------+
+|ColumnName|LocLevel8|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 Not used

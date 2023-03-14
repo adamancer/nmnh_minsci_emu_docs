@@ -14,14 +14,17 @@ Meteorite Bulletin Database (MBDB).
 Meteorite Name
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Meteorite Name  
-ColumnName MetMeteoriteName
-DataKind   dkAtom          
-DataType   Text            
-========== ================
++----------+----------------+
+|Field     |Value           |
++==========+================+
+|ItemPrompt|Meteorite Name  |
++----------+----------------+
+|ColumnName|MetMeteoriteName|
++----------+----------------+
+|DataKind  |dkAtom          |
++----------+----------------+
+|DataType  |Text            |
++----------+----------------+
 
 The official name of the meteorite
 
@@ -44,10 +47,10 @@ components: a generic identifier identifying a mass and an optional
 specific identifier (often referred to as a comma number) identifying a
 subsample. The generic identifier includes:
 
-- A three-character alphabetic prefix identifying the general area where
+* A three-character alphabetic prefix identifying the general area where
   the meteorite was collected
-- A space
-- A fiveto six-digit number (YYDDD or YYDDDD, where YY is the last two
+* A space
+* A five- to six-digit number (YYDDD or YYDDDD, where YY is the last two
   digits of the collection year and DDD/DDDD is the number identifying a
   mass)
 
@@ -59,7 +62,7 @@ the specific identifier.
 
 Some notes on meteorite numbers:
 
-- Meteorites collected early on in ANSMET used a letter to separate the
+* Meteorites collected early on in ANSMET used a letter to separate the
   locality prefix from the specimen number. The letter was intended to
   signify different field seasons within a year. Those additional field
   seasons never materialized, but some meteorites from the early years
@@ -69,7 +72,7 @@ Some notes on meteorite numbers:
   In other words, "ALHA76001" in MBDB is the same as "ALH 76001" in
   NASA's documentation. We use the NASA identifiers but retain the
   original numbers in the Other Numbers grid.
-- MBDB includes the NASA meteorite number in the Abbrev. field. MBDB
+* MBDB includes the NASA meteorite number in the Abbrev. field. MBDB
   uses the Name field to provide the full name of the collection area.
   For example, for ALH 83101, MBDB uses "Allan Hills 83101" for the name
   "ALH 83101" for the abbreviation.
@@ -86,14 +89,17 @@ collection could not be matched to an entry in MBDB.
 Synonym
 *******
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Synonym   
-ColumnName MetSynonym
-DataKind   dkAtom    
-DataType   Text      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Synonym   |
++----------+----------+
+|ColumnName|MetSynonym|
++----------+----------+
+|DataKind  |dkAtom    |
++----------+----------+
+|DataType  |Text      |
++----------+----------+
 
 The verbatim name of the meteorite if originally cataloged under a
 synonym
@@ -118,15 +124,19 @@ synonym for a meteorite.
 Meteorite Type
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Meteorite Type  
-ColumnName MetMeteoriteType
-DataKind   dkAtom          
-DataType   Text            
-LookupName Meteorite Type  
-========== ================
++----------+----------------+
+|Field     |Value           |
++==========+================+
+|ItemPrompt|Meteorite Type  |
++----------+----------------+
+|ColumnName|MetMeteoriteType|
++----------+----------------+
+|DataKind  |dkAtom          |
++----------+----------------+
+|DataType  |Text            |
++----------+----------------+
+|LookupName|Meteorite Type  |
++----------+----------------+
 
 The type of meteorite
 
@@ -156,14 +166,17 @@ Meteorite types  are aligned with MBDB annually.
 Record Number
 *************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Record No      
-ColumnName MetRecordNumber
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Record No      |
++----------+---------------+
+|ColumnName|MetRecordNumber|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 No idea
 
@@ -180,15 +193,19 @@ Legacy
 Find/Fall
 *********
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Find Fall         
-ColumnName MetFindFall       
-DataKind   dkAtom            
-DataType   Text              
-LookupName Meteorite FindFall
-========== ==================
++----------+------------------+
+|Field     |Value             |
++==========+==================+
+|ItemPrompt|Find Fall         |
++----------+------------------+
+|ColumnName|MetFindFall       |
++----------+------------------+
+|DataKind  |dkAtom            |
++----------+------------------+
+|DataType  |Text              |
++----------+------------------+
+|LookupName|Meteorite FindFall|
++----------+------------------+
 
 Whether the meteorite fall was observed
 
@@ -232,15 +249,19 @@ Allowed Values
 Locality
 ********
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Event/Site Ref   
-ColumnName BioEventSiteRef  
-DataKind   dkAtom           
-DataType   Reference        
-RefTable   ecollectionevents
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Event/Site Ref   |
++----------+-----------------+
+|ColumnName|BioEventSiteRef  |
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Reference        |
++----------+-----------------+
+|RefTable  |ecollectionevents|
++----------+-----------------+
 
 The collection locality and event
 
@@ -262,14 +283,17 @@ Reference to Collection Events
 Lot Description
 ***************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Live Specimen  
-ColumnName BioLiveSpecimen
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Live Specimen  |
++----------+---------------+
+|ColumnName|BioLiveSpecimen|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 A long-form description of the specimen
 
@@ -286,14 +310,17 @@ Omit if no appropriate data is available
 Condition Determination
 ***********************
 
-========== =========================
-Field      Value                    
-========== =========================
-ItemPrompt Condition Determination  
-ColumnName MetConditionDetermination
-DataKind   dkAtom                   
-DataType   Text                     
-========== =========================
++----------+-------------------------+
+|Field     |Value                    |
++==========+=========================+
+|ItemPrompt|Condition Determination  |
++----------+-------------------------+
+|ColumnName|MetConditionDetermination|
++----------+-------------------------+
+|DataKind  |dkAtom                   |
++----------+-------------------------+
+|DataType  |Text                     |
++----------+-------------------------+
 
 A description of the condition of the specimen
 

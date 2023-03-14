@@ -21,15 +21,19 @@ Depth columns are populated.
 Depth From
 **********
 
-========== =============== ============== ================ ====================
-Field      AquDepthFromMet AquDepthFromFt AquDepthFromFath AquDepthFromModifier
-========== =============== ============== ================ ====================
-ItemPrompt Depth From                                      Modifier            
-ColumnName AquDepthFromMet AquDepthFromFt AquDepthFromFath AquDepthFromModifier
-DataKind   dkAtom          dkAtom         dkAtom           dkAtom              
-DataType   Float           Float          Float            Text                
-LookupName                                                 Elevation Modifier  
-========== =============== ============== ================ ====================
++----------+---------------+--------------+----------------+--------------------+
+|Field     |AquDepthFromMet|AquDepthFromFt|AquDepthFromFath|AquDepthFromModifier|
++==========+===============+==============+================+====================+
+|ItemPrompt|Depth From     |              |                |Modifier            |
++----------+---------------+--------------+----------------+--------------------+
+|ColumnName|AquDepthFromMet|AquDepthFromFt|AquDepthFromFath|AquDepthFromModifier|
++----------+---------------+--------------+----------------+--------------------+
+|DataKind  |dkAtom         |dkAtom        |dkAtom          |dkAtom              |
++----------+---------------+--------------+----------------+--------------------+
+|DataType  |Float          |Float         |Float           |Text                |
++----------+---------------+--------------+----------------+--------------------+
+|LookupName|               |              |                |Elevation Modifier  |
++----------+---------------+--------------+----------------+--------------------+
 
 Not used
 
@@ -41,15 +45,19 @@ Not used
 Depth To
 ********
 
-========== ============= ============ ============== ==================
-Field      AquDepthToMet AquDepthToFt AquDepthToFath AquDepthToModifier
-========== ============= ============ ============== ==================
-ItemPrompt Depth To                                  Modifier          
-ColumnName AquDepthToMet AquDepthToFt AquDepthToFath AquDepthToModifier
-DataKind   dkAtom        dkAtom       dkAtom         dkAtom            
-DataType   Float         Float        Float          Text              
-LookupName                                           Elevation Modifier
-========== ============= ============ ============== ==================
++----------+-------------+------------+--------------+------------------+
+|Field     |AquDepthToMet|AquDepthToFt|AquDepthToFath|AquDepthToModifier|
++==========+=============+============+==============+==================+
+|ItemPrompt|Depth To     |            |              |Modifier          |
++----------+-------------+------------+--------------+------------------+
+|ColumnName|AquDepthToMet|AquDepthToFt|AquDepthToFath|AquDepthToModifier|
++----------+-------------+------------+--------------+------------------+
+|DataKind  |dkAtom       |dkAtom      |dkAtom        |dkAtom            |
++----------+-------------+------------+--------------+------------------+
+|DataType  |Float        |Float       |Float         |Text              |
++----------+-------------+------------+--------------+------------------+
+|LookupName|             |            |              |Elevation Modifier|
++----------+-------------+------------+--------------+------------------+
 
 Not used
 
@@ -61,15 +69,19 @@ Not used
 Depth Determination
 *******************
 
-========== =====================
-Field      Value                
-========== =====================
-ItemPrompt Depth Determination  
-ColumnName AquDepthDetermination
-DataKind   dkAtom               
-DataType   Text                 
-LookupName Depth Determination  
-========== =====================
++----------+---------------------+
+|Field     |Value                |
++==========+=====================+
+|ItemPrompt|Depth Determination  |
++----------+---------------------+
+|ColumnName|AquDepthDetermination|
++----------+---------------------+
+|DataKind  |dkAtom               |
++----------+---------------------+
+|DataType  |Text                 |
++----------+---------------------+
+|LookupName|Depth Determination  |
++----------+---------------------+
 
 Not used
 
@@ -81,14 +93,17 @@ Not used
 Text Depth
 **********
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Verbatim Depth  
-ColumnName AquVerbatimDepth
-DataKind   dkAtom          
-DataType   Text            
-========== ================
++----------+----------------+
+|Field     |Value           |
++==========+================+
+|ItemPrompt|Verbatim Depth  |
++----------+----------------+
+|ColumnName|AquVerbatimDepth|
++----------+----------------+
+|DataKind  |dkAtom          |
++----------+----------------+
+|DataType  |Text            |
++----------+----------------+
 
 Not used
 
@@ -100,15 +115,19 @@ Not used
 Bottom Depth From
 *****************
 
-========== ===================== ==================== ====================== ==========================
-Field      AquBottomDepthFromMet AquBottomDepthFromFt AquBottomDepthFromFath AquBottomDepthFromModifier
-========== ===================== ==================== ====================== ==========================
-ItemPrompt Bottom Depth From                                                 Modifier                  
-ColumnName AquBottomDepthFromMet AquBottomDepthFromFt AquBottomDepthFromFath AquBottomDepthFromModifier
-DataKind   dkAtom                dkAtom               dkAtom                 dkAtom                    
-DataType   Float                 Float                Float                  Text                      
-LookupName                                                                   Elevation Modifier        
-========== ===================== ==================== ====================== ==========================
++----------+---------------------+--------------------+----------------------+--------------------------+
+|Field     |AquBottomDepthFromMet|AquBottomDepthFromFt|AquBottomDepthFromFath|AquBottomDepthFromModifier|
++==========+=====================+====================+======================+==========================+
+|ItemPrompt|Bottom Depth From    |                    |                      |Modifier                  |
++----------+---------------------+--------------------+----------------------+--------------------------+
+|ColumnName|AquBottomDepthFromMet|AquBottomDepthFromFt|AquBottomDepthFromFath|AquBottomDepthFromModifier|
++----------+---------------------+--------------------+----------------------+--------------------------+
+|DataKind  |dkAtom               |dkAtom              |dkAtom                |dkAtom                    |
++----------+---------------------+--------------------+----------------------+--------------------------+
+|DataType  |Float                |Float               |Float                 |Text                      |
++----------+---------------------+--------------------+----------------------+--------------------------+
+|LookupName|                     |                    |                      |Elevation Modifier        |
++----------+---------------------+--------------------+----------------------+--------------------------+
 
 The depth of the seafloor at which a collection event began
 
@@ -147,15 +166,19 @@ uncertainty can be expressed in Text Bottom Depth.
 Bottom Depth To
 ***************
 
-========== =================== ================== ==================== ========================
-Field      AquBottomDepthToMet AquBottomDepthToFt AquBottomDepthToFath AquBottomDepthToModifier
-========== =================== ================== ==================== ========================
-ItemPrompt Bottom Depth To                                             Modifier                
-ColumnName AquBottomDepthToMet AquBottomDepthToFt AquBottomDepthToFath AquBottomDepthToModifier
-DataKind   dkAtom              dkAtom             dkAtom               dkAtom                  
-DataType   Float               Float              Float                Text                    
-LookupName                                                             Elevation Modifier      
-========== =================== ================== ==================== ========================
++----------+-------------------+------------------+--------------------+------------------------+
+|Field     |AquBottomDepthToMet|AquBottomDepthToFt|AquBottomDepthToFath|AquBottomDepthToModifier|
++==========+===================+==================+====================+========================+
+|ItemPrompt|Bottom Depth To    |                  |                    |Modifier                |
++----------+-------------------+------------------+--------------------+------------------------+
+|ColumnName|AquBottomDepthToMet|AquBottomDepthToFt|AquBottomDepthToFath|AquBottomDepthToModifier|
++----------+-------------------+------------------+--------------------+------------------------+
+|DataKind  |dkAtom             |dkAtom            |dkAtom              |dkAtom                  |
++----------+-------------------+------------------+--------------------+------------------------+
+|DataType  |Float              |Float             |Float               |Text                    |
++----------+-------------------+------------------+--------------------+------------------------+
+|LookupName|                   |                  |                    |Elevation Modifier      |
++----------+-------------------+------------------+--------------------+------------------------+
 
 The depth of the seafloor at which a collection event ended
 
@@ -194,15 +217,19 @@ uncertainty can be expressed in Text Bottom Depth.
 Bottom Depth Determination
 **************************
 
-========== ===========================
-Field      Value                      
-========== ===========================
-ItemPrompt Bottom Depth Determination 
-ColumnName AquBottomDepthDetermination
-DataKind   dkAtom                     
-DataType   Text                       
-LookupName Depth Determination        
-========== ===========================
++----------+---------------------------+
+|Field     |Value                      |
++==========+===========================+
+|ItemPrompt|Bottom Depth Determination |
++----------+---------------------------+
+|ColumnName|AquBottomDepthDetermination|
++----------+---------------------------+
+|DataKind  |dkAtom                     |
++----------+---------------------------+
+|DataType  |Text                       |
++----------+---------------------------+
+|LookupName|Depth Determination        |
++----------+---------------------------+
 
 The method by which the bottom depth was measured
 
@@ -219,14 +246,17 @@ Omit if no appropriate data is available
 Text Bottom Depth
 *****************
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt Verbatim Bottom Depth 
-ColumnName AquVerbatimBottomDepth
-DataKind   dkAtom                
-DataType   Text                  
-========== ======================
++----------+----------------------+
+|Field     |Value                 |
++==========+======================+
+|ItemPrompt|Verbatim Bottom Depth |
++----------+----------------------+
+|ColumnName|AquVerbatimBottomDepth|
++----------+----------------------+
+|DataKind  |dkAtom                |
++----------+----------------------+
+|DataType  |Text                  |
++----------+----------------------+
 
 A text string with the verbatim depth information, including units and
 uncertainy, if any.
@@ -251,15 +281,19 @@ Examples
 Source Of Sample
 ****************
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt Source of Sample      
-ColumnName DepSourceOfSample     
-DataKind   dkAtom                
-DataType   Text                  
-LookupName Depth Source of Sample
-========== ======================
++----------+----------------------+
+|Field     |Value                 |
++==========+======================+
+|ItemPrompt|Source of Sample      |
++----------+----------------------+
+|ColumnName|DepSourceOfSample     |
++----------+----------------------+
+|DataKind  |dkAtom                |
++----------+----------------------+
+|DataType  |Text                  |
++----------+----------------------+
+|LookupName|Depth Source of Sample|
++----------+----------------------+
 
 The part of the water column from which the specimen was collected. For
 geological specimens, this should always be Bottom.
@@ -282,15 +316,19 @@ Allowed Values
 Elevation From
 **************
 
-========== =================== ================== ========================
-Field      TerElevationFromMet TerElevationFromFt TerElevationFromModifier
-========== =================== ================== ========================
-ItemPrompt Elevation From      (feet)             Modifier                
-ColumnName TerElevationFromMet TerElevationFromFt TerElevationFromModifier
-DataKind   dkAtom              dkAtom             dkAtom                  
-DataType   Float               Float              Text                    
-LookupName                                        Elevation Modifier      
-========== =================== ================== ========================
++----------+-------------------+------------------+------------------------+
+|Field     |TerElevationFromMet|TerElevationFromFt|TerElevationFromModifier|
++==========+===================+==================+========================+
+|ItemPrompt|Elevation From     |(feet)            |Modifier                |
++----------+-------------------+------------------+------------------------+
+|ColumnName|TerElevationFromMet|TerElevationFromFt|TerElevationFromModifier|
++----------+-------------------+------------------+------------------------+
+|DataKind  |dkAtom             |dkAtom            |dkAtom                  |
++----------+-------------------+------------------+------------------------+
+|DataType  |Float              |Float             |Text                    |
++----------+-------------------+------------------+------------------------+
+|LookupName|                   |                  |Elevation Modifier      |
++----------+-------------------+------------------+------------------------+
 
 The elevation at which a collection event began
 
@@ -322,15 +360,19 @@ uncertainty can be expressed in Text.
 Elevation To
 ************
 
-========== ================= ================ ======================
-Field      TerElevationToMet TerElevationToFt TerElevationToModifier
-========== ================= ================ ======================
-ItemPrompt Elevation To      (feet)           Modifier              
-ColumnName TerElevationToMet TerElevationToFt TerElevationToModifier
-DataKind   dkAtom            dkAtom           dkAtom                
-DataType   Float             Float            Text                  
-LookupName                                    Elevation Modifier    
-========== ================= ================ ======================
++----------+-----------------+----------------+----------------------+
+|Field     |TerElevationToMet|TerElevationToFt|TerElevationToModifier|
++==========+=================+================+======================+
+|ItemPrompt|Elevation To     |(feet)          |Modifier              |
++----------+-----------------+----------------+----------------------+
+|ColumnName|TerElevationToMet|TerElevationToFt|TerElevationToModifier|
++----------+-----------------+----------------+----------------------+
+|DataKind  |dkAtom           |dkAtom          |dkAtom                |
++----------+-----------------+----------------+----------------------+
+|DataType  |Float            |Float           |Text                  |
++----------+-----------------+----------------+----------------------+
+|LookupName|                 |                |Elevation Modifier    |
++----------+-----------------+----------------+----------------------+
 
 The elevation at which a collection event ended
 
@@ -362,15 +404,19 @@ uncertainty can be expressed in Text.
 Elevation Determination
 ***********************
 
-========== =========================
-Field      Value                    
-========== =========================
-ItemPrompt Elevation Determination  
-ColumnName TerElevationDetermination
-DataKind   dkAtom                   
-DataType   Text                     
-LookupName Elevation Determination  
-========== =========================
++----------+-------------------------+
+|Field     |Value                    |
++==========+=========================+
+|ItemPrompt|Elevation Determination  |
++----------+-------------------------+
+|ColumnName|TerElevationDetermination|
++----------+-------------------------+
+|DataKind  |dkAtom                   |
++----------+-------------------------+
+|DataType  |Text                     |
++----------+-------------------------+
+|LookupName|Elevation Determination  |
++----------+-------------------------+
 
 The method by which the elevation was measured
 
@@ -387,14 +433,17 @@ Omit if no appropriate data is available
 Elevation Text
 **************
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt Verbatim Elevation  
-ColumnName TerVerbatimElevation
-DataKind   dkAtom              
-DataType   Text                
-========== ====================
++----------+--------------------+
+|Field     |Value               |
++==========+====================+
+|ItemPrompt|Verbatim Elevation  |
++----------+--------------------+
+|ColumnName|TerVerbatimElevation|
++----------+--------------------+
+|DataKind  |dkAtom              |
++----------+--------------------+
+|DataType  |Text                |
++----------+--------------------+
 
 A text string with the verbatim elevation information, including units
 and uncertainy, if any.

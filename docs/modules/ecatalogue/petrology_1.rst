@@ -12,15 +12,19 @@ This tab captures data specific to rocks and ores.
 Event/Site
 **********
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Event/Site Ref   
-ColumnName BioEventSiteRef  
-DataKind   dkAtom           
-DataType   Reference        
-RefTable   ecollectionevents
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Event/Site Ref   |
++----------+-----------------+
+|ColumnName|BioEventSiteRef  |
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Reference        |
++----------+-----------------+
+|RefTable  |ecollectionevents|
++----------+-----------------+
 
 The collection locality and event
 
@@ -42,15 +46,19 @@ Reference to Collection Events
 Collectors
 **********
 
-========== =====================
-Field      Value                
-========== =====================
-ItemPrompt Collectors Ref       
-ColumnName BioParticipantRef_tab
-DataKind   dkTable              
-DataType   Reference            
-RefTable   eparties             
-========== =====================
++----------+---------------------+
+|Field     |Value                |
++==========+=====================+
+|ItemPrompt|Collectors Ref       |
++----------+---------------------+
+|ColumnName|BioParticipantRef_tab|
++----------+---------------------+
+|DataKind  |dkTable              |
++----------+---------------------+
+|DataType  |Reference            |
++----------+---------------------+
+|RefTable  |eparties             |
++----------+---------------------+
 
 List of collector names
 
@@ -67,15 +75,19 @@ Populated automatically from the associated Collections Event record
 Lava Source
 ***********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Lava Source  
-ColumnName PetLavaSource
-DataKind   dkAtom       
-DataType   Text         
-LookupName Lava Source  
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Lava Source  |
++----------+-------------+
+|ColumnName|PetLavaSource|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Text         |
++----------+-------------+
+|LookupName|Lava Source  |
++----------+-------------+
 
 The name of the volcanic feature
 
@@ -92,15 +104,19 @@ Deprecated. Use the Subfeature field instead.
 Flow/Tephra
 ***********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Flow/Tephra  
-ColumnName PetFlowTephra
-DataKind   dkAtom       
-DataType   Text         
-LookupName Flow Tephra  
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Flow/Tephra  |
++----------+-------------+
+|ColumnName|PetFlowTephra|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Text         |
++----------+-------------+
+|LookupName|Flow Tephra  |
++----------+-------------+
 
 The name of the flow or tephra unit
 
@@ -117,15 +133,19 @@ Deprecate? Conceptual overlap with stratigraphy table.
 Preparation
 ***********
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Preparation        
-ColumnName ZooPreparation_tab 
-DataKind   dkTable            
-DataType   Text               
-LookupName Zoology Preparation
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Preparation        |
++----------+-------------------+
+|ColumnName|ZooPreparation_tab |
++----------+-------------------+
+|DataKind  |dkTable            |
++----------+-------------------+
+|DataType  |Text               |
++----------+-------------------+
+|LookupName|Zoology Preparation|
++----------+-------------------+
 
 The type of the preparation
 
@@ -167,15 +187,19 @@ Allowed Values
 Prepared By
 ***********
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt Prepared By Ref     
-ColumnName ZooPreparedByRef_tab
-DataKind   dkTable             
-DataType   Reference           
-RefTable   eparties            
-========== ====================
++----------+--------------------+
+|Field     |Value               |
++==========+====================+
+|ItemPrompt|Prepared By Ref     |
++----------+--------------------+
+|ColumnName|ZooPreparedByRef_tab|
++----------+--------------------+
+|DataKind  |dkTable             |
++----------+--------------------+
+|DataType  |Reference           |
++----------+--------------------+
+|RefTable  |eparties            |
++----------+--------------------+
 
 The person who created the preparation
 
@@ -197,14 +221,17 @@ Reference to Parties
 Preparation Count
 *****************
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt Preparation Count      
-ColumnName ZooPreparationCount_tab
-DataKind   dkTable                
-DataType   Integer                
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|Preparation Count      |
++----------+-----------------------+
+|ColumnName|ZooPreparationCount_tab|
++----------+-----------------------+
+|DataKind  |dkTable                |
++----------+-----------------------+
+|DataType  |Integer                |
++----------+-----------------------+
 
 The number of preparations of this type
 
@@ -221,14 +248,17 @@ Required for each row where Preparation is populated
 Preparation Remarks
 *******************
 
-========== =========================
-Field      Value                    
-========== =========================
-ItemPrompt Preparation Remarks      
-ColumnName ZooPreparationRemarks_tab
-DataKind   dkTable                  
-DataType   Text                     
-========== =========================
++----------+-------------------------+
+|Field     |Value                    |
++==========+=========================+
+|ItemPrompt|Preparation Remarks      |
++----------+-------------------------+
+|ColumnName|ZooPreparationRemarks_tab|
++----------+-------------------------+
+|DataKind  |dkTable                  |
++----------+-------------------------+
+|DataType  |Text                     |
++----------+-------------------------+
 
 Comments about the preparation
 
@@ -245,14 +275,17 @@ Omit if no appropriate data is available
 Lot Description
 ***************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Live Specimen  
-ColumnName BioLiveSpecimen
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Live Specimen  |
++----------+---------------+
+|ColumnName|BioLiveSpecimen|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 A long-form description of the specimen
 

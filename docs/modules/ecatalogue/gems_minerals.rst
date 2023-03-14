@@ -12,15 +12,19 @@ This tab captures data specific to gems and minerals.
 Event/Site
 **********
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Event/Site Ref   
-ColumnName BioEventSiteRef  
-DataKind   dkAtom           
-DataType   Reference        
-RefTable   ecollectionevents
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Event/Site Ref   |
++----------+-----------------+
+|ColumnName|BioEventSiteRef  |
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Reference        |
++----------+-----------------+
+|RefTable  |ecollectionevents|
++----------+-----------------+
 
 The collection locality and event
 
@@ -42,15 +46,19 @@ Reference to Collection Events
 Collectors
 **********
 
-========== =====================
-Field      Value                
-========== =====================
-ItemPrompt Collectors Ref       
-ColumnName BioParticipantRef_tab
-DataKind   dkTable              
-DataType   Reference            
-RefTable   eparties             
-========== =====================
++----------+---------------------+
+|Field     |Value                |
++==========+=====================+
+|ItemPrompt|Collectors Ref       |
++----------+---------------------+
+|ColumnName|BioParticipantRef_tab|
++----------+---------------------+
+|DataKind  |dkTable              |
++----------+---------------------+
+|DataType  |Reference            |
++----------+---------------------+
+|RefTable  |eparties             |
++----------+---------------------+
 
 List of collector names
 
@@ -67,14 +75,17 @@ Populated automatically from the associated Collections Event record
 Primary coll number
 *******************
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt Primary Coll Number 
-ColumnName BioPrimaryCollNumber
-DataKind   dkAtom              
-DataType   Text                
-========== ====================
++----------+--------------------+
+|Field     |Value               |
++==========+====================+
+|ItemPrompt|Primary Coll Number |
++----------+--------------------+
+|ColumnName|BioPrimaryCollNumber|
++----------+--------------------+
+|DataKind  |dkAtom              |
++----------+--------------------+
+|DataType  |Text                |
++----------+--------------------+
 
 Not used
 
@@ -86,15 +97,19 @@ Not used
 Jewelry Type
 ************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Jewelery Type  
-ColumnName MinJeweleryType
-DataKind   dkAtom         
-DataType   Text           
-LookupName Jewelery Type  
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Jewelery Type  |
++----------+---------------+
+|ColumnName|MinJeweleryType|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
+|LookupName|Jewelery Type  |
++----------+---------------+
 
 The type of jewelry
 
@@ -119,15 +134,19 @@ Examples
 Fashion/Cut
 ***********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Fashion/Cut
-ColumnName MinCut     
-DataKind   dkAtom     
-DataType   Text       
-LookupName Mineral Cut
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Fashion/Cut|
++----------+-----------+
+|ColumnName|MinCut     |
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Text       |
++----------+-----------+
+|LookupName|Mineral Cut|
++----------+-----------+
 
 The cut of the primary gem
 
@@ -151,15 +170,19 @@ Examples
 Color
 *****
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Color         
-ColumnName MinColor_tab  
-DataKind   dkTable       
-DataType   Text          
-LookupName Minerals Color
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Color         |
++----------+--------------+
+|ColumnName|MinColor_tab  |
++----------+--------------+
+|DataKind  |dkTable       |
++----------+--------------+
+|DataType  |Text          |
++----------+--------------+
+|LookupName|Minerals Color|
++----------+--------------+
 
 The color of the primary gem
 
@@ -184,15 +207,19 @@ Examples
 Cut By
 ******
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Cut By Ref 
-ColumnName MinCutByRef
-DataKind   dkAtom     
-DataType   Reference  
-RefTable   eparties   
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Cut By Ref |
++----------+-----------+
+|ColumnName|MinCutByRef|
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Reference  |
++----------+-----------+
+|RefTable  |eparties   |
++----------+-----------+
 
 The person who cut a gem
 
@@ -214,15 +241,19 @@ Reference to Parties
 Maker
 *****
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Maker      
-ColumnName MinMakerRef
-DataKind   dkAtom     
-DataType   Reference  
-RefTable   eparties   
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Maker      |
++----------+-----------+
+|ColumnName|MinMakerRef|
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Reference  |
++----------+-----------+
+|RefTable  |eparties   |
++----------+-----------+
 
 The person or organization that fabricated a piece of jewelry or
 synthetic specimen
@@ -245,15 +276,19 @@ Reference to Parties
 Microprobed
 ***********
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Microprobed   
-ColumnName MinMicroprobed
-DataKind   dkAtom        
-DataType   Text          
-LookupName Microprobed   
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Microprobed   |
++----------+--------------+
+|ColumnName|MinMicroprobed|
++----------+--------------+
+|DataKind  |dkAtom        |
++----------+--------------+
+|DataType  |Text          |
++----------+--------------+
+|LookupName|Microprobed   |
++----------+--------------+
 
 Not used
 
@@ -265,15 +300,19 @@ Not used
 X-Rayed
 *******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt X-Rayed  
-ColumnName MinXRayed
-DataKind   dkAtom   
-DataType   Text     
-LookupName X Rayed  
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|X-Rayed  |
++----------+---------+
+|ColumnName|MinXRayed|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
+|LookupName|X Rayed  |
++----------+---------+
 
 Whether or not a specimen has been X-rayed
 
@@ -290,15 +329,19 @@ Omit if no appropriate data is available
 Synthetic
 *********
 
-========== ============
-Field      Value       
-========== ============
-ItemPrompt Synthetic   
-ColumnName MinSynthetic
-DataKind   dkAtom      
-DataType   Text        
-LookupName Synthetic   
-========== ============
++----------+------------+
+|Field     |Value       |
++==========+============+
+|ItemPrompt|Synthetic   |
++----------+------------+
+|ColumnName|MinSynthetic|
++----------+------------+
+|DataKind  |dkAtom      |
++----------+------------+
+|DataType  |Text        |
++----------+------------+
+|LookupName|Synthetic   |
++----------+------------+
 
 Whether or not a specimen is synthetic
 
@@ -314,8 +357,8 @@ Synthetic specimens often include information about where and how the
 specimen was fabricated. This information is beyond the scope of this
 field and should be recorded as follows:
 
-- If the maker is known, record that information in Maker
-- If additional details about the fabrication process are known, include
+* If the maker is known, record that information in Maker
+* If additional details about the fabrication process are known, include
   them in the lot description
 
 Allowed Values
@@ -331,15 +374,19 @@ Allowed Values
 Chemical Modifier
 *****************
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Chemical Modifier  
-ColumnName MinChemicalModifier
-DataKind   dkAtom             
-DataType   Text               
-LookupName Chemical Modifier  
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Chemical Modifier  |
++----------+-------------------+
+|ColumnName|MinChemicalModifier|
++----------+-------------------+
+|DataKind  |dkAtom             |
++----------+-------------------+
+|DataType  |Text               |
++----------+-------------------+
+|LookupName|Chemical Modifier  |
++----------+-------------------+
 
 A modifier applied to the primary mineral type. In practice, modifiers
 are often included in Taxon instead.
@@ -364,14 +411,17 @@ Examples
 Gem/Jewelry Name
 ****************
 
-========== =======
-Field      Value  
-========== =======
-ItemPrompt Name   
-ColumnName MinName
-DataKind   dkAtom 
-DataType   Text   
-========== =======
++----------+-------+
+|Field     |Value  |
++==========+=======+
+|ItemPrompt|Name   |
++----------+-------+
+|ColumnName|MinName|
++----------+-------+
+|DataKind  |dkAtom |
++----------+-------+
+|DataType  |Text   |
++----------+-------+
 
 The name of a gem, piece of jewelry, or mineral specimen
 
@@ -394,14 +444,17 @@ Examples
 Lot Description
 ***************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Live Specimen  
-ColumnName BioLiveSpecimen
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Live Specimen  |
++----------+---------------+
+|ColumnName|BioLiveSpecimen|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 A long-form description of the specimen
 
@@ -418,15 +471,19 @@ Omit if no appropriate data is available
 Described/Figured
 *****************
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt Described/Figured      
-ColumnName MinDescribedFigured_tab
-DataKind   dkTable                
-DataType   Text                   
-LookupName Described Figured      
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|Described/Figured      |
++----------+-----------------------+
+|ColumnName|MinDescribedFigured_tab|
++----------+-----------------------+
+|DataKind  |dkTable                |
++----------+-----------------------+
+|DataType  |Text                   |
++----------+-----------------------+
+|LookupName|Described Figured      |
++----------+-----------------------+
 
 Whether a specimen has been described or figured
 
@@ -457,14 +514,18 @@ Allowed Values
 Chemical Analysis
 *****************
 
-========== ==========================
-Field      Value                     
-========== ==========================
-ItemPrompt Chemical Analysis Ref     
-ColumnName PetChemicalAnalysisRef_tab
-DataKind   dkTable                   
-DataType   Reference                 
-RefTable   enmnhanalysis             
-========== ==========================
++----------+--------------------------+
+|Field     |Value                     |
++==========+==========================+
+|ItemPrompt|Chemical Analysis Ref     |
++----------+--------------------------+
+|ColumnName|PetChemicalAnalysisRef_tab|
++----------+--------------------------+
+|DataKind  |dkTable                   |
++----------+--------------------------+
+|DataType  |Reference                 |
++----------+--------------------------+
+|RefTable  |enmnhanalysis             |
++----------+--------------------------+
 
 Not used

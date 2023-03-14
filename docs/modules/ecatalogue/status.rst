@@ -6,7 +6,7 @@ Documents inventory status and record quality
 
 **Known issues:**
 
-- The inventory grid is a mess.
+* The inventory grid is a mess.
 
 --------------------------------------------------------------------------------
 
@@ -16,15 +16,19 @@ Documents inventory status and record quality
 Accession Status
 ****************
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Accession Status  
-ColumnName StaAccessionStatus
-DataKind   dkAtom            
-DataType   Text              
-LookupName Accession Status  
-========== ==================
++------------+--------------------+
+| Field      | Value              |
++============+====================+
+| ItemPrompt | Accession Status   |
++------------+--------------------+
+| ColumnName | StaAccessionStatus |
++------------+--------------------+
+| DataKind   | dkAtom             |
++------------+--------------------+
+| DataType   | Text               |
++------------+--------------------+
+| LookupName | Accession Status   |
++------------+--------------------+
 
 The current accession status
 
@@ -41,15 +45,19 @@ Populated automatially?
 TM Status
 *********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt TM Status  
-ColumnName StaTMStatus
-DataKind   dkAtom     
-DataType   Text       
-LookupName TM Status  
-========== ===========
++------------+-------------+
+| Field      | Value       |
++============+=============+
+| ItemPrompt | TM Status   |
++------------+-------------+
+| ColumnName | StaTMStatus |
++------------+-------------+
+| DataKind   | dkAtom      |
++------------+-------------+
+| DataType   | Text        |
++------------+-------------+
+| LookupName | TM Status   |
++------------+-------------+
 
 The current transaction status. Note that incorrect transaction records
 (especially partial disposals that are not entered properly) can prevent
@@ -80,15 +88,19 @@ Allowed Values
 Record Quality
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Record Quality  
-ColumnName StaRecordQuality
-DataKind   dkAtom          
-DataType   Integer         
-LookupName Record Quality  
-========== ================
++------------+------------------+
+| Field      | Value            |
++============+==================+
+| ItemPrompt | Record Quality   |
++------------+------------------+
+| ColumnName | StaRecordQuality |
++------------+------------------+
+| DataKind   | dkAtom           |
++------------+------------------+
+| DataType   | Integer          |
++------------+------------------+
+| LookupName | Record Quality   |
++------------+------------------+
 
 The quality of the record as an integer between 2 and 4, where
 increasing numbers represent increasing completeness of the record. Used
@@ -110,15 +122,19 @@ Informatics.
 Primary Collection
 ******************
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt Primary Collection  
-ColumnName StaPrimaryCollection
-DataKind   dkAtom              
-DataType   Text                
-LookupName Primary Collection  
-========== ====================
++------------+----------------------+
+| Field      | Value                |
++============+======================+
+| ItemPrompt | Primary Collection   |
++------------+----------------------+
+| ColumnName | StaPrimaryCollection |
++------------+----------------------+
+| DataKind   | dkAtom               |
++------------+----------------------+
+| DataType   | Text                 |
++------------+----------------------+
+| LookupName | Primary Collection   |
++------------+----------------------+
 
 The name of the collection used for reporting by the museum or
 institution. Each division defined its own collections, which are based
@@ -142,16 +158,22 @@ This field is populated annually by the data manger.
 Inventory Status
 ****************
 
-========== ======================== ============================= ================= =======================
-Field      StaInventoryStatus_tab   StaInventoryRecordedByRef_tab StaInventoryDate0 StaInventoryRemarks_tab
-========== ======================== ============================= ================= =======================
-ItemPrompt Status                   Recorded By                   Date              Remarks                
-ColumnName StaInventoryStatus_tab   StaInventoryRecordedByRef_tab StaInventoryDate0 StaInventoryRemarks_tab
-DataKind   dkTable                  dkTable                       dkTable           dkTable                
-DataType   Text                     Reference                     Date              Text                   
-LookupName Catalog Inventory Status                                                                        
-RefTable                            eparties                                                               
-========== ======================== ============================= ================= =======================
++------------+------------------------+-------------------------------+-------------------+-------------------------+
+| Field      | StaInventoryStatus_tab | StaInventoryRecordedByRef_tab | StaInventoryDate0 | StaInventoryRemarks_tab |
++============+========================+===============================+===================+=========================+
+| ItemPrompt | Status                 | Recorded By                   | Date              | Remarks                 |
++------------+------------------------+-------------------------------+-------------------+-------------------------+
+| ColumnName | StaInventoryStatus_tab | StaInventoryRecordedByRef_tab | StaInventoryDate0 | StaInventoryRemarks_tab |
++------------+------------------------+-------------------------------+-------------------+-------------------------+
+| DataKind   | dkTable                | dkTable                       | dkTable           | dkTable                 |
++------------+------------------------+-------------------------------+-------------------+-------------------------+
+| DataType   | Text                   | Reference                     | Date              | Text                    |
++------------+------------------------+-------------------------------+-------------------+-------------------------+
+| LookupName | Catalog Inventory      |                               |                   |                         |
+|            | Status                 |                               |                   |                         |
++------------+------------------------+-------------------------------+-------------------+-------------------------+
+| RefTable   |                        | eparties                      |                   |                         |
++------------+------------------------+-------------------------------+-------------------+-------------------------+
 
 Records an inventory event
 
@@ -194,16 +216,22 @@ Allowed Values
 Record Status
 *************
 
-========== ===================== ========================== ============== ====================
-Field      StaRecordStatus_tab   StaRecordRecordedByRef_tab StaRecordDate0 StaRecordRemarks_tab
-========== ===================== ========================== ============== ====================
-ItemPrompt Record Status         Recorded By                Record Date    Remarks             
-ColumnName StaRecordStatus_tab   StaRecordRecordedByRef_tab StaRecordDate0 StaRecordRemarks_tab
-DataKind   dkTable               dkTable                    dkTable        dkTable             
-DataType   Text                  Reference                  Date           Text                
-LookupName Catalog Record Status                                                               
-RefTable                         eparties                                                      
-========== ===================== ========================== ============== ====================
++------------+---------------------+----------------------------+----------------+----------------------+
+| Field      | StaRecordStatus_tab | StaRecordRecordedByRef_tab | StaRecordDate0 | StaRecordRemarks_tab |
++============+=====================+============================+================+======================+
+| ItemPrompt | Record Status       | Recorded By                | Record Date    | Remarks              |
++------------+---------------------+----------------------------+----------------+----------------------+
+| ColumnName | StaRecordStatus_tab | StaRecordRecordedByRef_tab | StaRecordDate0 | StaRecordRemarks_tab |
++------------+---------------------+----------------------------+----------------+----------------------+
+| DataKind   | dkTable             | dkTable                    | dkTable        | dkTable              |
++------------+---------------------+----------------------------+----------------+----------------------+
+| DataType   | Text                | Reference                  | Date           | Text                 |
++------------+---------------------+----------------------------+----------------+----------------------+
+| LookupName | Catalog Record      |                            |                |                      |
+|            | Status              |                            |                |                      |
++------------+---------------------+----------------------------+----------------+----------------------+
+| RefTable   |                     | eparties                   |                |                      |
++------------+---------------------+----------------------------+----------------+----------------------+
 
 Records the source of the EMu record if it was loaded from a previous
 database, like Paradox or SELGEM.

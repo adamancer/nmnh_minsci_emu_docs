@@ -6,12 +6,11 @@ This tab is used to note tasks that need to be performed at a later date
 to complete a transaction or improve the transaction record. Tasks may
 include:
 
-- Adding or modifying data to ensure that the transaction record is
+* Adding or modifying data to ensure that the transaction record is
   accurate and complete
-- Cataloging an acquisition
-- Closing a loan after a condition has been met (for example, after one
+* Cataloging an acquisition
+* Closing a loan after a condition has been met (for example, after one
   year if specimens are reported lost)
-
 
 Because tasks may not be completed for years and contacts for individual
 collections may change over time, the best practice is to assign all
@@ -30,14 +29,17 @@ MinSciRegistrar resource account).
 Description
 ***********
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Task Description  
-ColumnName TasDescription_tab
-DataKind   dkTable           
-DataType   Text              
-========== ==================
++------------+--------------------+
+| Field      | Value              |
++============+====================+
+| ItemPrompt | Task Description   |
++------------+--------------------+
+| ColumnName | TasDescription_tab |
++------------+--------------------+
+| DataKind   | dkTable            |
++------------+--------------------+
+| DataType   | Text               |
++------------+--------------------+
 
 A description of the task to be performed
 
@@ -57,14 +59,13 @@ follow if needed.
 
 Bracketed key phrases under consideration include:
 
-- [CATALOGING PENDING] describes an acquisition that needs to be
+* [CATALOGING PENDING] describes an acquisition that needs to be
   catalogued and reconciled. This is used to identify records
   representing the backlog.
-- [DATA PENDING] describes an outgoing loan for which no data has been
+* [DATA PENDING] describes an outgoing loan for which no data has been
   returned
-- [ACTION PENDING] describes any other action that must be completed at
+* [ACTION PENDING] describes any other action that must be completed at
   a later date
-
 
 Key phrases would be used for searching/reporting and must be entered
 exactly.
@@ -86,15 +87,19 @@ Examples
 Assigned To
 ***********
 
-========== ==============================
-Field      Value                         
-========== ==============================
-ItemPrompt Person Assigned To Task       
-ColumnName TasPersonAssignedToRef_nesttab
-DataKind   dkNested                      
-DataType   Reference                     
-RefTable   eparties                      
-========== ==============================
++------------+--------------------------------+
+| Field      | Value                          |
++============+================================+
+| ItemPrompt | Person Assigned To Task        |
++------------+--------------------------------+
+| ColumnName | TasPersonAssignedToRef_nesttab |
++------------+--------------------------------+
+| DataKind   | dkNested                       |
++------------+--------------------------------+
+| DataType   | Reference                      |
++------------+--------------------------------+
+| RefTable   | eparties                       |
++------------+--------------------------------+
 
 The position of the person responsible for completing the task
 
@@ -117,15 +122,19 @@ Parties for the appropriate collection manager
 Assigned By
 ***********
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt Task Assigner         
-ColumnName TasTaskAssignerRef_tab
-DataKind   dkTable               
-DataType   Reference             
-RefTable   eparties              
-========== ======================
++------------+------------------------+
+| Field      | Value                  |
++============+========================+
+| ItemPrompt | Task Assigner          |
++------------+------------------------+
+| ColumnName | TasTaskAssignerRef_tab |
++------------+------------------------+
+| DataKind   | dkTable                |
++------------+------------------------+
+| DataType   | Reference              |
++------------+------------------------+
+| RefTable   | eparties               |
++------------+------------------------+
 
 The person who assigned the task
 
@@ -147,14 +156,17 @@ Reference to Parties
 Result
 ******
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Task Results  
-ColumnName TasResults_tab
-DataKind   dkTable       
-DataType   Text          
-========== ==============
++------------+----------------+
+| Field      | Value          |
++============+================+
+| ItemPrompt | Task Results   |
++------------+----------------+
+| ColumnName | TasResults_tab |
++------------+----------------+
+| DataKind   | dkTable        |
++------------+----------------+
+| DataType   | Text           |
++------------+----------------+
 
 The result of the task once completed
 
@@ -180,14 +192,17 @@ unbalanced), note why the task was not performed.
 Start Date
 **********
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt Commencement Date   
-ColumnName TasCommencementDate0
-DataKind   dkTable             
-DataType   Date                
-========== ====================
++------------+----------------------+
+| Field      | Value                |
++============+======================+
+| ItemPrompt | Commencement Date    |
++------------+----------------------+
+| ColumnName | TasCommencementDate0 |
++------------+----------------------+
+| DataKind   | dkTable              |
++------------+----------------------+
+| DataType   | Date                 |
++------------+----------------------+
 
 The date on which to start the task
 
@@ -200,8 +215,6 @@ amount of time)
 Format
 ======
 
-
-
 --------------------------------------------------------------------------------
 
 .. _enmnhtransactions-tasks-commencement-notify-on:
@@ -210,14 +223,17 @@ Format
 Notify On
 *********
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Notify Date        
-ColumnName TasStartNotifyDate0
-DataKind   dkTable            
-DataType   Date               
-========== ===================
++------------+---------------------+
+| Field      | Value               |
++============+=====================+
+| ItemPrompt | Notify Date         |
++------------+---------------------+
+| ColumnName | TasStartNotifyDate0 |
++------------+---------------------+
+| DataKind   | dkTable             |
++------------+---------------------+
+| DataType   | Date                |
++------------+---------------------+
 
 The date on which to notify the contacts in the associated Notify grid
 
@@ -230,8 +246,6 @@ amount of time)
 Format
 ======
 
-
-
 --------------------------------------------------------------------------------
 
 .. _enmnhtransactions-tasks-commencement-notify:
@@ -240,15 +254,19 @@ Format
 Notify
 ******
 
-========== ============================
-Field      Value                       
-========== ============================
-ItemPrompt Commemcement                
-ColumnName TasCommenceNotifyRef_nesttab
-DataKind   dkNested                    
-DataType   Reference                   
-RefTable   eparties                    
-========== ============================
++------------+------------------------------+
+| Field      | Value                        |
++============+==============================+
+| ItemPrompt | Commemcement                 |
++------------+------------------------------+
+| ColumnName | TasCommenceNotifyRef_nesttab |
++------------+------------------------------+
+| DataKind   | dkNested                     |
++------------+------------------------------+
+| DataType   | Reference                    |
++------------+------------------------------+
+| RefTable   | eparties                     |
++------------+------------------------------+
 
 List of positions to notify when the task is due to start
 
@@ -272,14 +290,17 @@ minimum. Consider also including the appropriate collection manager.
 Completed
 *********
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Completed?      
-ColumnName TasCompleted_tab
-DataKind   dkTable         
-DataType   Text            
-========== ================
++------------+------------------+
+| Field      | Value            |
++============+==================+
+| ItemPrompt | Completed?       |
++------------+------------------+
+| ColumnName | TasCompleted_tab |
++------------+------------------+
+| DataKind   | dkTable          |
++------------+------------------+
+| DataType   | Text             |
++------------+------------------+
 
 Whether the task has been completed
 
@@ -305,14 +326,17 @@ specimens before a transaction is scheduled to be closed unbalanced).
 Hours Taken
 ***********
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt Time Taken On Task    
-ColumnName TasTimeTakenOnTask_tab
-DataKind   dkTable               
-DataType   Float                 
-========== ======================
++------------+------------------------+
+| Field      | Value                  |
++============+========================+
+| ItemPrompt | Time Taken On Task     |
++------------+------------------------+
+| ColumnName | TasTimeTakenOnTask_tab |
++------------+------------------------+
+| DataKind   | dkTable                |
++------------+------------------------+
+| DataType   | Float                  |
++------------+------------------------+
 
 Not used
 
@@ -324,14 +348,17 @@ Not used
 End Date
 ********
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Completion Date   
-ColumnName TasCompletionDate0
-DataKind   dkTable           
-DataType   Date              
-========== ==================
++------------+--------------------+
+| Field      | Value              |
++============+====================+
+| ItemPrompt | Completion Date    |
++------------+--------------------+
+| ColumnName | TasCompletionDate0 |
++------------+--------------------+
+| DataKind   | dkTable            |
++------------+--------------------+
+| DataType   | Date               |
++------------+--------------------+
 
 The date on which the task was completed
 
@@ -343,8 +370,6 @@ Required when the task is completed
 Format
 ======
 
-
-
 --------------------------------------------------------------------------------
 
 .. _enmnhtransactions-tasks-completion-notify-on:
@@ -353,14 +378,17 @@ Format
 Notify On
 *********
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Notify Date      
-ColumnName TasEndNotifyDate0
-DataKind   dkTable          
-DataType   Date             
-========== =================
++------------+-------------------+
+| Field      | Value             |
++============+===================+
+| ItemPrompt | Notify Date       |
++------------+-------------------+
+| ColumnName | TasEndNotifyDate0 |
++------------+-------------------+
+| DataKind   | dkTable           |
++------------+-------------------+
+| DataType   | Date              |
++------------+-------------------+
 
 Not used
 
@@ -372,14 +400,18 @@ Not used
 Notify
 ******
 
-========== ==============================
-Field      Value                         
-========== ==============================
-ItemPrompt Completion                    
-ColumnName TasCompletionNotifyRef_nesttab
-DataKind   dkNested                      
-DataType   Reference                     
-RefTable   eparties                      
-========== ==============================
++------------+--------------------------------+
+| Field      | Value                          |
++============+================================+
+| ItemPrompt | Completion                     |
++------------+--------------------------------+
+| ColumnName | TasCompletionNotifyRef_nesttab |
++------------+--------------------------------+
+| DataKind   | dkNested                       |
++------------+--------------------------------+
+| DataType   | Reference                      |
++------------+--------------------------------+
+| RefTable   | eparties                       |
++------------+--------------------------------+
 
 Not used

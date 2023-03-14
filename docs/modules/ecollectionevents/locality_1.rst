@@ -8,15 +8,15 @@ Definitions below are adapted from the GeoNames Feature Codes list.
 
 **Known issues:**
 
-- Usage of Site Details is inconsistent. It has been used variously to
+* Usage of Site Details is inconsistent. It has been used variously to
   try to distinguish generic localities from localities with detailed
   collection info; to try to mark records as canonical for a given
   locality (for example, by referencing the corresponding GeoNames
   record); and to idenitfy stations/dredges associatd with a specific
   expedition.
-- It's difficult to reliably distinguish marine and terrestrial
+* It's difficult to reliably distinguish marine and terrestrial
   localities.
-- Administrative divisions that do not map neatly to
+* Administrative divisions that do not map neatly to
   country/state/county scheme have been entered inconsistently. Many
   countries use deeper schemes, so it's not always clear how to fit all
   the information in.
@@ -29,15 +29,19 @@ Definitions below are adapted from the GeoNames Feature Codes list.
 Record Classification
 *********************
 
-========== =======================================
-Field      Value                                  
-========== =======================================
-ItemPrompt Record Classification                  
-ColumnName LocRecordClassification                
-DataKind   dkAtom                                 
-DataType   Text                                   
-LookupName Collection Events Record Classification
-========== =======================================
++----------+---------------------------------------+
+|Field     |Value                                  |
++==========+=======================================+
+|ItemPrompt|Record Classification                  |
++----------+---------------------------------------+
+|ColumnName|LocRecordClassification                |
++----------+---------------------------------------+
+|DataKind  |dkAtom                                 |
++----------+---------------------------------------+
+|DataType  |Text                                   |
++----------+---------------------------------------+
+|LookupName|Collection Events Record Classification|
++----------+---------------------------------------+
 
 
 
@@ -54,14 +58,17 @@ Under evaluation
 Field/Sample Numbers
 ********************
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt Site Visit Numbers     
-ColumnName ColSiteVisitNumbers_tab
-DataKind   dkTable                
-DataType   Text                   
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|Site Visit Numbers     |
++----------+-----------------------+
+|ColumnName|ColSiteVisitNumbers_tab|
++----------+-----------------------+
+|DataKind  |dkTable                |
++----------+-----------------------+
+|DataType  |Text                   |
++----------+-----------------------+
 
 
 
@@ -78,14 +85,17 @@ Under evaluation
 Site/Station Number
 *******************
 
-========== ====================
-Field      Value               
-========== ====================
-ItemPrompt Site/Station Number 
-ColumnName LocSiteStationNumber
-DataKind   dkAtom              
-DataType   Text                
-========== ====================
++----------+--------------------+
+|Field     |Value               |
++==========+====================+
+|ItemPrompt|Site/Station Number |
++----------+--------------------+
+|ColumnName|LocSiteStationNumber|
++----------+--------------------+
+|DataKind  |dkAtom              |
++----------+--------------------+
+|DataType  |Text                |
++----------+--------------------+
 
 
 
@@ -114,15 +124,19 @@ beginning of their field number.
 Site Number Source
 ******************
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Site Number Source 
-ColumnName LocSiteNumberSource
-DataKind   dkAtom             
-DataType   Text               
-LookupName Site Number Source 
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Site Number Source |
++----------+-------------------+
+|ColumnName|LocSiteNumberSource|
++----------+-------------------+
+|DataKind  |dkAtom             |
++----------+-------------------+
+|DataType  |Text               |
++----------+-------------------+
+|LookupName|Site Number Source |
++----------+-------------------+
 
 
 
@@ -145,15 +159,19 @@ this may be an oceanographic institute, like WHOI or Scripps.
 Site Name
 *********
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Site Name      
-ColumnName LocSiteName_tab
-DataKind   dkTable        
-DataType   Text           
-LookupName Site Name      
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Site Name      |
++----------+---------------+
+|ColumnName|LocSiteName_tab|
++----------+---------------+
+|DataKind  |dkTable        |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
+|LookupName|Site Name      |
++----------+---------------+
 
 
 
@@ -170,15 +188,19 @@ Under evaluation
 Ocean
 *****
 
-========== ========
-Field      Value   
-========== ========
-ItemPrompt Ocean   
-ColumnName LocOcean
-DataKind   dkAtom  
-DataType   Text    
-LookupName Ocean   
-========== ========
++----------+--------+
+|Field     |Value   |
++==========+========+
+|ItemPrompt|Ocean   |
++----------+--------+
+|ColumnName|LocOcean|
++----------+--------+
+|DataKind  |dkAtom  |
++----------+--------+
+|DataType  |Text    |
++----------+--------+
+|LookupName|Ocean   |
++----------+--------+
 
 The name of an ocean
 
@@ -211,11 +233,11 @@ equator, with the exception of the Galapagos and Gilbert Islands, which
 cross the equator but are assigned to the South Pacific Ocean. Other
 features that cross the equator but are not addressed by IHO include:
 
-- **Halmahera** is assigned to the North Pacific Ocean because it is
+* **Halmahera** is assigned to the North Pacific Ocean because it is
   mostly north of the equator.
-- **Sulawesi** is assigned to the South Pacific Ocean because it is
+* **Sulawesi** is assigned to the South Pacific Ocean because it is
   mostly south of the equator.
-- **Galapagos Rise** and **Galapagos Spreading Center** are assigned to
+* **Galapagos Rise** and **Galapagos Spreading Center** are assigned to
   the South Pacific Ocean by analogy to the Galapagos Islands.
 
 Large islands at the border between oceans cannot always be assigned to
@@ -241,14 +263,17 @@ Allowed Values
 Sea/Gulf
 ********
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Sea/Gulf  
-ColumnName LocSeaGulf
-DataKind   dkAtom    
-DataType   Text      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Sea/Gulf  |
++----------+----------+
+|ColumnName|LocSeaGulf|
++----------+----------+
+|DataKind  |dkAtom    |
++----------+----------+
+|DataType  |Text      |
++----------+----------+
 
 The name of one of the primary divisions of the oceans, like a sea,
 marginal sea, or gulf
@@ -281,14 +306,17 @@ Examples
 Bay/Sound
 *********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Bay/Sound  
-ColumnName LocBaySound
-DataKind   dkAtom     
-DataType   Text       
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Bay/Sound  |
++----------+-----------+
+|ColumnName|LocBaySound|
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Text       |
++----------+-----------+
 
 The name of any coastal body of water smaller than a sea or gulf
 
@@ -305,15 +333,19 @@ Omit if no appropriate data is available
 Continent
 *********
 
-========== ============
-Field      Value       
-========== ============
-ItemPrompt Continent   
-ColumnName LocContinent
-DataKind   dkAtom      
-DataType   Text        
-LookupName Continent   
-========== ============
++----------+------------+
+|Field     |Value       |
++==========+============+
+|ItemPrompt|Continent   |
++----------+------------+
+|ColumnName|LocContinent|
++----------+------------+
+|DataKind  |dkAtom      |
++----------+------------+
+|DataType  |Text        |
++----------+------------+
+|LookupName|Continent   |
++----------+------------+
 
 The name of a continent
 
@@ -350,14 +382,17 @@ Allowed Values
 Country
 *******
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Country   
-ColumnName LocCountry
-DataKind   dkAtom    
-DataType   Text      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Country   |
++----------+----------+
+|ColumnName|LocCountry|
++----------+----------+
+|DataKind  |dkAtom    |
++----------+----------+
+|DataType  |Text      |
++----------+----------+
 
 The name of a country. Includes both independent entities and dependent
 but self-governed entities.
@@ -395,14 +430,17 @@ preferred form in the ISO list.
 Province/State/Terrirtory
 *************************
 
-========== =========================
-Field      Value                    
-========== =========================
-ItemPrompt Province/State/Territory 
-ColumnName LocProvinceStateTerritory
-DataKind   dkAtom                   
-DataType   Text                     
-========== =========================
++----------+-------------------------+
+|Field     |Value                    |
++==========+=========================+
+|ItemPrompt|Province/State/Territory |
++----------+-------------------------+
+|ColumnName|LocProvinceStateTerritory|
++----------+-------------------------+
+|DataKind  |dkAtom                   |
++----------+-------------------------+
+|DataType  |Text                     |
++----------+-------------------------+
 
 The primary administrative division in a country, like a state in the
 United States or a province in Canada
@@ -433,14 +471,17 @@ information.
 District/County/Shire
 *********************
 
-========== ======================
-Field      Value                 
-========== ======================
-ItemPrompt District/County/Shire 
-ColumnName LocDistrictCountyShire
-DataKind   dkAtom                
-DataType   Text                  
-========== ======================
++----------+----------------------+
+|Field     |Value                 |
++==========+======================+
+|ItemPrompt|District/County/Shire |
++----------+----------------------+
+|ColumnName|LocDistrictCountyShire|
++----------+----------------------+
+|DataKind  |dkAtom                |
++----------+----------------------+
+|DataType  |Text                  |
++----------+----------------------+
 
 The secondary administrative division in a country, like a county in the
 United States
@@ -467,15 +508,19 @@ information.
 City/Town
 *********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Township   
-ColumnName LocTownship
-DataKind   dkAtom     
-DataType   Text       
-LookupName Township   
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Township   |
++----------+-----------+
+|ColumnName|LocTownship|
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Text       |
++----------+-----------+
+|LookupName|Township   |
++----------+-----------+
 
 The name of a populated place, like a city, town, or township
 
@@ -504,14 +549,17 @@ designation.
 No Further Locality Data
 ************************
 
-========== ========================
-Field      Value                   
-========== ========================
-ItemPrompt No Further Locality Data
-ColumnName LocNoFurtherLocalityData
-DataKind   dkAtom                  
-DataType   Text                    
-========== ========================
++----------+------------------------+
+|Field     |Value                   |
++==========+========================+
+|ItemPrompt|No Further Locality Data|
++----------+------------------------+
+|ColumnName|LocNoFurtherLocalityData|
++----------+------------------------+
+|DataKind  |dkAtom                  |
++----------+------------------------+
+|DataType  |Text                    |
++----------+------------------------+
 
 Identifies simple locality records that do not include information on
 any tab except Locality (1) *except* georeferenced coordinates. This is
@@ -531,14 +579,17 @@ Leave unchecked if locality info appears on any other tab
 Precise Locality
 ****************
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Precise Location  
-ColumnName LocPreciseLocation
-DataKind   dkAtom            
-DataType   Text              
-========== ==================
++----------+------------------+
+|Field     |Value             |
++==========+==================+
+|ItemPrompt|Precise Location  |
++----------+------------------+
+|ColumnName|LocPreciseLocation|
++----------+------------------+
+|DataKind  |dkAtom            |
++----------+------------------+
+|DataType  |Text              |
++----------+------------------+
 
 A brief description of the exact sampling location
 

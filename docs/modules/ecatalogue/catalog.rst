@@ -15,15 +15,19 @@ Most fields on this tab should be populated in every record.
 Museum
 ******
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Museum            
-ColumnName CatMuseum         
-DataKind   dkAtom            
-DataType   Text              
-LookupName Collection Custody
-========== ==================
++----------+------------------+
+|Field     |Value             |
++==========+==================+
+|ItemPrompt|Museum            |
++----------+------------------+
+|ColumnName|CatMuseum         |
++----------+------------------+
+|DataKind  |dkAtom            |
++----------+------------------+
+|DataType  |Text              |
++----------+------------------+
+|LookupName|Collection Custody|
++----------+------------------+
 
 The name of the museum that has custody of the specimen
 
@@ -45,14 +49,17 @@ Allowed Values
 Museum Acronym
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Museum Acronym  
-ColumnName CatMuseumAcronym
-DataKind   dkAtom          
-DataType   Text            
-========== ================
++----------+----------------+
+|Field     |Value           |
++==========+================+
+|ItemPrompt|Museum Acronym  |
++----------+----------------+
+|ColumnName|CatMuseumAcronym|
++----------+----------------+
+|DataKind  |dkAtom          |
++----------+----------------+
+|DataType  |Text            |
++----------+----------------+
 
 The acronym used when displaying the catalog number. Most specimens at
 NMNH use the acronym "USNM" (short for United States National Museum),
@@ -78,14 +85,17 @@ Allowed Values
 Department
 **********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Department   
-ColumnName CatDepartment
-DataKind   dkAtom       
-DataType   Text         
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Department   |
++----------+-------------+
+|ColumnName|CatDepartment|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Text         |
++----------+-------------+
 
 The name of the department that has custody of the specimen
 
@@ -107,14 +117,17 @@ Allowed Values
 Division
 ********
 
-========== ===========
-Field      Value      
-========== ===========
-ItemPrompt Division   
-ColumnName CatDivision
-DataKind   dkAtom     
-DataType   Text       
-========== ===========
++----------+-----------+
+|Field     |Value      |
++==========+===========+
+|ItemPrompt|Division   |
++----------+-----------+
+|ColumnName|CatDivision|
++----------+-----------+
+|DataKind  |dkAtom     |
++----------+-----------+
+|DataType  |Text       |
++----------+-----------+
 
 The name of the division within a department that has custody of the
 specimen
@@ -139,14 +152,17 @@ Allowed Values
 Catalog
 *******
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Catalog   
-ColumnName CatCatalog
-DataKind   dkAtom    
-DataType   Text      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Catalog   |
++----------+----------+
+|ColumnName|CatCatalog|
++----------+----------+
+|DataKind  |dkAtom    |
++----------+----------+
+|DataType  |Text      |
++----------+----------+
 
 The name of the catalog within the division. Only **Mineralogy** has
 multiple catalogs (Gems and Minerals).
@@ -172,15 +188,19 @@ Allowed Values
 Collection Name
 ***************
 
-========== =====================
-Field      Value                
-========== =====================
-ItemPrompt Collection Name      
-ColumnName CatCollectionName_tab
-DataKind   dkTable              
-DataType   Text                 
-LookupName Collection Name      
-========== =====================
++----------+---------------------+
+|Field     |Value                |
++==========+=====================+
+|ItemPrompt|Collection Name      |
++----------+---------------------+
+|ColumnName|CatCollectionName_tab|
++----------+---------------------+
+|DataKind  |dkTable              |
++----------+---------------------+
+|DataType  |Text                 |
++----------+---------------------+
+|LookupName|Collection Name      |
++----------+---------------------+
 
 The name of the collection or collections the specimen has been assigned
 to. Each division divides its holdings into collections, that is,
@@ -217,15 +237,19 @@ Examples
 Prefix
 ******
 
-========== ==============
-Field      Value         
-========== ==============
-ItemPrompt Prefix        
-ColumnName CatPrefix     
-DataKind   dkAtom        
-DataType   Text          
-LookupName Catalog Prefix
-========== ==============
++----------+--------------+
+|Field     |Value         |
++==========+==============+
+|ItemPrompt|Prefix        |
++----------+--------------+
+|ColumnName|CatPrefix     |
++----------+--------------+
+|DataKind  |dkAtom        |
++----------+--------------+
+|DataType  |Text          |
++----------+--------------+
+|LookupName|Catalog Prefix|
++----------+--------------+
 
 An alphabetic prefix added to the beginning of the catalog number to
 specify a catalog number series. A series is similar to a collection.
@@ -259,14 +283,17 @@ Allowed Values
 Number
 ******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Number   
-ColumnName CatNumber
-DataKind   dkAtom   
-DataType   Integer  
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Number   |
++----------+---------+
+|ColumnName|CatNumber|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Integer  |
++----------+---------+
 
 The numeric part of a catalog number. A catalog number may represent a
 single specimen or a group of related specimens.
@@ -299,14 +326,17 @@ distinguished by suffixes.
 Suffix
 ******
 
-========== =========
-Field      Value    
-========== =========
-ItemPrompt Suffix   
-ColumnName CatSuffix
-DataKind   dkAtom   
-DataType   Text     
-========== =========
++----------+---------+
+|Field     |Value    |
++==========+=========+
+|ItemPrompt|Suffix   |
++----------+---------+
+|ColumnName|CatSuffix|
++----------+---------+
+|DataKind  |dkAtom   |
++----------+---------+
+|DataType  |Text     |
++----------+---------+
 
 An alphanumeric suffix used to distinguish specimens with the same
 catalog number.
@@ -340,14 +370,17 @@ four characters, but this is not typical.
 Barcode
 *******
 
-========== ==========
-Field      Value     
-========== ==========
-ItemPrompt Barcode   
-ColumnName CatBarcode
-DataKind   dkAtom    
-DataType   Text      
-========== ==========
++----------+----------+
+|Field     |Value     |
++==========+==========+
+|ItemPrompt|Barcode   |
++----------+----------+
+|ColumnName|CatBarcode|
++----------+----------+
+|DataKind  |dkAtom    |
++----------+----------+
+|DataType  |Text      |
++----------+----------+
 
 Not used
 
@@ -359,14 +392,17 @@ Not used
 Part Number
 ***********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Part Number  
-ColumnName CatPartNumber
-DataKind   dkAtom       
-DataType   Integer      
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Part Number  |
++----------+-------------+
+|ColumnName|CatPartNumber|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Integer      |
++----------+-------------+
 
 Not used
 
@@ -378,15 +414,19 @@ Not used
 Whole/Part
 **********
 
-========== ==================
-Field      Value             
-========== ==================
-ItemPrompt Whole/Part        
-ColumnName CatWholePart      
-DataKind   dkAtom            
-DataType   Text              
-LookupName Catalog Whole/Part
-========== ==================
++----------+------------------+
+|Field     |Value             |
++==========+==================+
+|ItemPrompt|Whole/Part        |
++----------+------------------+
+|ColumnName|CatWholePart      |
++----------+------------------+
+|DataKind  |dkAtom            |
++----------+------------------+
+|DataType  |Text              |
++----------+------------------+
+|LookupName|Catalog Whole/Part|
++----------+------------------+
 
 Whether a record represents a specimen in its entirety or a part of a
 complex specimen. For example, consider a specimen from the mineral
@@ -413,15 +453,19 @@ Allowed Values
 Cataloged By
 ************
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Cataloged By     
-ColumnName CatCatalogedByRef
-DataKind   dkAtom           
-DataType   Reference        
-RefTable   eparties         
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Cataloged By     |
++----------+-----------------+
+|ColumnName|CatCatalogedByRef|
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Reference        |
++----------+-----------------+
+|RefTable  |eparties         |
++----------+-----------------+
 
 A reference to the party record for the cataloger. For new records, the
 cataloger is the person who creates the digital record, either by
@@ -441,14 +485,17 @@ Omit if no appropriate data is available
 Date Cataloged
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Date Cataloged  
-ColumnName CatDateCataloged
-DataKind   dkAtom          
-DataType   Date            
-========== ================
++----------+----------------+
+|Field     |Value           |
++==========+================+
+|ItemPrompt|Date Cataloged  |
++----------+----------------+
+|ColumnName|CatDateCataloged|
++----------+----------------+
+|DataKind  |dkAtom          |
++----------+----------------+
+|DataType  |Date            |
++----------+----------------+
 
 The date the specimen was cataloged. For records entered directly into
 the client, the cataloged date is the date the record is created. For
@@ -474,15 +521,19 @@ Format
 Kind Of Object
 **************
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Object Type  
-ColumnName CatObjectType
-DataKind   dkAtom       
-DataType   Text         
-LookupName Object Type  
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Object Type  |
++----------+-------------+
+|ColumnName|CatObjectType|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Text         |
++----------+-------------+
+|LookupName|Object Type  |
++----------+-------------+
 
 The type of object represented by the record
 
@@ -504,15 +555,19 @@ Allowed Values
 Specimen Count
 **************
 
-========== ================ ========================
-Field      CatSpecimenCount CatSpecimenCountModifier
-========== ================ ========================
-ItemPrompt Specimen Count   Modifier                
-ColumnName CatSpecimenCount CatSpecimenCountModifier
-DataKind   dkAtom           dkAtom                  
-DataType   Integer          Text                    
-LookupName                  Count Modifier          
-========== ================ ========================
++----------+----------------+------------------------+
+|Field     |CatSpecimenCount|CatSpecimenCountModifier|
++==========+================+========================+
+|ItemPrompt|Specimen Count  |Modifier                |
++----------+----------------+------------------------+
+|ColumnName|CatSpecimenCount|CatSpecimenCountModifier|
++----------+----------------+------------------------+
+|DataKind  |dkAtom          |dkAtom                  |
++----------+----------------+------------------------+
+|DataType  |Integer         |Text                    |
++----------+----------------+------------------------+
+|LookupName|                |Count Modifier          |
++----------+----------------+------------------------+
 
 The number of objects represented by this record.
 
@@ -554,15 +609,19 @@ Examples
 Original Count
 **************
 
-========== ================ ========================
-Field      CatOriginalCount CatOriginalCountModifier
-========== ================ ========================
-ItemPrompt Original Count   Modifier                
-ColumnName CatOriginalCount CatOriginalCountModifier
-DataKind   dkAtom           dkAtom                  
-DataType   Text             Text                    
-LookupName                  Count Modifier          
-========== ================ ========================
++----------+----------------+------------------------+
+|Field     |CatOriginalCount|CatOriginalCountModifier|
++==========+================+========================+
+|ItemPrompt|Original Count  |Modifier                |
++----------+----------------+------------------------+
+|ColumnName|CatOriginalCount|CatOriginalCountModifier|
++----------+----------------+------------------------+
+|DataKind  |dkAtom          |dkAtom                  |
++----------+----------------+------------------------+
+|DataType  |Text            |Text                    |
++----------+----------------+------------------------+
+|LookupName|                |Count Modifier          |
++----------+----------------+------------------------+
 
 Not used
 
@@ -574,15 +633,19 @@ Not used
 Other Counts
 ************
 
-========== ====================== =======================
-Field      CatOtherCountsType_tab CatOtherCountsValue_tab
-========== ====================== =======================
-ItemPrompt Type                   Value                  
-ColumnName CatOtherCountsType_tab CatOtherCountsValue_tab
-DataKind   dkTable                dkTable                
-DataType   Text                   Integer                
-LookupName Other Counts Type                             
-========== ====================== =======================
++----------+----------------------+-----------------------+
+|Field     |CatOtherCountsType_tab|CatOtherCountsValue_tab|
++==========+======================+=======================+
+|ItemPrompt|Type                  |Value                  |
++----------+----------------------+-----------------------+
+|ColumnName|CatOtherCountsType_tab|CatOtherCountsValue_tab|
++----------+----------------------+-----------------------+
+|DataKind  |dkTable               |dkTable                |
++----------+----------------------+-----------------------+
+|DataType  |Text                  |Integer                |
++----------+----------------------+-----------------------+
+|LookupName|Other Counts Type     |                       |
++----------+----------------------+-----------------------+
 
 Not used
 
@@ -594,15 +657,19 @@ Not used
 Other Numbers
 *************
 
-========== ======================= ========================= ========================
-Field      CatOtherNumbersType_tab CatOtherNumbersSource_tab CatOtherNumbersValue_tab
-========== ======================= ========================= ========================
-ItemPrompt Type                    Source                    Value                   
-ColumnName CatOtherNumbersType_tab CatOtherNumbersSource_tab CatOtherNumbersValue_tab
-DataKind   dkTable                 dkTable                   dkTable                 
-DataType   Text                    Text                      Text                    
-LookupName Other Numbers Type      Other Numbers Source                              
-========== ======================= ========================= ========================
++----------+-----------------------+-------------------------+------------------------+
+|Field     |CatOtherNumbersType_tab|CatOtherNumbersSource_tab|CatOtherNumbersValue_tab|
++==========+=======================+=========================+========================+
+|ItemPrompt|Type                   |Source                   |Value                   |
++----------+-----------------------+-------------------------+------------------------+
+|ColumnName|CatOtherNumbersType_tab|CatOtherNumbersSource_tab|CatOtherNumbersValue_tab|
++----------+-----------------------+-------------------------+------------------------+
+|DataKind  |dkTable                |dkTable                  |dkTable                 |
++----------+-----------------------+-------------------------+------------------------+
+|DataType  |Text                   |Text                     |Text                    |
++----------+-----------------------+-------------------------+------------------------+
+|LookupName|Other Numbers Type     |Other Numbers Source     |                        |
++----------+-----------------------+-------------------------+------------------------+
 
 Additional identifiers used to refer to the specimen, like the field
 number assigned by the collector.

@@ -15,15 +15,19 @@ vessels and cruises.
 Expedition Name
 ***************
 
-========== =================
-Field      Value            
-========== =================
-ItemPrompt Expedition Name  
-ColumnName ExpExpeditionName
-DataKind   dkAtom           
-DataType   Text             
-LookupName Expedition Name  
-========== =================
++----------+-----------------+
+|Field     |Value            |
++==========+=================+
+|ItemPrompt|Expedition Name  |
++----------+-----------------+
+|ColumnName|ExpExpeditionName|
++----------+-----------------+
+|DataKind  |dkAtom           |
++----------+-----------------+
+|DataType  |Text             |
++----------+-----------------+
+|LookupName|Expedition Name  |
++----------+-----------------+
 
 The name of the expedition or field program during which a collecting
 event took place. Names are typically assigned by the sponsor of an
@@ -54,15 +58,19 @@ Examples
 Vessel Name
 ***********
 
-========== =============
-Field      Value        
-========== =============
-ItemPrompt Vessel Name  
-ColumnName AquVesselName
-DataKind   dkAtom       
-DataType   Text         
-LookupName Vessel Name  
-========== =============
++----------+-------------+
+|Field     |Value        |
++==========+=============+
+|ItemPrompt|Vessel Name  |
++----------+-------------+
+|ColumnName|AquVesselName|
++----------+-------------+
+|DataKind  |dkAtom       |
++----------+-------------+
+|DataType  |Text         |
++----------+-------------+
+|LookupName|Vessel Name  |
++----------+-------------+
 
 The name of the ship from which a sample was collected.
 
@@ -93,14 +101,17 @@ Examples
 Cruise Number
 *************
 
-========== ===============
-Field      Value          
-========== ===============
-ItemPrompt Cruise Number  
-ColumnName AquCruiseNumber
-DataKind   dkAtom         
-DataType   Text           
-========== ===============
++----------+---------------+
+|Field     |Value          |
++==========+===============+
+|ItemPrompt|Cruise Number  |
++----------+---------------+
+|ColumnName|AquCruiseNumber|
++----------+---------------+
+|DataKind  |dkAtom         |
++----------+---------------+
+|DataType  |Text           |
++----------+---------------+
 
 The identifier assigned by the organization that operates a vessel to a
 research cruise, that is, a continuous, port-to-port voyage conducted to
@@ -137,14 +148,17 @@ cruise ABCD can be entered as "ABCD-2".
 Start/Completion Date
 *********************
 
-========== ============ =================
-Field      ExpStartDate ExpCompletionDate
-========== ============ =================
-ItemPrompt Start Date   Completion Date  
-ColumnName ExpStartDate ExpCompletionDate
-DataKind   dkAtom       dkAtom           
-DataType   Date         Date             
-========== ============ =================
++----------+------------+-----------------+
+|Field     |ExpStartDate|ExpCompletionDate|
++==========+============+=================+
+|ItemPrompt|Start Date  |Completion Date  |
++----------+------------+-----------------+
+|ColumnName|ExpStartDate|ExpCompletionDate|
++----------+------------+-----------------+
+|DataKind  |dkAtom      |dkAtom           |
++----------+------------+-----------------+
+|DataType  |Date        |Date             |
++----------+------------+-----------------+
 
 The start and end dates for an expedition or cruise
 
@@ -158,18 +172,18 @@ Format
 
 EMu depicts dates using the following formats:
 
-- Year, month, and day: 1 Jan 1970
-- Year and month: Jan 1970
-- Year: 1970
+* Year, month, and day: 1 Jan 1970
+* Year and month: Jan 1970
+* Year: 1970
 
 
 It accepts a variety of formats in addition to the display formats
 above, including but not limited to:
-- January 1, 1970
-- Jan 1, 1970
-- 1970-01-01
-- 1970-01
-- 0101970
+* January 1, 1970
+* Jan 1, 1970
+* 1970-01-01
+* 1970-01
+* 0101970
 
 
 Use the most specific date format possible.
@@ -188,14 +202,17 @@ not known, enter "1970" in both fields.
 Project Number
 **************
 
-========== ================
-Field      Value           
-========== ================
-ItemPrompt Project Number  
-ColumnName ExpProjectNumber
-DataKind   dkAtom          
-DataType   Text            
-========== ================
++----------+----------------+
+|Field     |Value           |
++==========+================+
+|ItemPrompt|Project Number  |
++----------+----------------+
+|ColumnName|ExpProjectNumber|
++----------+----------------+
+|DataKind  |dkAtom          |
++----------+----------------+
+|DataType  |Text            |
++----------+----------------+
 
 Not used
 
@@ -207,15 +224,19 @@ Not used
 Collection Method
 *****************
 
-========== ===================
-Field      Value              
-========== ===================
-ItemPrompt Collection Method  
-ColumnName ColCollectionMethod
-DataKind   dkAtom             
-DataType   Text               
-LookupName Collection Method  
-========== ===================
++----------+-------------------+
+|Field     |Value              |
++==========+===================+
+|ItemPrompt|Collection Method  |
++----------+-------------------+
+|ColumnName|ColCollectionMethod|
++----------+-------------------+
+|DataKind  |dkAtom             |
++----------+-------------------+
+|DataType  |Text               |
++----------+-------------------+
+|LookupName|Collection Method  |
++----------+-------------------+
 
 The device used to collect a specimen
 
@@ -250,14 +271,17 @@ Examples
 Area
 ****
 
-========== ========================
-Field      Value                   
-========== ========================
-ItemPrompt Total Surface Area Value
-ColumnName MetTotalSurfaceAreaValue
-DataKind   dkAtom                  
-DataType   Float                   
-========== ========================
++----------+------------------------+
+|Field     |Value                   |
++==========+========================+
+|ItemPrompt|Total Surface Area Value|
++----------+------------------------+
+|ColumnName|MetTotalSurfaceAreaValue|
++----------+------------------------+
+|DataKind  |dkAtom                  |
++----------+------------------------+
+|DataType  |Float                   |
++----------+------------------------+
 
 Not used
 
@@ -269,14 +293,18 @@ Not used
 Unit
 ****
 
-========== =======================
-Field      Value                  
-========== =======================
-ItemPrompt Total Surface Area Unit
-ColumnName MetTotalSurfaceAreaUnit
-DataKind   dkAtom                 
-DataType   Text                   
-LookupName Total Surface Area Unit
-========== =======================
++----------+-----------------------+
+|Field     |Value                  |
++==========+=======================+
+|ItemPrompt|Total Surface Area Unit|
++----------+-----------------------+
+|ColumnName|MetTotalSurfaceAreaUnit|
++----------+-----------------------+
+|DataKind  |dkAtom                 |
++----------+-----------------------+
+|DataType  |Text                   |
++----------+-----------------------+
+|LookupName|Total Surface Area Unit|
++----------+-----------------------+
 
 Not used
