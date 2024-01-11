@@ -49,10 +49,9 @@ in EMu. It is often useful to retain that information, including both
 its source and structure. As in the previous section, the best place to
 include this information is as a note in the record being modified.
 
-The recommended structured note format using YAML, a human-readable
-markup language. It includes a topline comment describing the source of
-the data, while the data itself is expressed as a series of key-value
-pairs.
+The recommended format for structured notes is YAML, a human-readable
+markup language. Notes should include a topline comment describing the
+source of the data and the data itself as a series of key-value pairs.
 
 .. code-block:: YAML
 
@@ -85,13 +84,13 @@ Modifying locality information
 Updating localities
 -------------------
 
-Place names and borders are change over time, both through
-administrative reorganizations and justice-minded efforts to remove
-racist or derogatory place names. It is often useful to update
-collection localities to match current names. Alternatively, museum
-staff may find new information about a specimen's collection locality
-that requires them to update the locality. These changes can be complex
-and must be handled thoughtfully.
+Place names and borders change over time, both through administrative
+reorganizations and justice-minded efforts to remove racist or
+derogatory place names. It is often useful to update collection
+localities to match current names. Alternatively, museum staff may find
+new information about a specimen's collection locality that requires
+them to update the locality. These changes can be complex and must be
+handled thoughtfully.
 
 * Any change to the locality must be explicitly documented in note
   including both what changes were made and why. See :ref:`Documenting
@@ -123,10 +122,10 @@ original data.
 Filling in information from coordinates
 ---------------------------------------
 
-Services like GeoNames allow us to fill in the administrative hierarchy
-from a set of coordinates. We do not use these services to update
-information, but they can be useful for identifying errors in
-coordinates.
+Services like `GeoNames <https://geonames.org/>`_ allow us to fill in
+the administrative hierarchy from a set of coordinates. We do not use
+these services to update information, but they can be useful for
+identifying errors in coordinates.
 
 *****************************************************
 Adding and updating data in EMu using the import tool

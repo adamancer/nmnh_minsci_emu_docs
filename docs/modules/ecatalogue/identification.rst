@@ -103,7 +103,7 @@ Populated automatically by EMu
 Format
 ======
 
-Usually the display name of from Taxon. If Qualifier is "uncertain", a
+The display name of the associated Taxon. If Qualifier is "uncertain", a
 question mark will be appended to the value in this field to denote that
 uncertainty.
 

@@ -8,10 +8,10 @@ extrapolate depths or elevations from coordinates.
 
 This tab includes two sets of fields for depth. The **depth fields**
 describe the depth in the water column at which a specimen was
-collected. The **bottom depth fields** fields describe to the depth of
-the sea floor. Geological specimens in the Mineral Sciences collections
-always come from the sea floor. To avoid redundancy, only the Bottom
-Depth columns are populated.
+collected. The **bottom depth fields** describe to the depth of the sea
+floor. Geological specimens in the Mineral Sciences collections always
+come from the sea floor. To avoid redundancy, only the Bottom Depth
+columns are populated.
 
 --------------------------------------------------------------------------------
 
@@ -341,9 +341,10 @@ Format
 ======
 
 Each of the columns in this group represents a specific unit: meters and
-feet. When adding an elevation, you only need to fill out one of column.
-The other unit will be calculated automatically by EMu. Original values
-display as black and calculated values as red in the client.
+feet. When adding an elevation, you only need to fill out one of the
+columns. The other unit will be calculated automatically by EMu.
+Original values display as black and calculated values as red in the
+client.
 
 If only one elevation is provided, use that depth in both From and To.
 Always provide the verbatim elevation, including units, in Text.

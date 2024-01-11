@@ -73,7 +73,7 @@ The other numbers grid has been used to store information about recataloged spec
 - Lab number
 - Parent IGSN
 - VG number"
-ecatalogue,Status,Object/Remains Status,Accession Status,- StaAccessionStatus,The current accession status,Populated automatially?,,,
+ecatalogue,Status,Object/Remains Status,Accession Status,- StaAccessionStatus,The current accession status,Populated automatically?,,,
 ecatalogue,Status,Object/Remains Status,TM Status,- StaTMStatus,"The current transaction status. Note that incorrect transaction records (especially partial disposals that are not entered properly) can prevent a given record from being attached to a new transaction.
 ","Populated automatically when this record is linked to a loan or disposal in the Transactions module if the whole specimen is part of the transaction
 ",,"- Deaccessioned
@@ -88,7 +88,7 @@ ecatalogue,Status,Object/Remains Status,Record Quality,- StaRecordQuality,"The q
 ecatalogue,Status,Object/Remains Status,Primary Collection,- StaPrimaryCollection,"The name of the collection used for reporting by the museum or institution. Each division defined its own collections, which are based on the collection name, storage location, or collection locality.
 
 Primary collections are used to track the health of the collection over time, so it's generally best to use the same ones each year. If a new primary collection is needed, contact the Registrar and Informatics.
-","Required for all records, but not the responsibility of the cataloger. This field is populated annually by the data manger.
+","Required for all records, but not the responsibility of the cataloger. This field is populated annually by the data manager.
 ",,,
 ecatalogue,Status,Inventory Status,Inventory Status,"- StaInventoryStatus_tab
 - StaInventoryRecordedByRef_tab
@@ -108,7 +108,7 @@ ecatalogue,Status,Record Status,Record Status,"- StaRecordStatus_tab
 ",,,
 ecatalogue,Identification,Identification Details,Taxon,- IdeTaxonRef_tab,The name of the rock or mineral,Required,Reference to Taxonomy,,
 ecatalogue,Identification,Identification Details,Qualifier,- IdeQualifier_tab,Used to express uncertainty in the identification,Omit if high confidence in the identification,"Must be ""uncertain"" if populated",,
-ecatalogue,Identification,Identification Details,Qualified Name,- IdeQualifiedName_tab,The qualified name of the rock or mineral,Populated automatically by EMu,"Usually the display name of from Taxon. If Qualifier is ""uncertain"", a question mark will be appended to the value in this field to denote that uncertainty.",,
+ecatalogue,Identification,Identification Details,Qualified Name,- IdeQualifiedName_tab,The qualified name of the rock or mineral,Populated automatically by EMu,"The display name of the associated Taxon. If Qualifier is ""uncertain"", a question mark will be appended to the value in this field to denote that uncertainty.",,
 ecatalogue,Identification,Identification Details,Comments,- IdeComments_tab,Comments about the identification,Omit if no appropriate data is available,"Used primarily to note verbatim names when the selected Taxon does not exactly match the name in the source material.
 
 **Deprecated uses**
@@ -133,17 +133,17 @@ For **Antarctic meteorites**, the name must be the meteorite number as currently
 - A space
 - A five- to six-digit number (YYDDD or YYDDDD, where YY is the last two digits of the collection year and DDD/DDDD is the number identifying a mass)
 
-If a specific identfier has been assigned, append a comma followed by that identifier to the generic identifier. A representative example is ""ALH 83101,15"", where ""ALH 83101"" is the generic identifier and ""15"" is the specific identifier.
+If a specific identifier has been assigned, append a comma followed by that identifier to the generic identifier. A representative example is ""ALH 83101,15"", where ""ALH 83101"" is the generic identifier and ""15"" is the specific identifier.
 
 Some notes on meteorite numbers:
 
 - Meteorites collected early on in ANSMET used a letter to separate the locality prefix from the specimen number. The letter was intended to signify different field seasons within a year. Those additional field seasons never materialized, but some meteorites from the early years of the program were originally numbered named using an ""A"" instead of a space. MBDB retains the original identifiers, but NASA's public documentation has standardized all meteorites numbers to use a space. In other words, ""ALHA76001"" in MBDB is the same as ""ALH 76001"" in NASA's documentation. We use the NASA identifiers but retain the original numbers in the Other Numbers grid.
-- MBDB includes the NASA meteorite number in the Abbrev. field. MBDB uses the Name field to provide the full name of the collection area. For example, for ALH 83101, MBDB uses ""Allan Hills 83101"" for the name ""ALH 83101"" for the abbreviation.
+- MBDB includes the NASA meteorite number in the Abbrev. field. MBDB uses the Name field to provide the full name of the collection area. For example, for ALH 83101, MBDB uses ""Allan Hills 83101"" for the name and ""ALH 83101"" for the abbreviation.
 
 Names are aligned with MBDB annually. Roughly 100 meteorites in the collection could not be matched to an entry in MBDB.
 ",,
 ecatalogue,Meteorites,Meteorite Details,Synonym,- MetSynonym,The verbatim name of the meteorite if originally cataloged under a synonym,Required if meteorite was originally cataloged under a synonym,"For meteorites originally cataloged under a synonym, use this field to record the verbatim name. This field should not be used to record every synonym for a meteorite.",,
-ecatalogue,Meteorites,Meteorite Details,Meteorite Type,- MetMeteoriteType,The type of meteorite,Required,"The type should exactly match the Type field for the corresponding MBDB record. MBDB uses a different format format for meteorite type than NASA.
+ecatalogue,Meteorites,Meteorite Details,Meteorite Type,- MetMeteoriteType,The type of meteorite,Required,"The type should exactly match the Type field for the corresponding MBDB record. MBDB uses a different format for meteorite type than NASA.
 
 A handful of specimens collected during ANSMET were determined to be terrestrial in origin. These specimens are assigned the type ""Terrestrial rock"".
 
@@ -151,7 +151,7 @@ Meteorite types  are aligned with MBDB annually.",,
 ecatalogue,Meteorites,Meteorite Details,Record Number,- MetRecordNumber,No idea,Legacy,,,
 ecatalogue,Meteorites,Meteorite Details,Find/Fall,- MetFindFall,Whether the meteorite fall was observed,Required,"Usually ""Find"" or ""Fall"", but more recent meteorites sometimes included more specific information.
 
-Historically, meteorites are categorized as ""falls"" if they are witnessed falling and ""finds"" otherwise. These categories elide much of the uncertainy in assigning fall status. In Agee et al. (2015), the Meteorite Nomenclature Committee revised fall categorization for recent meteorite discoveries to better capture that uncertainty. The terms they settled on are included in the Allowed Values list. We plan implement that vocabulary but, as of 2022, none of the meteorites in the collection has been assigned to one of the new categories.
+Historically, meteorites are categorized as ""falls"" if they are witnessed falling and ""finds"" otherwise. These categories elide much of the uncertainy in assigning fall status. In Agee et al. (2015), the Meteorite Nomenclature Committee revised fall categorization for recent meteorite discoveries to better capture that uncertainty. The terms they settled on are included in the Allowed Values list. We plan to implement that vocabulary but, as of 2022, none of the meteorites in the collection has been assigned to one of the new categories.
 
 Fall status is aligned with MBDB annually.","- Fall
 - Fall, confirmed
@@ -163,11 +163,14 @@ Fall status is aligned with MBDB annually.","- Fall
 ecatalogue,Meteorites,Collection Details,Locality,- BioEventSiteRef,The collection locality and event,Required,Reference to Collection Events,,
 ecatalogue,Meteorites,Lot Description,Lot Description,- BioLiveSpecimen,A long-form description of the specimen ,Omit if no appropriate data is available,,,
 ecatalogue,Meteorites,Condition Determination,Condition Determination,- MetConditionDetermination,A description of the condition of the specimen,Omit if no appropriate data is available,,,
-ecollectionevents,Locality (1),Site Details,Record Classification,- LocRecordClassification,,Under evaluation,,,
-ecollectionevents,Locality (1),Site Details,Field/Sample Numbers,- ColSiteVisitNumbers_tab,,Under evaluation,,,
-ecollectionevents,Locality (1),Site Details,Site/Station Number,- LocSiteStationNumber,,Under evaluation,"Marine collection events, like dredges or dives, are usually assigned an identifier. Historically we've captured this information very generally (for example, ""Dredge 1"" or ""Station 1""). This is not very useful for discriminating between records. Instead, the recommended practice is to use the exact identifier assigned during the cruise. This is often the cruise number followed by the dredge or station number, and samples collected during an event often include the site/station number at the beginning of their field number.
+ecollectionevents,Locality (1),Site Details,Record Classification,- LocRecordClassification,A high-level classification of a Collections Event record. Allows users to quickly identify generic locality records (like those for states or counties) that are suitable for re-use.,Required,,"- Location
+- Location (Canonical)
+- Location (Unknown)
+- Event",
+ecollectionevents,Locality (1),Site Details,Field/Sample Numbers,- ColSiteVisitNumbers_tab,The field numbers of samples collected during a Collection Event,In limited use,Currently used only to specify the name of the ANSMET meteorite associated with a sampling locality from that field program.,,
+ecollectionevents,Locality (1),Site Details,Site/Station Number,- LocSiteStationNumber,The identifier of a site or station,Omit if no appropriate data is available,"Marine collection events, like dredges or dives, are usually assigned an identifier. Historically we've captured this information very generally (for example, ""Dredge 1"" or ""Station 1""). This is not very useful for discriminating between records. Instead, the recommended practice is to use the exact identifier assigned during the cruise. This is often the cruise number followed by the dredge or station number, and samples collected during an event often include the site/station number at the beginning of their field number.
 ",,
-ecollectionevents,Locality (1),Site Details,Site Number Source,- LocSiteNumberSource,,Under evaluation,"The name of the authority that provided the station number. For cruises, this may be an oceanographic institute, like WHOI or Scripps.
+ecollectionevents,Locality (1),Site Details,Site Number Source,- LocSiteNumberSource,The authority that created the site station number,Omit if no appropriate data is available,"The name of the authority that provided the site name and station number. For cruises, this may be an oceanographic institute, like WHOI or Scripps, although in most cases a generic identifier, Collector, has been used instead.
 ",,
 ecollectionevents,Locality (1),Site Details,Site Name,- LocSiteName_tab,,Under evaluation,,,
 ecollectionevents,Locality (1),Ocean,Ocean,- LocOcean,The name of an ocean,"Required for marine localities and ocean islands. Omit for large islands.
@@ -251,7 +254,7 @@ ecollectionevents,Locality (2),Geomorphological Location,Geomorphological Locati
 ",Omit if no appropriate data is available,A semicolon-delimited list of feature names,,"- Rocky Mountains
 - Lake Huron
 - Half-Mile Beach"
-ecollectionevents,Locality (2),Geologic Setting,Geologic Setting,- LocGeologicSetting,"The name of a geologic feature, including petrologic province, complex, zone within a complex, or genetic association from which a specimen was collected. ",Omit if no appropriate data is available,"Names of geologic settings must be writtern out in full.
+ecollectionevents,Locality (2),Geologic Setting,Geologic Setting,- LocGeologicSetting,"The name of a geologic feature, including petrologic province, complex, zone within a complex, or genetic association from which a specimen was collected. ",Omit if no appropriate data is available,"Names of geologic settings must be written out in full.
 
 - **Geologic features**, like kimberlite pipes and plutons, should be recorded in Geologic Setting
 - **Stratigraphic units**, like groups, formations, and members, should be recorded in Catalog > Stratigraphy
@@ -367,7 +370,7 @@ ecollectionevents,Depth/Elev,Depth Details,Text Bottom Depth,- AquVerbatimBottom
 ecollectionevents,Depth/Elev,Depth Details,Source Of Sample,- DepSourceOfSample,"The part of the water column from which the specimen was collected. For geological specimens, this should always be Bottom.",Required when depth info is populated,,- Bottom,
 ecollectionevents,Depth/Elev,Elevation (Relative),Elevation From,"- TerElevationFromMet
 - TerElevationFromFt
-- TerElevationFromModifier",The elevation at which a collection event began,Omit if no appropriate data is available,"Each of the columns in this group represents a specific unit: meters and feet. When adding an elevation, you only need to fill out one of column. The other unit will be calculated automatically by EMu. Original values display as black and calculated values as red in the client.
+- TerElevationFromModifier",The elevation at which a collection event began,Omit if no appropriate data is available,"Each of the columns in this group represents a specific unit: meters and feet. When adding an elevation, you only need to fill out one of the columns. The other unit will be calculated automatically by EMu. Original values display as black and calculated values as red in the client.
 
 If only one elevation is provided, use that depth in both From and To. Always provide the verbatim elevation, including units, in Text.
 

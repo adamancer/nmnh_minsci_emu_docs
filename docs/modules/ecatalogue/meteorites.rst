@@ -4,7 +4,8 @@ ecatalogue > Meteorites
 
 This tab captures data specific to meteorites. Basic meteorite metadata,
 including name, type, and find/fall, is aligned annually with the
-Meteorite Bulletin Database (MBDB).
+`Meteorite Bulletin Database (MBDB)
+<https://www.lpi.usra.edu/meteor/metbull.php>`_.
 
 --------------------------------------------------------------------------------
 
@@ -55,7 +56,7 @@ subsample. The generic identifier includes:
   mass)
 
 
-If a specific identfier has been assigned, append a comma followed by
+If a specific identifier has been assigned, append a comma followed by
 that identifier to the generic identifier. A representative example is
 "ALH 83101,15", where "ALH 83101" is the generic identifier and "15" is
 the specific identifier.
@@ -75,7 +76,7 @@ Some notes on meteorite numbers:
 * MBDB includes the NASA meteorite number in the Abbrev. field. MBDB
   uses the Name field to provide the full name of the collection area.
   For example, for ALH 83101, MBDB uses "Allan Hills 83101" for the name
-  "ALH 83101" for the abbreviation.
+  and "ALH 83101" for the abbreviation.
 
 
 Names are aligned with MBDB annually. Roughly 100 meteorites in the
@@ -149,8 +150,7 @@ Format
 ======
 
 The type should exactly match the Type field for the corresponding MBDB
-record. MBDB uses a different format format for meteorite type than
-NASA.
+record. MBDB uses a different format for meteorite type than NASA.
 
 A handful of specimens collected during ANSMET were determined to be
 terrestrial in origin. These specimens are assigned the type
@@ -225,7 +225,7 @@ witnessed falling and "finds" otherwise. These categories elide much of
 the uncertainy in assigning fall status. In Agee et al. (2015), the
 Meteorite Nomenclature Committee revised fall categorization for recent
 meteorite discoveries to better capture that uncertainty. The terms they
-settled on are included in the Allowed Values list. We plan implement
+settled on are included in the Allowed Values list. We plan to implement
 that vocabulary but, as of 2022, none of the meteorites in the
 collection has been assigned to one of the new categories.
 

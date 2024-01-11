@@ -9,7 +9,7 @@ ecatalogue,Status,"Documents inventory status and record quality
 ",ALL
 ecatalogue,Identification,This tab consist of a grid identifying the types of rock or mineral found in a specimen.,PET | MIN
 ecatalogue,Gems/Minerals,This tab captures data specific to gems and minerals.,MIN
-ecatalogue,Meteorites,"This tab captures data specific to meteorites. Basic meteorite metadata, including name, type, and find/fall, is aligned annually with the Meteorite Bulletin Database (MBDB).",MET
+ecatalogue,Meteorites,"This tab captures data specific to meteorites. Basic meteorite metadata, including name, type, and find/fall, is aligned annually with the `Meteorite Bulletin Database (MBDB) <https://www.lpi.usra.edu/meteor/metbull.php>`_.",MET
 ecatalogue,Petrology (1),This tab captures data specific to rocks and ores.,PET
 ecatalogue,Petrology (2),This tab captures additional data specific to rocks and ores.,PET
 ecatalogue,Relationship,"This tab documents relationships between objects, including objects held by other organizations.",ALL
@@ -27,7 +27,7 @@ ecollectionevents,Volcano (1),"This tab contains information about the volcano t
 ecollectionevents,Exp/Method,"This tab includes information about expeditions that produced samples in the collection. Expeditions include both terrestrial and marine programs. For the latter, this tab also includes fields for identifying vessels and cruises.",ALL
 ecollectionevents,Depth/Elev,"This tab is used to summarize depth and elevation information. Only populate this tab if the collector provides this information--do not extrapolate depths or elevations from coordinates.
 
-This tab includes two sets of fields for depth. The **depth fields** describe the depth in the water column at which a specimen was collected. The **bottom depth fields** fields describe to the depth of the sea floor. Geological specimens in the Mineral Sciences collections always come from the sea floor. To avoid redundancy, only the Bottom Depth columns are populated.
+This tab includes two sets of fields for depth. The **depth fields** describe the depth in the water column at which a specimen was collected. The **bottom depth fields** describe to the depth of the sea floor. Geological specimens in the Mineral Sciences collections always come from the sea floor. To avoid redundancy, only the Bottom Depth columns are populated.
 ",ALL
 elocations,Location,"This tab includes information about a storage location, allowing users to locate specimens in the collection or on exhibit. Most collections locations use the first three or four levels of the hierarchy, that is, building, room, cabinet/case, and drawer/shelf (Mineralogy typically omits the last level). Exhibit locations use a more flexible hierarchy, with the first two locations identifying the building and exhibit, the third through fifth levels describing more precise locations within the exhibit (for example, a topic area, a group of cases, and a specific case), and the sixth level the identifier assigned by Exhibits. The exhibit hierarchy was derived from the exhibit script and those locations vary widely in their specificity.",ALL
 enmnhtransactions,Transactors,"To show the Transactors tab, click the Multiple Transactors checkbox on the primary tab for the current transaction type (either Loan, Acquisition, or Disposal).

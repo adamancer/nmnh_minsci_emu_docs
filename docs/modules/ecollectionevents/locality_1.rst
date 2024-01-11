@@ -43,12 +43,22 @@ Record Classification
 |LookupName|Collection Events Record Classification|
 +----------+---------------------------------------+
 
-
+A high-level classification of a Collections Event record. Allows users
+to quickly identify generic locality records (like those for states or
+counties) that are suitable for re-use.
 
 Usage
 =====
 
-Under evaluation
+Required
+
+Allowed Values
+==============
+
+* Location
+* Location (Canonical)
+* Location (Unknown)
+* Event
 
 --------------------------------------------------------------------------------
 
@@ -70,12 +80,18 @@ Field/Sample Numbers
 |DataType  |Text                   |
 +----------+-----------------------+
 
-
+The field numbers of samples collected during a Collection Event
 
 Usage
 =====
 
-Under evaluation
+In limited use
+
+Format
+======
+
+Currently used only to specify the name of the ANSMET meteorite
+associated with a sampling locality from that field program.
 
 --------------------------------------------------------------------------------
 
@@ -97,12 +113,12 @@ Site/Station Number
 |DataType  |Text                |
 +----------+--------------------+
 
-
+The identifier of a site or station
 
 Usage
 =====
 
-Under evaluation
+Omit if no appropriate data is available
 
 Format
 ======
@@ -138,18 +154,20 @@ Site Number Source
 |LookupName|Site Number Source |
 +----------+-------------------+
 
-
+The authority that created the site station number
 
 Usage
 =====
 
-Under evaluation
+Omit if no appropriate data is available
 
 Format
 ======
 
-The name of the authority that provided the station number. For cruises,
-this may be an oceanographic institute, like WHOI or Scripps.
+The name of the authority that provided the site name and station
+number. For cruises, this may be an oceanographic institute, like WHOI
+or Scripps, although in most cases a generic identifier, Collector, has
+been used instead.
 
 --------------------------------------------------------------------------------
 

@@ -266,7 +266,7 @@ Omit if no appropriate data is available
 Format
 ======
 
-Names of geologic settings must be writtern out in full.
+Names of geologic settings must be written out in full.
 
 * **Geologic features**, like kimberlite pipes and plutons, should be
   recorded in Geologic Setting

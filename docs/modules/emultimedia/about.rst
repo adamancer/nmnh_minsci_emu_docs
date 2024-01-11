@@ -6,7 +6,7 @@ About Multimedia
 Data standard
 *************
 
-This section describes a proposed data stanadrd for multimedia in
+This section describes a proposed data standard for multimedia in
 Mineral Sciences. All categories described here can be determined based
 on an EMu export file except the PDF archival format check, which
 requires a copy of the document. Note that these standards are stricter
@@ -84,8 +84,10 @@ Embedded metadata
 * **Exceeds**: All recommended metadata fields are populated
 
 The lists of required and recommended IPTC metadata are based on the
-Basic Guidelines for Minimal Descriptive Embedded Metadata in Digital
-Images.
+`Basic Guidelines for Minimal Descriptive Embedded Metadata in Digital
+  Images <https://sinet.sharepoint.com/sites/NMNH-Team/Encyclopedia-of-L
+  ife/Shared%20Documents/GuidelinesEmbeddedMetadata.pdf#search=NAA%20Dig
+  ital%20Imaging%20Guidelines>`_.
 
 Required metadata
 -----------------
@@ -126,7 +128,7 @@ below for details.
   extension. Modern OSes support longer filenames, but in practice
   these are unwieldy.
 * Filenames should be lowercase. Purely aesthetic.
-* Words within within filenames should be separated by underscores. This
+* Words within filenames should be separated by underscores. This
   improves readability slightly but is also mostly an aesthetic
   preference.
 
@@ -180,7 +182,7 @@ criteria to be eligible for open access:
 * No identifiable people are depicted in the asset
 * The asset and all objects depicted are out of copyright, not subject
   to moral rights, and otherwise free of contractual restrictions
-* The depicted object is not a culturally sensitive
+* The depicted object is not culturally sensitive
 
 Any of the above criteria (except possibly moral rights) can be waived
 by written agreement with the relevant party (i.e., the owner of a

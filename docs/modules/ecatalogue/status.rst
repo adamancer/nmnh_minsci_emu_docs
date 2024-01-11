@@ -35,7 +35,7 @@ The current accession status
 Usage
 =====
 
-Populated automatially?
+Populated automatically?
 
 --------------------------------------------------------------------------------
 
@@ -148,7 +148,7 @@ Usage
 =====
 
 Required for all records, but not the responsibility of the cataloger.
-This field is populated annually by the data manger.
+This field is populated annually by the data manager.
 
 --------------------------------------------------------------------------------
 

@@ -14,35 +14,24 @@ Information that goes into the collections database should:
 
 **When in doubt, ask the collections staff!** Ask early, ask often.
 
-**********************************
-Getting the data entry spreadsheet
-**********************************
+********************************
+Using the data entry spreadsheet
+********************************
 
-Mineral Sciences has a data capture spreadsheet that you can customize
-for the needs of your collection. Contact the data manager to obtain a
-copy of the spreadsheet.
+Mineral Sciences maintains a `data capture spreadsheet
+<https://naturalhistory.si.edu/sites/default/files/media/file/minsci-data-capture-spreadsheet.xlsx>`_
+that catalogers can use to create specimen records that can later be
+imported into EMu. The data entry spreadsheet can be modified to better
+suit the needs of a given project by adding new columns or deleting
+unneeded columns.
 
-* **Using Excel instead of Google Sheets**: If you'd prefer to use Excel
-  for data entry, export the spreadsheet as .xlsx by selecting File >
-  Download as > Microsoft Excel (.xlsx). Some of the formatting gets a
-  little messed up by the export process, but the data validation
-  defined in the sheet appears to make it through unharmed.
-
-**************************************
-Customizing the data entry spreadsheet
-**************************************
-
-You can modify the data entry spreadsheet to better suit the needs of
-your collection by adding columns for specific data or deleting columns
-you don't need.
-
-* **Use recommended column names**: This document and the Google sheet
+* **Use recommended column names**: This document and the Excel sheet
   include fields and definitions for many common types of data. You
   can add any of these columns to your spreadsheet. Please stick to
   the recommended column names if possible.
 * **Requesting a new column**: If you encounter data that doesn't fit
-  any of these categories, ask someone from the collections staff
-  where it should go.
+  into any of the existing columns, ask either the data manager or the
+  appropriate collection manager where that data should go.
 
 ******************
 General guidelines
