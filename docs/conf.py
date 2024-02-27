@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "Mineral Sciences Data Guidelines"
-copyright = "2023, Smithsonian"
+copyright = "2023-2024, Smithsonian"
 author = "Adam Mansur"
 
 
